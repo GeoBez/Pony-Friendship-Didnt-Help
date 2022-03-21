@@ -1,1 +1,0 @@
-# Pony-Friendship-Didnt-Help
