@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
 		if (_target != null) 
 		{
 			transform.eulerAngles = _target.transform.position.x > transform.position.x ? new Vector3(0, 180, 0) : new Vector3(0, 0, 0);
-			//TODO раскомментить transform.position = Vector2.MoveTowards(transform.position, _target.transform.position, speed * Time.deltaTime);
+			transform.position = Vector2.MoveTowards(transform.position, _target.transform.position, speed * Time.deltaTime);
 		}
 	}
 
@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
 	{
 		Destroy(gameObject);
 	}
+
 	public void TakeDamage(float damage)
 	{
 		health -= damage;

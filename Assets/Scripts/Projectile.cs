@@ -40,7 +40,7 @@ public class Projectile : MonoBehaviour
     {
         if (collider.CompareTag("Enemy"))
         {
-            //TODO раскомментить collider.GetComponent<Enemy>().TakeDamage(damage); 
+            collider.GetComponent<Enemy>().TakeDamage(damage); 
             DestroyProjectile();
         }
     }
