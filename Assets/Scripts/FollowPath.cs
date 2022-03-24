@@ -10,6 +10,7 @@ public class FollowPath : MonoBehaviour
         Lerping
     }
 
+    private Transform _target;
     public MovementType Type = MovementType.Moveing;
     public MovementPath MyPath;
     public float speed = 1;
@@ -59,5 +60,8 @@ public class FollowPath : MonoBehaviour
         {
             pointInPath.MoveNext();
         }
+
+        _target = pointInPath.Current.transform;
+        transform.eulerAngles = _target.transform.position.x > transform.position.x ? new Vector3(0, 180, 0) : new Vector3(0, 0, 0);
     }
 }
