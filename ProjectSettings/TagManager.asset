@@ -8,6 +8,9 @@ TagManager:
   - Slow Mine
   - Destroying Mine
   - Enemy
+  - Main Tower
+  - Tower
+  - Tower_Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Tower Enemy
   - 
   - 
   - 

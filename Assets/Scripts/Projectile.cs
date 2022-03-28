@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour
     {
         if (_target != null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, _targetPosition/*самонаводку сюда вместо _targetPosition*/, speed * Time.deltaTime); //самонаводка - _target?.transform.position ?? Vector2.up
+            transform.position = Vector2.MoveTowards(transform.position, _target?.transform.position ?? Vector2.up /*_targetPosition*//*самонаводку сюда вместо _targetPosition*/, speed * Time.deltaTime); //самонаводка - _target?.transform.position ?? Vector2.up
         }
         else
         {

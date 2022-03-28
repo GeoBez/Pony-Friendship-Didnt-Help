@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy_Spawn : MonoBehaviour
 {
-    public Enemy enemy;
+    public GameObject enemy;
     public float time;
     float default_Time;
 
@@ -23,6 +23,11 @@ public class Enemy_Spawn : MonoBehaviour
         {
             Instantiate(enemy, transform.position, transform.rotation);
             time = default_Time;
+        }
+
+        if(enemy.tag == "Tower_Enemy")
+        {
+            enemy.GetComponent<FollowPath>().MyPath = gameObject.GetComponentInChildren<MovementPath>();
         }
     }
 }
