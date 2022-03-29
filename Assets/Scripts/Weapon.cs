@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Transform shotPoint;
     private float _coolDown, _resetCoolDown;
     private static Collider2D[] targetsAtDetectionDistance;
-    public Transform currentTarget;
+    [NonSerialized] public Transform currentTarget;
     public float detectionDistance = 10;
 
     void Start()
