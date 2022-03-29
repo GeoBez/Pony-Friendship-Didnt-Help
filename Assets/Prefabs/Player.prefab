@@ -426,4 +426,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: -945702478172302271, guid: d87cd6ba24bd4a143a1892b6bd57bc4e, type: 3}
   shotPoint: {fileID: 1901460011688975648}
+  currentTarget: {fileID: 0}
   detectionDistance: 10.46

@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public float damage;
 
 	public LayerMask whatIsAttack;
+    public Weapon shot_Point;
 
     private Transform _target;
     private Vector2 _targetPosition;
@@ -38,7 +39,7 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Enemy"))
+        if (collider.CompareTag("Enemy") || collider.CompareTag("Tower_Enemy"))
         {
             collider.GetComponent<Enemy>().TakeDamage(damage); 
             DestroyProjectile();
@@ -47,7 +48,7 @@ public class Projectile : MonoBehaviour
 
     private void GetTarget()
     {
-        _target = Weapon.currentTarget;
+        _target = shot_Point.currentTarget;
         if (_target != null) _targetPosition = new Vector2(_target.position.x, _target.position.y);
     }
 

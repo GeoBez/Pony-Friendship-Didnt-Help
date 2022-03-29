@@ -103,6 +103,7 @@ MonoBehaviour:
   whatIsAttack:
     serializedVersion: 2
     m_Bits: 64
+  shot_Point: {fileID: 0}
 --- !u!70 &-3696831313024291865
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

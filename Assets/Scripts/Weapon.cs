@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Transform shotPoint;
     private float _coolDown, _resetCoolDown;
     private static Collider2D[] targetsAtDetectionDistance;
-    public static Transform currentTarget;
+    public Transform currentTarget;
     public float detectionDistance = 10;
 
     void Start()
@@ -35,6 +35,8 @@ public class Weapon : MonoBehaviour
     private void TargetSearch()
     {
         targetsAtDetectionDistance = Physics2D.OverlapCircleAll(shotPoint.position, detectionDistance,  projectile.whatIsAttack);
+
+        projectile.shot_Point = GetComponent<Weapon>();
 
         var tempList = new List<float>();
         for (int i = 0; i < targetsAtDetectionDistance.Length; i++)

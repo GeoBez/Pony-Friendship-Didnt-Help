@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4081208222589897776}
   - component: {fileID: 4332482414467565446}
   - component: {fileID: 1311227925043922015}
-  - component: {fileID: 6889148360871345325}
+  - component: {fileID: 6081111955599462340}
   m_Layer: 0
   m_Name: Tower fireball
   m_TagString: Untagged
@@ -100,7 +100,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3.2, y: 1.52}
   m_Direction: 1
---- !u!114 &6889148360871345325
+--- !u!114 &6081111955599462340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4864448537402001833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c1dc849e5e8dc47a62c5aebda0cb1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a7f6c97c7ab6004bb59411821820a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
@@ -119,3 +119,4 @@ MonoBehaviour:
   whatIsAttack:
     serializedVersion: 2
     m_Bits: 128
+  shot_Point: {fileID: 0}
