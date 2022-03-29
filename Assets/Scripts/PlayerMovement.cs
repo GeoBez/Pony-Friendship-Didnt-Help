@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 8;
+    private float defaultSpeed;
+
+    public float returnSpeedTime;
+    private float defaultTime;
+
     public enum ControlType { PC, Phone }
 
     [Range(0, 3)] public int joystickNum;
@@ -25,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
         _controlType = ControlType.Phone;
         rb = GetComponent<Rigidbody2D>();
         if (_controlType == ControlType.PC) { _joystick.gameObject.SetActive(false); }
+        defaultTime = returnSpeedTime;
+        defaultSpeed = speed;
     }
 
     void Update()
@@ -41,7 +48,18 @@ public class PlayerMovement : MonoBehaviour
         moveVelicity = moveInput.normalized * speed;
         if (facingRight && moveInput.x < 0) { Flip(); }
         else if (!facingRight && moveInput.x > 0) { Flip(); }
+
+        if(speed != defaultSpeed)
+        {
+            returnSpeedTime -= Time.deltaTime;
+            if(returnSpeedTime < 0)
+            {
+                speed = defaultSpeed;
+                returnSpeedTime = defaultTime;
+            }
+        }
     }
+
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelicity * Time.deltaTime);
