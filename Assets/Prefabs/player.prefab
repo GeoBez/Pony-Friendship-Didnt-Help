@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1901460010057848810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1901460011688975648}
   m_Father: {fileID: 1901460010378308551}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1901460010378310713}
   - component: {fileID: 1901460010378310715}
   m_Layer: 0
-  m_Name: newPlayer
+  m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 1901460010378308550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1901460010057848811}
   m_Father: {fileID: 0}
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  returnSpeedTime: 0
   joystickNum: 3
   _joysticks:
   - {fileID: 0}
@@ -219,5 +220,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: -945702478172302271, guid: d87cd6ba24bd4a143a1892b6bd57bc4e, type: 3}
   shotPoint: {fileID: 1901460011688975648}
-  currentTarget: {fileID: 0}
   detectionDistance: 10
