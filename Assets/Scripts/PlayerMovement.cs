@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,10 +21,12 @@ public class PlayerMovement : MonoBehaviour
     public enum ControlType { PC, Phone }
 
     #region JoyStick
-    [Range(0, 3)] public int joystickNum;
+    private int joystickNum;
     [SerializeField] private Joystick[] _joysticks;
     private Joystick _joystick;
     [SerializeField] private ControlType _controlType;
+
+    int lastJoysticNum;
     #endregion
 
     private Rigidbody2D rb;
@@ -31,14 +34,14 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveVelicity;
 
     public Transform shotPoint;
-    //private bool facingRight;
+
 
     void Start()
     {
-
         animator = GetComponentInChildren<Animator>();
-        _joystick = _joysticks[joystickNum];
-        _joysticks[joystickNum].gameObject.SetActive(true);
+
+        joystickNum = lastJoysticNum = PlayerPrefs.HasKey("joystickType") ? PlayerPrefs.GetInt("joystickType") : 0;
+        SwitchJoystick(joystickNum);
 
         _controlType = ControlType.Phone;
         rb = GetComponent<Rigidbody2D>();
@@ -61,15 +64,21 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("X", x);
         animator.SetFloat("Y", y);
-        if (x != 0 && y != 0) { animator.SetBool("isMoving", true); }
-        else animator.SetBool("isMoving", false);
+        if (x != 0 && y != 0) 
+        {   
+            animator.SetBool("isMoving", true);
+            shotPoint.localPosition = new Vector2(x, y);
+        }
+        else
+        {
+            shotPoint.localPosition = new Vector2(0, -1);
+            animator.SetBool("isMoving", false);
+        }
+
 
         shotPoint.localPosition = new Vector2(x, y);
 
         moveVelicity = moveInput.normalized * speed;
-
-        /*if (facingRight && moveInput.x < 0) { Flip(); }
-        else if (!facingRight && moveInput.x > 0) { Flip(); }*/
 
         if(speed != defaultSpeed)
         {
@@ -87,11 +96,11 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + moveVelicity * Time.deltaTime);
     }
 
-    private void Flip()
+    private void SwitchJoystick(int joystickNum)
     {
-        /*facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;*/
+        _joystick = _joysticks[joystickNum];
+        _joysticks[lastJoysticNum].gameObject.SetActive(false);
+        _joysticks[joystickNum].gameObject.SetActive(true);
+        lastJoysticNum = joystickNum;
     }
 }
