@@ -1338,6 +1338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+--- !u!4 &1271609904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1901460011688975648, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+  m_PrefabInstance: {fileID: 1967386481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1506797632 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1901460010057848810, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
@@ -1620,6 +1625,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1901460011688975648, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901460011688975648, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489787237821227859, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: shotPoint
+      value: 
+      objectReference: {fileID: 1271609904}
     - target: {fileID: 6489787237821227859, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: _joysticks.Array.data[0]
       value: 
