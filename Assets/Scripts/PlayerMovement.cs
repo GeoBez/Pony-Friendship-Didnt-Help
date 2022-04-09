@@ -7,36 +7,23 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 8;
     private float defaultSpeed;
 
-    #region Animation
-
-    private Animator animator;
-    private float x, y;
-
-    #endregion
-
     public float returnSpeedTime;
     private float defaultTime;
 
     public enum ControlType { PC, Phone }
 
-    #region JoyStick
     [Range(0, 3)] public int joystickNum;
     [SerializeField] private Joystick[] _joysticks;
     private Joystick _joystick;
     [SerializeField] private ControlType _controlType;
-    #endregion
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 moveVelicity;
-
-    public Transform shotPoint;
-    //private bool facingRight;
+    private bool facingRight;
 
     void Start()
     {
-
-        animator = GetComponentInChildren<Animator>();
         _joystick = _joysticks[joystickNum];
         _joysticks[joystickNum].gameObject.SetActive(true);
 
@@ -52,24 +39,15 @@ public class PlayerMovement : MonoBehaviour
         switch (_controlType)
         {
             case ControlType.PC:
-                moveInput = new Vector2(x = Input.GetAxisRaw("Horizontal"), y = Input.GetAxisRaw("Vertical"));
+                moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
                 break;
             case ControlType.Phone:
-                moveInput = new Vector2(x = _joystick.Horizontal, y = _joystick.Vertical);
+                moveInput = new Vector2(_joystick.Horizontal, _joystick.Vertical);
                 break;
         }
-
-        animator.SetFloat("X", x);
-        animator.SetFloat("Y", y);
-        if (x != 0 && y != 0) { animator.SetBool("isMoving", true); }
-        else animator.SetBool("isMoving", false);
-
-        shotPoint.localPosition = new Vector2(x, y);
-
         moveVelicity = moveInput.normalized * speed;
-
-        /*if (facingRight && moveInput.x < 0) { Flip(); }
-        else if (!facingRight && moveInput.x > 0) { Flip(); }*/
+        if (facingRight && moveInput.x < 0) { Flip(); }
+        else if (!facingRight && moveInput.x > 0) { Flip(); }
 
         if(speed != defaultSpeed)
         {
@@ -89,9 +67,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
-        /*facingRight = !facingRight;
+        facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
-        transform.localScale = Scaler;*/
+        transform.localScale = Scaler;
     }
 }
