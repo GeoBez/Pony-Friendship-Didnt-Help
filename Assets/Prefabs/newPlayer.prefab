@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 10
-  damage: 0
+  damage: 3
   GameOverMenu: {fileID: 0}
 --- !u!114 &6489787237821227859
 MonoBehaviour:
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 6733266887903818103}
   m_Layer: 0
   m_Name: shotPoint
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

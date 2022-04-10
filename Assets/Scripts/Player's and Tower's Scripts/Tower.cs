@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     public float health;
-
+    public float damage;
 
     void Update()
     {

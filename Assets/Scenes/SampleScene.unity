@@ -1062,7 +1062,7 @@ GameObject:
   - component: {fileID: 1082636940}
   m_Layer: 0
   m_Name: ShotPoint
-  m_TagString: Untagged
+  m_TagString: Main Tower
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1983,10 +1983,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 1901460011688975663, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6489787237821227859, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: joystick
       value: 
@@ -2150,6 +2146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 80
+  damage: 1
 --- !u!70 &1988725535
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

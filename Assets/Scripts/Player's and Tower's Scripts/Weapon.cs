@@ -12,12 +12,18 @@ public class Weapon : MonoBehaviour
     private static Collider2D[] targetsAtDetectionDistance;
     [NonSerialized] public Transform currentTarget;
     public float detectionDistance = 10;
+    private float damage;
 
     void Start()
     {
         _coolDown = 0;
         _resetCoolDown = projectile.coolDown;
         //TargetSearch();
+
+        if (gameObject.tag == "Player")
+            damage = GetComponentInParent<Player>().damage;
+        else if (gameObject.tag == "Tower" || gameObject.tag == "Main Tower")
+            damage = GetComponentInParent<Tower>().damage;
     }
     void Update()
     {
@@ -37,6 +43,7 @@ public class Weapon : MonoBehaviour
         targetsAtDetectionDistance = Physics2D.OverlapCircleAll(shotPoint.position, detectionDistance,  projectile.whatIsAttack);
 
         projectile.shot_Point = GetComponent<Weapon>();
+        projectile.damage = damage;
 
         var tempList = new List<float>();
         for (int i = 0; i < targetsAtDetectionDistance.Length; i++)
