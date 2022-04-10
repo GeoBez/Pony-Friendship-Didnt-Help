@@ -15,9 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
-    public float returnSpeedTime;
-    private float defaultTime;
-
     public enum ControlType { PC, Phone }
 
     #region JoyStick
@@ -38,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        speed = GetComponent<Player>().speed;
+
         animator = GetComponentInChildren<Animator>();
 
         joystickNum = lastJoysticNum = PlayerPrefs.HasKey("joystickType") ? PlayerPrefs.GetInt("joystickType") : 0;
@@ -46,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
         _controlType = ControlType.Phone;
         rb = GetComponent<Rigidbody2D>();
         if (_controlType == ControlType.PC) { _joystick.gameObject.SetActive(false); }
-        defaultTime = returnSpeedTime;
         defaultSpeed = speed;
     }
 
@@ -82,12 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(speed != defaultSpeed)
         {
-            returnSpeedTime -= Time.deltaTime;
-            if(returnSpeedTime < 0)
-            {
-                speed = defaultSpeed;
-                returnSpeedTime = defaultTime;
-            }
+            GetComponent<Return_Speed_Script>().speed = speed; 
         }
     }
 

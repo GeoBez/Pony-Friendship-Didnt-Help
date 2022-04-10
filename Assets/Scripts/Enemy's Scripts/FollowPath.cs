@@ -13,7 +13,7 @@ public class FollowPath : MonoBehaviour
     private Transform _target;
     public MovementType Type = MovementType.Moveing;
     public MovementPath MyPath;
-    public float speed = 1;
+    private float speed = 1;
     public float maxDistance = .1f;
     public int moveingTo = 0;
     public int movementDirection = 1;
@@ -37,6 +37,8 @@ public class FollowPath : MonoBehaviour
             Debug.Log("Точек нет");
             return;
         }
+
+        speed = GetComponent<Enemy>().speed;
 
         transform.position = pointInPath.Current.position;
     }
