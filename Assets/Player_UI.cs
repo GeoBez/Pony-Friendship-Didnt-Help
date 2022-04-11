@@ -18,13 +18,16 @@ public class Player_UI : MonoBehaviour
 
     public void Update()
     {
-        if(Player.GetComponent<Player>().inTowerCollider)
+        if (Player != null)
         {
-            CTB.interactable = false;
-        }
-        else
-        {
-            CTB.interactable = true;
+            if (Player.GetComponent<Player>().inTowerCollider)
+            {
+                CTB.interactable = false;
+            }
+            else
+            {
+                CTB.interactable = true;
+            }
         }
     }
 

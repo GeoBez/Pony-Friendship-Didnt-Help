@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5232870316641352980}
   - component: {fileID: 1901460010378310713}
   - component: {fileID: 1901460010378310715}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: newPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   health: 10
   speed: 10
   damage: 3
-  GameOverMenu: {fileID: 0}
+  inTowerCollider: 0
 --- !u!114 &6489787237821227859
 MonoBehaviour:
   m_ObjectHideFlags: 0

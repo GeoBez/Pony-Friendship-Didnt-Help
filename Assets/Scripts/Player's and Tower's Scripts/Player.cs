@@ -9,22 +9,9 @@ public class Player : MonoBehaviour
     public float damage;
     public bool inTowerCollider = false;
 
-    public GameObject GameOverMenu;
-
     private void Start()
     {
         GetComponent<PlayerMovement>().speed = speed;
-        GameOverMenu = GameObject.FindGameObjectWithTag("GameOver");
-        GameOverMenu.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-            GameOverMenu.SetActive(true);
-        }
     }
 
     public void TakeDamage(float damage)

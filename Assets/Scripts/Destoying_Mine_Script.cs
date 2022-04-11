@@ -12,7 +12,7 @@ public class Destoying_Mine_Script : MonoBehaviour
         }
         else if (collision.tag == "Player")
         {
-            collision.GetComponent<Player>().health -= collision.GetComponent<Player>().health;
+            collision.GetComponent<Player>().TakeDamage(collision.GetComponent<Player>().health);
         }
     }
 }
