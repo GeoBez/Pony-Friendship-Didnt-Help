@@ -12,11 +12,12 @@ TagManager:
   - Tower
   - Tower_Enemy
   - GameOver
+  - CTB
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PlayerSide
   - Water
   - UI
   - Enemy

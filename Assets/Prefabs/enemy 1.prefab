@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8987850c513f970478085681a0d312c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  What_Attack: {fileID: 0}
   isTowerEnemy: 0
   damage: 1
   time: 4

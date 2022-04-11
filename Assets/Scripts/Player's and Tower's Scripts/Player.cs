@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     public float health;
     public float speed;
     public float damage;
+    public bool inTowerCollider = false;
+
     public GameObject GameOverMenu;
 
     private void Start()

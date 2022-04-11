@@ -14,6 +14,7 @@ public class FollowPath : MonoBehaviour
     public MovementType Type = MovementType.Moveing;
     public MovementPath MyPath;
     private float speed = 1;
+    private float defaultSpeed;
     public float maxDistance = .1f;
     public int moveingTo = 0;
     public int movementDirection = 1;
@@ -41,6 +42,7 @@ public class FollowPath : MonoBehaviour
         speed = GetComponent<Enemy>().speed;
 
         transform.position = pointInPath.Current.position;
+        defaultSpeed = speed;
     }
 
     private void Update()
@@ -63,6 +65,15 @@ public class FollowPath : MonoBehaviour
         if (distanceSquare < maxDistance * maxDistance)
         {
             pointInPath.MoveNext();
+        }
+
+        if(GetComponentInChildren<Enemy_Attack>().What_Attack != null)
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed = defaultSpeed;
         }
 
         _target = pointInPath.Current.transform;

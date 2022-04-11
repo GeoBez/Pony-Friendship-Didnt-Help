@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy_Attack : MonoBehaviour
 {
-    GameObject What_Attack;
+    public GameObject What_Attack;
     public bool isTowerEnemy;
     public float damage;
     public float time;
@@ -42,7 +42,7 @@ public class Enemy_Attack : MonoBehaviour
         {
             SetTargetObject(collision.gameObject);
         }
-        else if (collision.tag == "Tower" || collision.tag == "Main Tower" && isTowerEnemy)
+        else if ((collision.tag == "Tower" || collision.tag == "Main Tower") && isTowerEnemy)
         {
             SetTargetObject(collision.gameObject);
         }
@@ -54,7 +54,7 @@ public class Enemy_Attack : MonoBehaviour
         {
             What_Attack = null;
         }
-        else if (collision.tag == "Tower" || collision.tag == "Main Tower" && isTowerEnemy)
+        else if ((collision.tag == "Tower" || collision.tag == "Main Tower") && isTowerEnemy)
         {
             What_Attack = null;
         }
