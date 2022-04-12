@@ -7,7 +7,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Projectile projectile;
-    [SerializeField] private Transform shotPoint;
+    [SerializeField] public Transform shotPoint;
     private float _coolDown, _resetCoolDown;
     private static Collider2D[] targetsAtDetectionDistance;
     [NonSerialized] public Transform currentTarget;
@@ -28,6 +28,9 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         TargetSearch();
+
+        if (currentTarget != null) this.transform.rotation = Quaternion.LookRotation(transform.forward, -currentTarget.position);
+
         if (_coolDown <= 0 && currentTarget != null)
         {
             Instantiate(projectile, shotPoint.position, shotPoint.rotation);

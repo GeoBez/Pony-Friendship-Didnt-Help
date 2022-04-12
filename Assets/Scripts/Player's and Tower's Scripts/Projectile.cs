@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
     private Vector2 _targetPosition;
 
     Rigidbody2D rb;
-    private float rotateSpeed = 600F;
+    private float rotateSpeed = 200F;
 
     void Start()
     {
@@ -28,21 +28,21 @@ public class Projectile : MonoBehaviour
     }
 
 
-
     void FixedUpdate()
     {
         if (_target != null)
         {
-            Vector2 direction = (Vector2)_targetPosition - rb.position;
+            Vector2 direction = (Vector2)_target.position - rb.position;
             float rotateAmount = Vector3.Cross(direction.normalized, transform.right).z;
             rb.angularVelocity = -rotateAmount * rotateSpeed;
-            rb.velocity = transform.right * speed;
         }
         else
         {
-            GetTarget(); //строка дает возможность уже выпущеному снаряду переключить цель
+            rb.angularVelocity = 0;
+            //GetTarget(); //строка дает возможность уже выпущеному снаряду переключить цель
             //_target = Weapon.currentTarget; то же что и выше, но с самонаводкой
         }
+        rb.velocity = transform.right * speed;
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
