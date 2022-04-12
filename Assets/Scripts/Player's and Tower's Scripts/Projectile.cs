@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
     public float speed;
@@ -16,27 +17,33 @@ public class Projectile : MonoBehaviour
     private Transform _target;
     private Vector2 _targetPosition;
 
+    Rigidbody2D rb;
+    private float rotateSpeed = 600F;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         Invoke(nameof(DestroyProjectile), lifetime);
         GetTarget();
     }
 
 
-    void Update()
+
+    void FixedUpdate()
     {
         if (_target != null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, _target?.transform.position ?? Vector2.up /*_targetPosition*//*самонаводку сюда вместо _targetPosition*/, speed * Time.deltaTime); //самонаводка - _target?.transform.position ?? Vector2.up
+            Vector2 direction = (Vector2)_targetPosition - rb.position;
+            float rotateAmount = Vector3.Cross(direction.normalized, transform.right).z;
+            rb.angularVelocity = -rotateAmount * rotateSpeed;
+            rb.velocity = transform.right * speed;
         }
         else
         {
-            transform.Translate(Vector2.up * speed * Time.deltaTime); //летит в сторону направления взгляда...или нет)
             GetTarget(); //строка дает возможность уже выпущеному снаряду переключить цель
             //_target = Weapon.currentTarget; то же что и выше, но с самонаводкой
         }
     }
-
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Enemy") || collider.CompareTag("Tower_Enemy"))
