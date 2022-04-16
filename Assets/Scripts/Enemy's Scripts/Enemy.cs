@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-	public HealthBar healthBar;
+	HealthBar healthBar;
 	public float maxHealth = 10;
     public float health;
 	public float speed;
 	public float damage;
-	public float defaultSpeed;
+	float defaultSpeed;
 	public float attackTime;
 
 	private void Start()
 	{
+		healthBar = GetComponentInChildren<HealthBar>();
 		healthBar?.SetMaxHealth(maxHealth);
         health = maxHealth;
 

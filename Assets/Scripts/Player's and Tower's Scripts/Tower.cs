@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public HealthBar healthBar;
+    HealthBar healthBar;
     public float maxHealth = 80;
     public float health;
     public float damage;
 
     void Start()
     {
+        healthBar = GetComponentInChildren<HealthBar>();
         healthBar.SetMaxHealth(maxHealth);
         health = maxHealth;
     }
+
     void Update()
     {
         if (health <= 0)

@@ -153,11 +153,6 @@ Transform:
   m_Father: {fileID: 99270790}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &67160019 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1901460010378308550, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
-  m_PrefabInstance: {fileID: 1967386481}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &67160025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1901460010378308551, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
@@ -1188,9 +1183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6a11d68ffd8b14eaab7491ca7787ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CTB: {fileID: 1273548677}
   Tower: {fileID: 5408714187243187385, guid: 5375569047a015b49b589295363fd66f, type: 3}
-  Player: {fileID: 67160019}
 --- !u!1 &1154510303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,7 +1516,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1151944592}
         m_TargetAssemblyTypeName: Player_UI, Assembly-CSharp
         m_MethodName: CreateTower
         m_Mode: 1
@@ -2071,6 +2064,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 550104209833301177, guid: 5375569047a015b49b589295363fd66f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550104209833301177, guid: 5375569047a015b49b589295363fd66f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5408714187243187382, guid: 5375569047a015b49b589295363fd66f, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2903,7 +2904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3755544248766993572, guid: 1528836719f93894b8a4f82e307d774a, type: 3}
       propertyPath: m_Name
-      value: Mines_1
+      value: Slowing_Mine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1528836719f93894b8a4f82e307d774a, type: 3}
@@ -2914,6 +2915,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 550104209833301177, guid: 5375569047a015b49b589295363fd66f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550104209833301177, guid: 5375569047a015b49b589295363fd66f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5408714187243187382, guid: 5375569047a015b49b589295363fd66f, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2971,6 +2980,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 950191526663332544, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950191526663332544, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6045906499427412218, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
       propertyPath: m_Name
       value: MainTower

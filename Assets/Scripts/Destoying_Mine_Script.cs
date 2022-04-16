@@ -10,7 +10,8 @@ public class Destoying_Mine_Script : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (collision.tag == "Player")
+
+        if (collision.tag == "Player")
         {
             collision.GetComponent<Player>().TakeDamage(collision.GetComponent<Player>().health);
         }

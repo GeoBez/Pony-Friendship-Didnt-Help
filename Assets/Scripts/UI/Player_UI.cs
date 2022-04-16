@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Player_UI : MonoBehaviour
 {
-    public Button CTB; //Create Tower Button
+    Button CTB; //Create Tower Button
 
     public GameObject Tower;
-    public GameObject Player;
+    GameObject Player;
 
     public void Start()
     {
