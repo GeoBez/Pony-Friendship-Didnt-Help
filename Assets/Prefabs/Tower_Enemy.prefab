@@ -100,13 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d10c1015cf2cf4f8b5af33031dde6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 666116272925370569}
   maxHealth: 10
   health: 10
   speed: 1
   damage: 1
-  defaultSpeed: 0
   attackTime: 3
+  Heal_Ball: {fileID: 4743943494906487930, guid: 7e473dde17d4b4e4885da255f7a18164, type: 3}
 --- !u!50 &2368099218257057564
 Rigidbody2D:
   serializedVersion: 4
@@ -347,14 +346,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
   m_PrefabInstance: {fileID: 3136366411318459806}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &666116272925370569 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2501777745890547031, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
-  m_PrefabInstance: {fileID: 3136366411318459806}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64b25cb9c86bb044fa5630aac76f52a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

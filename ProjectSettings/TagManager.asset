@@ -11,6 +11,7 @@ TagManager:
   - Tower_Enemy
   - GameOver
   - CTB
+  - Heal Ball
   layers:
   - Default
   - TransparentFX

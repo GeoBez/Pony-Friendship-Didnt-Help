@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Pursuit : MonoBehaviour
+public class Pursuit : MonoBehaviour
 {
 	public float speed;
 	private Transform _target;

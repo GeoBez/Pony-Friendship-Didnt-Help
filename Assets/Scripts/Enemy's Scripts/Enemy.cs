@@ -11,9 +11,13 @@ public class Enemy : MonoBehaviour
 	public float damage;
 	float defaultSpeed;
 	public float attackTime;
+	public GameObject Heal_Ball;
+	public Set_Victory_Menu all_Enemies;
 
 	private void Start()
 	{
+		all_Enemies = GameObject.FindGameObjectWithTag("Game Instance").GetComponent<Set_Victory_Menu>();
+
 		healthBar = GetComponentInChildren<HealthBar>();
 		healthBar?.SetMaxHealth(maxHealth);
         health = maxHealth;
@@ -36,6 +40,12 @@ public class Enemy : MonoBehaviour
 
 	public void Death()
 	{
+		all_Enemies.all_Enemies--;
+		float rnd = Random.Range(0, 99);
+		if (rnd < 5)
+		{
+			Instantiate(Heal_Ball, gameObject.transform.position, Quaternion.identity);
+		}
 		Destroy(gameObject);
 	}
 

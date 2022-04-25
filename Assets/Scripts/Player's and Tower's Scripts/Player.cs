@@ -10,12 +10,22 @@ public class Player : MonoBehaviour
     public float speed;
     public float damage;
     public bool inTowerCollider = false;
+    public bool mode_YouShallNotPass;
+    public bool isMeleeAttacker;
 
     private void Start()
     {
         healthBar.SetMaxHealth(maxHealth);
         health = maxHealth;
         GetComponent<PlayerMovement>().speed = speed;
+    }
+
+    private void Update()
+    {
+        if(health > maxHealth)
+        {
+            health = maxHealth;
+        }
     }
 
     public void TakeDamage(float damage)

@@ -175,13 +175,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d10c1015cf2cf4f8b5af33031dde6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 4946402801957412951}
   maxHealth: 10
   health: 10
   speed: 3
   damage: 2
-  defaultSpeed: 0
   attackTime: 3
+  Heal_Ball: {fileID: 4743943494906487930, guid: 7e473dde17d4b4e4885da255f7a18164, type: 3}
 --- !u!70 &3273722354616540097
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -369,14 +368,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
   m_PrefabInstance: {fileID: 7358106356192359680}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4946402801957412951 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2501777745890547031, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
-  m_PrefabInstance: {fileID: 7358106356192359680}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64b25cb9c86bb044fa5630aac76f52a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
