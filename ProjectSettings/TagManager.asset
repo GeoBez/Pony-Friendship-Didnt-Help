@@ -12,6 +12,8 @@ TagManager:
   - GameOver
   - CTB
   - Heal Ball
+  - Victory Menu
+  - Game Instance
   layers:
   - Default
   - TransparentFX

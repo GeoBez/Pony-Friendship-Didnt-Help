@@ -8,12 +8,12 @@ public class Change_Attack : MonoBehaviour
     {
         if(GetComponentInParent<Player>().isMeleeAttacker)
         {
-            GetComponent<Melee_Attack>().enabled = true;
+            GetComponent<PlayerMeleeAttacks>().enabled = true;
             GetComponent<Weapon>().enabled = false;
         }
         else
         {
-            GetComponent<Melee_Attack>().enabled = false;
+            GetComponent<PlayerMeleeAttacks>().enabled = false;
             GetComponent<Weapon>().enabled = true;
         }
     }
