@@ -12,6 +12,13 @@ TagManager:
   - GameOver
   - CTB
   - Heal Ball
+<<<<<<< Updated upstream
+=======
+  - Victory Menu
+  - Game Instance
+  - Wave System
+  - Preparation
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

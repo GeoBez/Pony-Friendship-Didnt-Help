@@ -21,7 +21,7 @@ public class Set_Victory_Menu : MonoBehaviour
 
     private void Update()
     {
-        if(all_Enemies <= 0)
+        if (all_Enemies <= 0)
         {
             Victory_Menu.SetActive(true);
         }
