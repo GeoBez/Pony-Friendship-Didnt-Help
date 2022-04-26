@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public HealthBar healthBar;
+    public StatsBar healthBar;
     public float maxHealth = 10;
     private float health;
     public float Health
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
             if (value <= maxHealth)
             {
                 health = value;
-                healthBar.SetHealth(value);
+                healthBar.SetValue(value);
             }
         }
     }
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxValue(maxHealth);
         Health = maxHealth;
         GetComponent<PlayerMovement>().speed = speed;
     }

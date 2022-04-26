@@ -106,6 +106,7 @@ MonoBehaviour:
   damage: 1
   attackTime: 3
   Heal_Ball: {fileID: 4743943494906487930, guid: 7e473dde17d4b4e4885da255f7a18164, type: 3}
+  all_Enemies: {fileID: 0}
 --- !u!50 &2368099218257057564
 Rigidbody2D:
   serializedVersion: 4
@@ -171,7 +172,7 @@ GameObject:
   - component: {fileID: 678187629481155012}
   - component: {fileID: 231751993961192298}
   - component: {fileID: 7485907308028897890}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -339,7 +340,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2501777745890547031, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
 --- !u!224 &666116273431834337 stripped
 RectTransform:

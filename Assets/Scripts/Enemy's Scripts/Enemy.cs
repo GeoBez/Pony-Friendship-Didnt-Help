@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-	HealthBar healthBar;
+	StatsBar healthBar;
 	public float maxHealth = 10;
     public float health;
 	public float speed;
@@ -18,8 +18,8 @@ public class Enemy : MonoBehaviour
 	{
 		all_Enemies = GameObject.FindGameObjectWithTag("Game Instance").GetComponent<Set_Victory_Menu>();
 
-		healthBar = GetComponentInChildren<HealthBar>();
-		healthBar?.SetMaxHealth(maxHealth);
+		healthBar = GetComponentInChildren<StatsBar>();
+		healthBar?.SetMaxValue(maxHealth);
         health = maxHealth;
 
 		defaultSpeed = speed;
@@ -52,6 +52,6 @@ public class Enemy : MonoBehaviour
 	public void TakeDamage(float damage)
 	{
 		health -= damage;
-		healthBar?.SetHealth(health);
+		healthBar?.SetValue(health);
 	}
 }
