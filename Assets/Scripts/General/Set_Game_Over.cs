@@ -19,7 +19,7 @@ public class Set_Game_Over : MonoBehaviour
     private void Update()
     {
         if (PHealth != null)
-            if (PHealth.health <= 0)
+            if (PHealth.Health <= 0)
             {
                 Destroy(PHealth.gameObject);
                 GameOverMenu.SetActive(true);
