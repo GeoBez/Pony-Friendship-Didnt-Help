@@ -230,7 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wave_Number: 0
-  number_Of_Enemies: 
+  number_Of_Enemies: 02000000
+  preparation: {fileID: 0}
 --- !u!4 &338458423
 Transform:
   m_ObjectHideFlags: 0

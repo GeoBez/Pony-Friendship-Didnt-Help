@@ -13,7 +13,7 @@ public class Set_Victory_Menu : MonoBehaviour
         Victory_Menu = GameObject.FindGameObjectWithTag("Victory Menu");
         Victory_Menu.SetActive(false);
         number_Of_Enemies = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
-        for(int i = 0; i < number_Of_Enemies.number_Of_Enemies.Length; i++)
+        for (int i = 0; i < number_Of_Enemies.number_Of_Enemies.Length; i++)
         {
             all_Enemies += number_Of_Enemies.number_Of_Enemies[i];
         }
@@ -21,7 +21,7 @@ public class Set_Victory_Menu : MonoBehaviour
 
     private void Update()
     {
-        if(all_Enemies <= 0)
+        if (all_Enemies <= 0)
         {
             Victory_Menu.SetActive(true);
         }
