@@ -15,6 +15,7 @@ TagManager:
   - Victory Menu
   - Game Instance
   - Wave System
+  - Preparation
   layers:
   - Default
   - TransparentFX
