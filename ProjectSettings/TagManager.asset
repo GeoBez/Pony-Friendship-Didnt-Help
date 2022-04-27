@@ -11,6 +11,11 @@ TagManager:
   - Tower_Enemy
   - GameOver
   - CTB
+  - Heal Ball
+  - Victory Menu
+  - Game Instance
+  - Wave System
+  - Preparation
   layers:
   - Default
   - TransparentFX

@@ -43,7 +43,7 @@ public class Weapon : MonoBehaviour
     }
     private void TargetSearch()
     {
-        targetsAtDetectionDistance = Physics2D.OverlapCircleAll(shotPoint.position, detectionDistance, projectile.whatIsAttack);
+        targetsAtDetectionDistance = Physics2D.OverlapCircleAll(shotPoint.position, detectionDistance,  projectile.whatIsAttack);
 
         projectile.shot_Point = GetComponent<Weapon>();
         projectile.damage = damage;
@@ -61,7 +61,7 @@ public class Weapon : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.yellow - new Color(0, 0, 0, 0.9F);
-        Gizmos.DrawSphere(shotPoint.position, detectionDistance);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(shotPoint.position, detectionDistance);
     }
 }

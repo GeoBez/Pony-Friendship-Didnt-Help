@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    HealthBar healthBar;
+    StatsBar healthBar;
     public float maxHealth = 80;
     public float health;
     public float damage;
 
     void Start()
     {
-        healthBar = GetComponentInChildren<HealthBar>();
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar = GetComponentInChildren<StatsBar>();
+        healthBar.SetMaxValue(maxHealth);
         health = maxHealth;
     }
 
@@ -27,6 +27,6 @@ public class Tower : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        healthBar.SetHealth(health);
+        healthBar.SetValue(health);
     }
 }

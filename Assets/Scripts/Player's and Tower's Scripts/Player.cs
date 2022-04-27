@@ -4,23 +4,47 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public HealthBar healthBar;
+    public StatsBar healthBar;
     public float maxHealth = 10;
-    public float health;
+    private float health;
+    public float Health
+    {
+        get => health;
+        set  
+        {
+            if (value <= maxHealth)
+            {
+                health = value;
+                healthBar.SetValue(value);
+            }
+        }
+    }
     public float speed;
     public float damage;
     public bool inTowerCollider = false;
+    public bool mode_YouShallNotPass;
+    public bool isMeleeAttacker;
+
+    
 
     private void Start()
     {
-        healthBar.SetMaxHealth(maxHealth);
-        health = maxHealth;
+        healthBar.SetMaxValue(maxHealth);
+        Health = maxHealth;
         GetComponent<PlayerMovement>().speed = speed;
+    }
+
+    private void Update()
+    {
+        //if(Health > maxHealth)
+        //{
+        //    Health = maxHealth;
+        //}
     }
 
     public void TakeDamage(float damage)
     {
-        health -= damage;
-        healthBar.SetHealth(health);
+        Health -= damage;
+        //healthBar.SetHealth(Health);
     }
 }

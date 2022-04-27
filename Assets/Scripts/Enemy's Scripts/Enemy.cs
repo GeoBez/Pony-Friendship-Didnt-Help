@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-	HealthBar healthBar;
+	StatsBar healthBar;
 	public float maxHealth = 10;
     public float health;
 	public float speed;
 	public float damage;
 	float defaultSpeed;
 	public float attackTime;
+	public GameObject Heal_Ball;
+	public Set_Victory_Menu all_Enemies;
 
 	private void Start()
 	{
-		healthBar = GetComponentInChildren<HealthBar>();
-		healthBar?.SetMaxHealth(maxHealth);
+		all_Enemies = GameObject.FindGameObjectWithTag("Game Instance").GetComponent<Set_Victory_Menu>();
+
+		healthBar = GetComponentInChildren<StatsBar>();
+		healthBar?.SetMaxValue(maxHealth);
         health = maxHealth;
 
 		defaultSpeed = speed;
@@ -36,12 +40,18 @@ public class Enemy : MonoBehaviour
 
 	public void Death()
 	{
+		all_Enemies.all_Enemies--;
+		float rnd = Random.Range(0, 99);
+		if (rnd < 5)
+		{
+			Instantiate(Heal_Ball, gameObject.transform.position, Quaternion.identity);
+		}
 		Destroy(gameObject);
 	}
 
 	public void TakeDamage(float damage)
 	{
 		health -= damage;
-		healthBar?.SetHealth(health);
+		healthBar?.SetValue(health);
 	}
 }
