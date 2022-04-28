@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
 	float defaultSpeed;
 	public float attackTime;
 	public GameObject Heal_Ball;
+	//public GameObject Coin;
 	public Set_Victory_Menu all_Enemies;
 
 	private void Start()
@@ -46,6 +47,11 @@ public class Enemy : MonoBehaviour
 		{
 			Instantiate(Heal_Ball, gameObject.transform.position, Quaternion.identity);
 		}
+		/*rnd = Random.Range(0, 99);
+		if (rnd < 100)
+		{
+			Instantiate(Coin, gameObject.transform.position, Quaternion.identity);
+		}*/
 		Destroy(gameObject);
 	}
 

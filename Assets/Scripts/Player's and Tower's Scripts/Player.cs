@@ -23,9 +23,10 @@ public class Player : MonoBehaviour
     public float damage;
     public bool inTowerCollider = false;
     public bool mode_YouShallNotPass;
+    public bool mode_Magnit=false;
+    public bool mode_Double_Denomination = false;
     public bool isMeleeAttacker;
-
-    
+        
 
     private void Start()
     {

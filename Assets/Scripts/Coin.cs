@@ -10,8 +10,8 @@ public class Coin : MonoBehaviour
     private Transform player;
     private int speed=2;
 
-    public int coin_Denomination = 1;
-    public int range = 6;
+    public static int coin_Denomination = 1;
+    public static int range = 6;
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class Coin : MonoBehaviour
     {
         float dictanceToPlayer = Vector2.Distance(transform.position, player.position);
         //Debug.Log(dictanceToPlayer);
-        
+
         if (dictanceToPlayer <= range)
         {
             ChasePlayer();
@@ -40,5 +40,9 @@ public class Coin : MonoBehaviour
     void ChasePlayer()
     {
         physic.velocity = new Vector2(speed*(player.position.x - transform.position.x), speed*(player.position.y - transform.position.y));
+    }
+    public static void ChangeRange()
+    {
+        range = 12;
     }
 }
