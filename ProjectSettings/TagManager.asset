@@ -16,6 +16,7 @@ TagManager:
   - Game Instance
   - Wave System
   - Preparation
+  - Coin
   layers:
   - Default
   - TransparentFX
