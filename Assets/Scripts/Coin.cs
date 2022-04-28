@@ -26,6 +26,7 @@ public class Coin : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Update()
     {
         float dictanceToPlayer = Vector2.Distance(transform.position, player.position);
@@ -39,10 +40,6 @@ public class Coin : MonoBehaviour
     }
     void ChasePlayer()
     {
-        physic.velocity = new Vector2(speed*(player.position.x - transform.position.x), speed*(player.position.y - transform.position.y));
-    }
-    public static void ChangeRange()
-    {
-        range = 12;
+        physic.velocity = new Vector2((player.position.x - transform.position.x)* speed, (player.position.y - transform.position.y)*speed);
     }
 }

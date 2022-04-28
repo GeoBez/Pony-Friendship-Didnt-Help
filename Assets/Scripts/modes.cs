@@ -10,7 +10,7 @@ public class modes : MonoBehaviour
     {
         player = GetComponent<Player>();
         //ActivateMagnite();
-        AcivateDoubleDenomination();
+        //AcivateDoubleDenomination();
     }
 
     void ActivateMagnite()

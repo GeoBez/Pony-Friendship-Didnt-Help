@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public bool mode_YouShallNotPass;
     public bool mode_Magnit=false;
     public bool mode_Double_Denomination = false;
+    public bool mode_Clover_Leaf = false;
     public bool isMeleeAttacker;
         
 

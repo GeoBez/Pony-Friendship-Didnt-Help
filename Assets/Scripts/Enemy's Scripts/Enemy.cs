@@ -11,8 +11,7 @@ public class Enemy : MonoBehaviour
 	public float damage;
 	float defaultSpeed;
 	public float attackTime;
-	public GameObject Heal_Ball;
-	//public GameObject Coin;
+	public GameObject[] fall_Object;
 	public Set_Victory_Menu all_Enemies;
 
 	private void Start()
@@ -45,13 +44,15 @@ public class Enemy : MonoBehaviour
 		float rnd = Random.Range(0, 99);
 		if (rnd < 5)
 		{
-			Instantiate(Heal_Ball, gameObject.transform.position, Quaternion.identity);
+			Instantiate(fall_Object[0], gameObject.transform.position, Quaternion.identity);
 		}
-		/*rnd = Random.Range(0, 99);
-		if (rnd < 100)
+
+		//потом попытаюсь переделать, ибо с разных мобов могут падать разные плюшки
+		if (rnd < 30)
 		{
-			Instantiate(Coin, gameObject.transform.position, Quaternion.identity);
-		}*/
+			Instantiate(fall_Object[1], gameObject.transform.position, Quaternion.identity);
+		}
+
 		Destroy(gameObject);
 	}
 
