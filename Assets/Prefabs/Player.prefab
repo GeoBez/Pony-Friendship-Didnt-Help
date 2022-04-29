@@ -158,6 +158,9 @@ MonoBehaviour:
   damage: 2
   inTowerCollider: 0
   mode_YouShallNotPass: 0
+  mode_Magnit: 0
+  mode_Double_Denomination: 0
+  mode_Clover_Leaf: 0
   isMeleeAttacker: 1
 --- !u!114 &6489787237821227859
 MonoBehaviour:

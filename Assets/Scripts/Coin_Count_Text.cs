@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class Coin_Count_Text : MonoBehaviour
 {
-    public static int coin_Count;
+    public static int coin_Count=0;
     private Text text;
 
     void Start()
     {
-        text = GetComponent<Text>();
+        coin_Count = 0;
+        text = GetComponent<Text>();        
     }
     void Update()
     {

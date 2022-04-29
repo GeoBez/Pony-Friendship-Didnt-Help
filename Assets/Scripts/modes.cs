@@ -12,13 +12,11 @@ public class modes : MonoBehaviour
         //ActivateMagnite();
         //AcivateDoubleDenomination();
     }
-
     void ActivateMagnite()
     {
         player.mode_Magnit = true;
         Coin.range = 12;
     }
-
     void AcivateDoubleDenomination()
     {
         player.mode_Double_Denomination = true;
