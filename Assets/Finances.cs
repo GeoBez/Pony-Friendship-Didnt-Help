@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Finances : MonoBehaviour
 {
-    public int XP;
-    public int Coins;
+    public static int XP;
+    public static int Coins;
 }
