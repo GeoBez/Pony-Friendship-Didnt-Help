@@ -10,6 +10,7 @@ public class Player_UI : MonoBehaviour
     public GameObject Tower;
     GameObject Player;
 
+    private Tower tower;
     public void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -33,6 +34,11 @@ public class Player_UI : MonoBehaviour
 
     public void CreateTower()
     {
-        Instantiate(Tower, Player.transform.position, Quaternion.identity);
+        var tower = Tower.GetComponent<Tower>();        
+        if (Coin_Count_Text.coin_Count >= tower.price)
+        {
+            Coin_Count_Text.coin_Count -= tower.price;
+            Instantiate(Tower, Player.transform.position, Quaternion.identity);
+        }
     }
 }

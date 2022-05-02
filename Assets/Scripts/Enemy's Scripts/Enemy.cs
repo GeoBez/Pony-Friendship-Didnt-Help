@@ -48,8 +48,9 @@ public class Enemy : MonoBehaviour
 		}
 
 		//потом попытаюсь переделать, ибо с разных мобов могут падать разные плюшки
-		if (rnd < 30)
+		if (rnd < Coin.probability)
 		{
+			Debug.Log(Coin.probability);
 			Instantiate(fall_Object[1], gameObject.transform.position, Quaternion.identity);
 		}
 

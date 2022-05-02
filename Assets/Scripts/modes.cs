@@ -22,4 +22,9 @@ public class modes : MonoBehaviour
         player.mode_Double_Denomination = true;
         Coin.coin_Denomination = 2;
     }
+    void ActivateCleverLeaf()
+    {
+        player.mode_Clover_Leaf = true;
+        Coin.probability = 40;
+    }
 }

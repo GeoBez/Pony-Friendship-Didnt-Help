@@ -8,6 +8,7 @@ public class Tower : MonoBehaviour
     public float maxHealth = 80;
     public float health;
     public float damage;
+    public int price;
 
     void Start()
     {
