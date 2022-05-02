@@ -53,6 +53,21 @@ public class Enemy : MonoBehaviour
 			Instantiate(fall_Object[1], gameObject.transform.position, Quaternion.identity);
 		}
 
+		if (rnd < 70)
+		{
+			if (gameObject.tag == "Enemy")
+			{
+				fall_Object[2].GetComponent<XP_Ball_Script>().xp_points = 3;
+			}
+			else if (gameObject.tag == "Tower_Enemy")
+			{
+				fall_Object[2].GetComponent<XP_Ball_Script>().xp_points = 2;
+			}
+			Instantiate(fall_Object[2], gameObject.transform.position, Quaternion.identity);
+		}
+
+		Wave_System RWN = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
+		RWN.Rise_Wave_Number();
 		Destroy(gameObject);
 	}
 

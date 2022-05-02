@@ -14,17 +14,20 @@ public class Wave_System : MonoBehaviour
         Wave_Number = 0;
     }
 
-    private void Update()
+    public void Rise_Wave_Number()
     {
-        if (number_Of_Enemies[Wave_Number] == 0)
-        {
-            if (Wave_Number < number_Of_Enemies.Length)
-            {
-                preparation.GetComponent<Preparation_Script>().Reset_Timer();
-                Wave_Number++;
-            }
-            else if (Wave_Number == number_Of_Enemies.Length)
+        if (Wave_Number == number_Of_Enemies.Length)
                 gameObject.SetActive(false);
+        else if (number_Of_Enemies[Wave_Number] == 0)
+        {
+            Set_Preparation();
+            
         }
+    }
+
+    public void Set_Preparation()
+    {
+        preparation.GetComponent<Preparation_Script>().Reset_Timer();
+        Wave_Number++;
     }
 }

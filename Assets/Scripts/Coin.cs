@@ -13,16 +13,20 @@ public class Coin : MonoBehaviour
     public static int coin_Denomination = 1;
     public static int range = 6;
 
+    Finances finances;
+
     private void Start()
     {
         physic = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player").GetComponent<Transform>();
+        finances = GameObject.FindGameObjectWithTag("Game Instance").GetComponent<Finances>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            Coin_Count_Text.coin_Count += coin_Denomination;              
+            Coin_Count_Text.coin_Count += coin_Denomination;
+            finances.Coins++;
             Destroy(gameObject);
         }
     }

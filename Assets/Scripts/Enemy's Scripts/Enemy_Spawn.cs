@@ -17,6 +17,10 @@ public class Enemy_Spawn : MonoBehaviour
         preparation = GameObject.FindGameObjectWithTag("Preparation").GetComponent<Preparation_Script>();
         wave_System = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
         default_Time = time;
+        if (enemy.tag == "Tower_Enemy")
+        {
+            enemy.GetComponent<FollowPath>().MyPath = gameObject.GetComponentInChildren<MovementPath>();
+        }
     }
 
     void Update()
@@ -38,11 +42,6 @@ public class Enemy_Spawn : MonoBehaviour
                 }
                 time = default_Time;
             }
-        }
-
-        if (enemy.tag == "Tower_Enemy")
-        {
-            enemy.GetComponent<FollowPath>().MyPath = gameObject.GetComponentInChildren<MovementPath>();
         }
     }
 }
