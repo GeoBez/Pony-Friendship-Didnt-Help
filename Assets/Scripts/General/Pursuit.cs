@@ -16,7 +16,7 @@ public class Pursuit : MonoBehaviour
 	void Update()
 	{
 		if (_target != null)
-		{
+		{			
 			transform.eulerAngles = _target.transform.position.x > transform.position.x ? new Vector3(0, 180, 0) : new Vector3(0, 0, 0);
 			transform.position = Vector2.MoveTowards(transform.position, _target.transform.position, speed * Time.deltaTime);
 		}

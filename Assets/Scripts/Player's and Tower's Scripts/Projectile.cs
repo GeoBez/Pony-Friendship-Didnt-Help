@@ -25,12 +25,14 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Invoke(nameof(DestroyProjectile), lifetime);
         GetTarget();
+
+        rb.velocity = new Vector2((_target.position.x - transform.position.x) * speed, (_target.position.y - transform.position.y) * speed);
     }
 
 
     void FixedUpdate()
     {
-        if (_target != null)
+        /*if (_target != null)
         {
             Vector2 direction = (Vector2)_target.position - rb.position;
             float rotateAmount = Vector3.Cross(direction.normalized, transform.right).z;
@@ -42,7 +44,7 @@ public class Projectile : MonoBehaviour
             //GetTarget(); //строка дает возможность уже выпущеному снаряду переключить цель
             //_target = Weapon.currentTarget; то же что и выше, но с самонаводкой
         }
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * speed;*/
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
