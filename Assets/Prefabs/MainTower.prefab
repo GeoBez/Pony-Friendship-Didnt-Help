@@ -46,6 +46,9 @@ MonoBehaviour:
   projectile: {fileID: 6081111955599462340, guid: a1d90a13727c262499a1fbc2861b9745, type: 3}
   shotPoint: {fileID: 6045906498655525227}
   detectionDistance: 10
+  whatIsAttack:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &6045906499427412218
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,10 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e5ecd45654d8544aaaa3fe8782509e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 950191527533421608}
   maxHealth: 80
   health: 80
   damage: 1
+  price: 0
 --- !u!1001 &3429451199521206655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -309,14 +312,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
   m_PrefabInstance: {fileID: 3429451199521206655}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &950191527533421608 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2501777745890547031, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
-  m_PrefabInstance: {fileID: 3429451199521206655}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64b25cb9c86bb044fa5630aac76f52a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

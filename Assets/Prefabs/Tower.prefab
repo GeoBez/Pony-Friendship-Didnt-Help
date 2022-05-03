@@ -46,6 +46,9 @@ MonoBehaviour:
   projectile: {fileID: 6081111955599462340, guid: a1d90a13727c262499a1fbc2861b9745, type: 3}
   shotPoint: {fileID: 5408714187024413839}
   detectionDistance: 10
+  whatIsAttack:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &5408714187243187385
 GameObject:
   m_ObjectHideFlags: 0

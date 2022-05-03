@@ -7,8 +7,8 @@ public class PlayerMeleeAttacks : MonoBehaviour
 {
     public float attackCoolDown;
     public StatsBar attackCoolDownBar;
-    private bool isNeedRollback;
-    private float currentAttackCoolDown;
+    private bool _isNeedRollback;
+    private float _currentAttackCoolDown;
     float attackDamage;
     public float attackRange;
     public LayerMask enemyLayer;
@@ -17,21 +17,21 @@ public class PlayerMeleeAttacks : MonoBehaviour
     void Start()
     {
         animator = GetComponentInParent<Animator>();
-        currentAttackCoolDown = attackCoolDown;
+        _currentAttackCoolDown = attackCoolDown;
         attackCoolDownBar.SetMaxValue(attackCoolDown);
         attackDamage = GetComponentInParent<Player>().damage;
     }
     void Update()
     {
-        if (currentAttackCoolDown >= attackCoolDown) TargetSearch();
+        if (_currentAttackCoolDown >= attackCoolDown) TargetSearch();
 
-        if (isNeedRollback) currentAttackCoolDown += Time.deltaTime;
+        if (_isNeedRollback) _currentAttackCoolDown += Time.deltaTime;
 
-        if (currentAttackCoolDown >= attackCoolDown)
+        if (_currentAttackCoolDown >= attackCoolDown)
         {
-            isNeedRollback = false;
+            _isNeedRollback = false;
         }
-        attackCoolDownBar.SetValue(currentAttackCoolDown);
+        attackCoolDownBar.SetValue(_currentAttackCoolDown);
     }
 
     private void Attack(Collider2D[] hitEnemies)
@@ -43,8 +43,8 @@ public class PlayerMeleeAttacks : MonoBehaviour
             enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
         }
 
-        isNeedRollback = true;
-        currentAttackCoolDown = 0;
+        _isNeedRollback = true;
+        _currentAttackCoolDown = 0;
     }
 
     private void TargetSearch()

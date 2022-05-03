@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     [NonSerialized] public Transform currentTarget;
     public float detectionDistance = 10;
     private float damage;
+    public LayerMask whatIsAttack;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class Weapon : MonoBehaviour
     {
         TargetSearch();
 
-        if (currentTarget != null) this.transform.rotation = Quaternion.LookRotation(transform.forward, -currentTarget.position);
+        if (currentTarget != null) shotPoint.transform.rotation = Quaternion.AngleAxis(Vector2.Angle(shotPoint.transform.position, currentTarget.position) + 90, Vector3.forward);
 
         if (_coolDown <= 0 && currentTarget != null)
         {
@@ -43,7 +44,7 @@ public class Weapon : MonoBehaviour
     }
     private void TargetSearch()
     {
-        targetsAtDetectionDistance = Physics2D.OverlapCircleAll(shotPoint.position, detectionDistance,  projectile.whatIsAttack);
+        targetsAtDetectionDistance = Physics2D.OverlapCircleAll(shotPoint.position, detectionDistance,  whatIsAttack);
 
         projectile.shot_Point = GetComponent<Weapon>();
         projectile.damage = damage;
