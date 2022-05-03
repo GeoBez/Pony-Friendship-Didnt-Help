@@ -21,13 +21,20 @@ public class Player : MonoBehaviour
     }
     public float speed;
     public float damage;
+
     public bool inTowerCollider = false;
     public bool mode_YouShallNotPass;
-    public bool mode_Magnit=false;
+    public bool mode_Magnit = false;
     public bool mode_Double_Denomination = false;
     public bool mode_Clover_Leaf = false;
-    public bool isMeleeAttacker;
-        
+    public bool mode_MoreBits = false;
+    public bool mode_Sturdy = false;
+    public bool mode_HealthyHealth = false;
+    public bool mode_NewHorseshoes = false;
+    public bool mode_OneTimeTreatment = false;
+    public bool mode_MoreHealth = false;
+
+    public bool isMeleeAttacker;        
 
     private void Start()
     {

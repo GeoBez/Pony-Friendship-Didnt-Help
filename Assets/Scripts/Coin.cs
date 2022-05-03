@@ -12,6 +12,7 @@ public class Coin : MonoBehaviour
 
     public static int coin_Denomination = 1;
     public static int range = 6;
+    public static int probability = 30;
 
 
     private void Start()
