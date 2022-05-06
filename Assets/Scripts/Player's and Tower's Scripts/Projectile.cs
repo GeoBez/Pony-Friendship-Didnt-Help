@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
         if (_target != null)
         {
             Vector2 direction = (Vector2)_target.position - rb.position;
-            float rotateAmount = Vector3.Cross(direction.normalized, transform.right).z;
+            float rotateAmount = Vector3.Cross(direction.normalized, transform.up).z;
             rb.angularVelocity = -rotateAmount * rotateSpeed;
         }
         else
@@ -43,7 +43,7 @@ public class Projectile : MonoBehaviour
             //GetTarget(); //строка дает возможность уже выпущеному снаряду переключить цель
             //_target = Weapon.currentTarget; то же что и выше, но с самонаводкой
         }
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.up * speed;
     }
     void OnTriggerEnter2D(Collider2D collider)
     {

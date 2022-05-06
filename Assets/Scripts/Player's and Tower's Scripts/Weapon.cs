@@ -30,7 +30,15 @@ public class Weapon : MonoBehaviour
     {
         TargetSearch();
 
-        if (currentTarget != null) shotPoint.transform.rotation = Quaternion.AngleAxis(Vector2.Angle(shotPoint.transform.position, currentTarget.position) + 90, Vector3.forward);
+        if (currentTarget != null)
+        {
+            
+
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, Mathf.Atan2(currentTarget.position.y - transform.position.y, currentTarget.position.x - transform.position.x) * Mathf.Rad2Deg - 90);
+
+
+            //shotPoint.transform.rotation = Quaternion.AngleAxis(Vector2.Angle(shotPoint.transform.position, currentTarget.position) + 90, Vector3.forward);
+        }
 
         if (_coolDown <= 0 && currentTarget != null)
         {
