@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IFreezable
 {
 	StatsBar healthBar;
 	public float maxHealth = 10;
@@ -14,10 +14,12 @@ public class Enemy : MonoBehaviour
 	public GameObject[] fall_Object;
 	public Set_Victory_Menu all_Enemies;
 
+	private Animator _animator;
+
 	private void Start()
 	{
 		all_Enemies = GameObject.FindGameObjectWithTag("Game Instance").GetComponent<Set_Victory_Menu>();
-
+		_animator = GetComponent<Animator>();
 		healthBar = GetComponentInChildren<StatsBar>();
 		healthBar?.SetMaxValue(maxHealth);
         health = maxHealth;
@@ -75,5 +77,34 @@ public class Enemy : MonoBehaviour
 	{
 		health -= damage;
 		healthBar?.SetValue(health);
+	}
+
+	public void FreezingAnimationStart()
+    {
+		_animator.SetTrigger("Freezing");
+		_animator.SetBool("isWalking", false);
+	}
+
+	public void FreezingStart(Ice ice)
+    {
+		var a = GetComponent<Pursuit>();
+		if (a != null) a.enabled = false;
+
+		var b = GetComponentInChildren<Enemy_Attack>();
+		if (b != null) b.enabled = false;
+
+		Instantiate(ice, transform.position, Quaternion.identity, transform);
+    }
+
+    public void FreezingEnd(ParticleSystem iceDestroyParticle)
+    {
+		var a = GetComponent<Pursuit>();
+		if (a != null) a.enabled = true;
+
+        var b = GetComponentInChildren<Enemy_Attack>();
+		if (b != null) b.enabled = true;
+
+		Instantiate(iceDestroyParticle, transform.position, Quaternion.identity, transform);
+		_animator.SetTrigger("FreezingEnd");
 	}
 }

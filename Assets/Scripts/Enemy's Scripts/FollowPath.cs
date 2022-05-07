@@ -21,8 +21,11 @@ public class FollowPath : MonoBehaviour
 
     private IEnumerator<Transform> pointInPath;
 
+    private Animator _animator;
+
     private void Start()
     {
+        _animator = GetComponent<Animator>();
         if (MyPath == null)
         {
             Debug.Log("Путь забыл");
@@ -60,7 +63,7 @@ public class FollowPath : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, pointInPath.Current.position, Time.deltaTime * speed);
         }
-
+        _animator.SetBool("isMoving", true);
         float distanceSquare = (transform.position - pointInPath.Current.position).sqrMagnitude;
         if (distanceSquare < maxDistance * maxDistance)
         {
@@ -70,6 +73,7 @@ public class FollowPath : MonoBehaviour
         if(GetComponentInChildren<Enemy_Attack>().What_Attack != null)
         {
             speed = 0;
+            _animator.SetBool("isMoving", false);
         }
         else
         {

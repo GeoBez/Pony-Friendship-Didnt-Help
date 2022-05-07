@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UltYouWillNotPass : MonoBehaviour
+public abstract class Ult : MonoBehaviour
 {
-    [SerializeField] private Weapon weapon;
     [SerializeField] private Image image;
-    [SerializeField] private Text text;
 
     private bool _isNeedRollback;
     public float coolDown;
     private bool _isUltActive;
     private float _currentCoolDown;
 
-    public float duration;
-    private float _currentDuration;
+    [Range(1, 60)]public float duration;
+    protected float _currentDuration;
+    protected bool isUltEnd;
 
-    void Start()
+    public void Start()
     {
         _currentCoolDown = coolDown;
         _currentDuration = duration;
         image.fillAmount = 1;
     }
 
-    void Update()
+    public void Update()
     {
         if (_isNeedRollback)
         {
@@ -43,24 +42,21 @@ public class UltYouWillNotPass : MonoBehaviour
             if (_currentDuration <= 0)
             {
                 _isUltActive = false;
+                isUltEnd = true;
                 _currentDuration = duration;
-                text.gameObject.SetActive(false);
-                weapon.whatIsAttack = LayerMask.GetMask("Enemy");
             }
         }
 
     }
 
-    public void TryUse()
+    public bool TryUse()
     {
-        if(_currentCoolDown == coolDown)
-        {
-            weapon.whatIsAttack = LayerMask.GetMask("Tower Enemy");
-            _currentCoolDown = 0;
-            image.fillAmount = 0;
-            _isNeedRollback = true;
-            _isUltActive = true;
-            text.gameObject.SetActive(true);
-        }
+        if (_currentCoolDown != coolDown) return false;
+        
+        _currentCoolDown = 0;
+        image.fillAmount = 0;
+        _isNeedRollback = true;
+        _isUltActive = true;
+        return true;
     }
 }

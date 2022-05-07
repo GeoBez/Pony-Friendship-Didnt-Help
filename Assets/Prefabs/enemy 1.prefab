@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5310630589074371007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.42, y: 0, z: 0}
+  m_LocalPosition: {x: 0.37, y: 0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7847343715933001954}
@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: -867046405696707068}
   - component: {fileID: 4857665649270067289}
   - component: {fileID: 7804605480881736885}
+  - component: {fileID: 1676982295}
   m_Layer: 6
   m_Name: enemy 1
   m_TagString: Enemy
@@ -105,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 9175673980754752827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.1636574, y: 0.16365737, z: 0.16365737}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 5713725675607818944}
   - {fileID: 4946402801400620671}
@@ -185,6 +186,7 @@ MonoBehaviour:
   - {fileID: 8974354507945617733, guid: 689e9bcad43e6c142970c1dc2173d82a, type: 3}
   - {fileID: 3100191239330530495, guid: ae87fdd1d57095446a92312b45115a3d, type: 3}
   all_Enemies: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!70 &3273722354616540097
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -198,8 +200,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.57}
-  m_Size: {x: 4.17, y: 7.37}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1.8238994}
   m_Direction: 0
 --- !u!50 &-867046405696707068
 Rigidbody2D:
@@ -250,6 +252,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   returnSpeedTime: 0
+--- !u!95 &1676982295
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9175673980754752827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 264b9575db62b264c9f5569a4d885ec5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7358106356192359680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -311,11 +332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.055163
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.055163
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -347,11 +368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.56
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.36
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
