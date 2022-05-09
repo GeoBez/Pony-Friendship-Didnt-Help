@@ -1054,6 +1054,14 @@ PrefabInstance:
       propertyPath: iceDestroyParticle
       value: 
       objectReference: {fileID: 2158173793540605992, guid: 37a9cd80bae92e9448803ba895da7dd3, type: 3}
+    - target: {fileID: 2126379725, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
+      propertyPath: timer
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126379725, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
+      propertyPath: bossTimer
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 6886516553854750160, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
       propertyPath: m_Camera
       value: 

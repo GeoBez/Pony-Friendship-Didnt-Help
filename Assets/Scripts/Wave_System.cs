@@ -20,8 +20,7 @@ public class Wave_System : MonoBehaviour
                 gameObject.SetActive(false);
         else if (number_Of_Enemies[Wave_Number] == 0)
         {
-            Set_Preparation();
-            
+            Set_Preparation();            
         }
     }
 

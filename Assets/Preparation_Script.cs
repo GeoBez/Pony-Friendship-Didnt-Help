@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Preparation_Script : MonoBehaviour
 {
     public float timer;
+    public float bossTimer;
     float default_time;
     public bool inPreparation;
 
@@ -59,6 +61,20 @@ public class Preparation_Script : MonoBehaviour
 
     public void End_Time()
     {
+        if (timer > 0)
+        {
+           var coin = Coin.coinForWavePass;
+
+           if (timer > (int)(0.8*default_time))
+                Coin_Count_Text.coin_Count += coin;
+           else if (timer > (int)(0.5 * default_time))
+                Coin_Count_Text.coin_Count += (int)(coin*0.5);
+           else if (timer > (int)(0.2 * default_time))
+                Coin_Count_Text.coin_Count += (int)(0.2*coin);
+           else if (timer > (int)(0.1 * default_time))
+                Coin_Count_Text.coin_Count += (int)(0.1*coin);
+        }
+
         timer = -1;
     }
 
