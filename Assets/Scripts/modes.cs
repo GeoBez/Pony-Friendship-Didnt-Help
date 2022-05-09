@@ -62,10 +62,28 @@ public class modes : MonoBehaviour
     }
     void ActivateMoreHealth()
     {
-        Debug.Log(tree.maxHealth);
+        //Debug.Log(tree.maxHealth);
         player.mode_MoreHealth = true;
         tree.maxHealth += 20;
         tree.health += 20;
-        Debug.Log(tree.maxHealth);
+        //Debug.Log(tree.maxHealth);
     }
+    void ActivateTimeIsMoney()
+    {
+        player.mode_TimeIsMoney = true;
+        Coin.coinForWavePass *= 2;
+    }
+    void ActivateIAmPower()
+    {
+        player.mode_IAmPower = true;
+        player.damage *= 2;
+    }
+
+    void ActivatePowerPlus()
+    {
+        player.mode_PowerPlus = true;
+        player.damage += 5;
+    }
+
+
 }

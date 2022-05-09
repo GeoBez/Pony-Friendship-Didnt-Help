@@ -33,6 +33,9 @@ public class Player : MonoBehaviour
     public bool mode_NewHorseshoes = false;
     public bool mode_OneTimeTreatment = false;
     public bool mode_MoreHealth = false;
+    public bool mode_TimeIsMoney = false;
+    public bool mode_IAmPower = false;
+    public bool mode_PowerPlus = false;
 
     public bool isMeleeAttacker;        
 
