@@ -363,11 +363,7 @@ MonoBehaviour:
   healthBar: {fileID: 2877501745157864698}
   maxHealth: 80
   speed: 10
-<<<<<<< HEAD
-  damage: 3
-=======
   damage: 2
->>>>>>> a1cde7ef5abc8ee3fed090c5e06bd8417e044b4a
   inTowerCollider: 0
   mode_YouShallNotPass: 0
   mode_Magnit: 0
@@ -684,4 +680,4 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76fa31901b6d3e04599db85a758573ad, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
