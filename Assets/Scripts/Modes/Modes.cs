@@ -1,8 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public abstract class Modes// : MonoBehaviour
+public interface ModeActivate{
+    void Activate();
+    void MainModeDo();
+    string GetName();
+    string GetDescription();
+}
+public abstract class Modes : ModeActivate//MonoBehaviour, ModeActivate
 {
     public static string name;
     public static string description;
@@ -10,27 +15,32 @@ public abstract class Modes// : MonoBehaviour
 
     public static  bool isBlocked = false; //пригодится для ограничений
     public static bool isActive = false;
-
-    /*private static Player player;
-    private static Tower tree;
-    private void Start()
+    public virtual void Activate()
     {
-        player = GetComponent<Player>();
-        tree = GameObject.FindGameObjectWithTag("Main Tower").GetComponent<Tower>();
-    }*/
+        isActive = true;
+        isBlocked = true;
+
+        MainModeDo();
+    }
+
+    public virtual void MainModeDo() {}
+    public string GetName() => name;
+    public string GetDescription() => description;
 }
 
 public class Mode_Magnit : Modes
 {
-    private void Start()
+    public Mode_Magnit()
     {
         name = "Магнит";
         description = "Увеличивает радиус сбора монет";
+        //Activate();
     }
-    public static void Activate()
+
+    public override void MainModeDo()
     {
-        //player.mode_Magnit = true;
-        isActive = true;
         Coin.range = 12;        
     }
 }
+
+

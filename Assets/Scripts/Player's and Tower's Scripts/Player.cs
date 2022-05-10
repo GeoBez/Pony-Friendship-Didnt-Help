@@ -45,11 +45,8 @@ public class Player : MonoBehaviour
         Health = maxHealth;
         GetComponent<PlayerMovement>().speed = speed;
 
-        //Debug.Log(Coin.range);
-        //Mode_Magnit.Activate();
-        Modes u = new Mode_Magnit();
-        
-        Debug.Log(u);
+        //Modes u = new Mode_Magnit();
+        //u.Activate();
     }
 
     private void Update()
