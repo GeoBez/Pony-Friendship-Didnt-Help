@@ -63,7 +63,7 @@ public class FollowPath : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, pointInPath.Current.position, Time.deltaTime * speed);
         }
-        _animator.SetBool("isMoving", true);
+        _animator.SetBool("isWalking", true);
         float distanceSquare = (transform.position - pointInPath.Current.position).sqrMagnitude;
         if (distanceSquare < maxDistance * maxDistance)
         {
@@ -73,7 +73,7 @@ public class FollowPath : MonoBehaviour
         if(GetComponentInChildren<Enemy_Attack>().What_Attack != null)
         {
             speed = 0;
-            _animator.SetBool("isMoving", false);
+            _animator.SetBool("isWalking", false);
         }
         else
         {
