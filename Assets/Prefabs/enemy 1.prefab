@@ -180,13 +180,13 @@ MonoBehaviour:
   health: 10
   speed: 3
   damage: 2
+  xp_points: 3
   attackTime: 3
   fall_Object:
   - {fileID: 4743943494906487930, guid: 7e473dde17d4b4e4885da255f7a18164, type: 3}
   - {fileID: 8974354507945617733, guid: 689e9bcad43e6c142970c1dc2173d82a, type: 3}
   - {fileID: 3100191239330530495, guid: ae87fdd1d57095446a92312b45115a3d, type: 3}
   all_Enemies: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!70 &3273722354616540097
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

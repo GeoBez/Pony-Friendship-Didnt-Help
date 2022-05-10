@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4ff35082f66baf44c845c1253bf017e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,13 +105,13 @@ MonoBehaviour:
   health: 10
   speed: 1
   damage: 1
+  xp_points: 2
   attackTime: 3
   fall_Object:
   - {fileID: 4743943494906487930, guid: 7e473dde17d4b4e4885da255f7a18164, type: 3}
   - {fileID: 8974354507945617733, guid: 689e9bcad43e6c142970c1dc2173d82a, type: 3}
   - {fileID: 3100191239330530495, guid: ae87fdd1d57095446a92312b45115a3d, type: 3}
   all_Enemies: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!50 &2368099218257057564
 Rigidbody2D:
   serializedVersion: 4
