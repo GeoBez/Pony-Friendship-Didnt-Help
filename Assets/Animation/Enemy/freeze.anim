@@ -243,7 +243,7 @@ AnimationClip:
   - time: 0.25
     functionName: FreezingStart
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: -4603341165334654499, guid: 2567faef0620db242951f4806b2215a7, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
