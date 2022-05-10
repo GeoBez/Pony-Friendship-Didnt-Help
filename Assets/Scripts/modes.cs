@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//старый скрипт
 public class modes : MonoBehaviour
 {
     private Player player;
