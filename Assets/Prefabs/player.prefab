@@ -361,9 +361,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2877501745157864698}
-  maxHealth: 10
+  maxHealth: 80
   speed: 10
-  damage: 6
+  damage: 2
   inTowerCollider: 0
   mode_YouShallNotPass: 0
   mode_Magnit: 0
@@ -375,6 +375,9 @@ MonoBehaviour:
   mode_NewHorseshoes: 0
   mode_OneTimeTreatment: 0
   mode_MoreHealth: 0
+  mode_TimeIsMoney: 0
+  mode_IAmPower: 0
+  mode_PowerPlus: 0
   isMeleeAttacker: 0
 --- !u!114 &6489787237821227859
 MonoBehaviour:
