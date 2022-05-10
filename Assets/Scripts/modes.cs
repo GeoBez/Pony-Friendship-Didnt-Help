@@ -84,6 +84,4 @@ public class modes : MonoBehaviour
         player.mode_PowerPlus = true;
         player.damage += 5;
     }
-
-
 }
