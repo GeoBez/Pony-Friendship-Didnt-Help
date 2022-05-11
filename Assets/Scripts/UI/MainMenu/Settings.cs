@@ -9,7 +9,7 @@ public class Settings : MonoBehaviour
 
     public void Start()
     {
-        dropdown.value = PlayerPrefs.HasKey("joystickType") ? PlayerPrefs.GetInt("joystickType") : 0;
+        if (dropdown != null) dropdown.value = PlayerPrefs.HasKey("joystickType") ? PlayerPrefs.GetInt("joystickType") : 0;
     }
     public void SwitchJoystick(int currentJoystickIndex)
     {
