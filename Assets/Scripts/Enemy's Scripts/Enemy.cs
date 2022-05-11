@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour, IFreezable
     public float health;
 	public float speed;
 	public float damage;
+	public int xp_points;
 	float defaultSpeed;
 	public float attackTime;
 	public GameObject[] fall_Object;
@@ -57,18 +58,12 @@ public class Enemy : MonoBehaviour, IFreezable
 
 		if (rnd < 70)
 		{
-			if (gameObject.tag == "Enemy")
-			{
-				fall_Object[2].GetComponent<XP_Ball_Script>().xp_points = 3;
-			}
-			else if (gameObject.tag == "Tower_Enemy")
-			{
-				fall_Object[2].GetComponent<XP_Ball_Script>().xp_points = 2;
-			}
+			fall_Object[2].GetComponent<XP_Ball_Script>().xp_points = xp_points;
 			Instantiate(fall_Object[2], gameObject.transform.position, Quaternion.identity);
 		}
 
 		Wave_System RWN = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
+		RWN.number_Of_Existed_Enemies[RWN.Wave_Number]--;
 		RWN.Rise_Wave_Number();
 		Destroy(gameObject);
 	}

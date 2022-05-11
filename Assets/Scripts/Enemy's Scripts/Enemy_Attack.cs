@@ -9,12 +9,14 @@ public class Enemy_Attack : MonoBehaviour
     public float damage;
     public float time;
     float default_Time;
+    string Main_Tower;
 
     void Start()
     {
         time = GetComponentInParent<Enemy>().attackTime;
         damage = GetComponentInParent<Enemy>().damage;
         default_Time = time;
+        Main_Tower = "Main Tower";
     }
 
     void Update()
@@ -29,7 +31,7 @@ public class Enemy_Attack : MonoBehaviour
             {
                 if (What_Attack.tag == "Player")
                     What_Attack.GetComponent<Player>().TakeDamage(damage);
-                else if (What_Attack.tag == "Tower" || What_Attack.tag == "Main Tower")
+                else if (What_Attack.tag == Main_Tower)
                     What_Attack.GetComponent<Tower>().TakeDamage(damage);
                 time = default_Time;
             }
@@ -42,7 +44,7 @@ public class Enemy_Attack : MonoBehaviour
         {
             SetTargetObject(collision.gameObject);
         }
-        else if ((collision.tag == "Tower" || collision.tag == "Main Tower") && isTowerEnemy)
+        else if ((collision.tag == Main_Tower) && isTowerEnemy)
         {
             SetTargetObject(collision.gameObject);
         }
@@ -54,7 +56,7 @@ public class Enemy_Attack : MonoBehaviour
         {
             What_Attack = null;
         }
-        else if ((collision.tag == "Tower" || collision.tag == "Main Tower") && isTowerEnemy)
+        else if ((collision.tag == Main_Tower) && isTowerEnemy)
         {
             What_Attack = null;
         }

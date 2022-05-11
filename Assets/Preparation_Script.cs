@@ -17,12 +17,15 @@ public class Preparation_Script : MonoBehaviour
     Text text;
     Button button;
 
+    XP_Bar xp_Bar;
+
     private void Start()
     {
         default_time = timer;
         inPreparation = true;
         text = GetComponentInChildren<Text>();
         button = GetComponentInChildren<Button>();
+        xp_Bar = GameObject.Find("XP_Bar").GetComponent<XP_Bar>();
     }
 
     private void Update()
@@ -80,6 +83,7 @@ public class Preparation_Script : MonoBehaviour
 
     public void Reset_Timer()
     {
+        xp_Bar.Update_Bar(0);
         inPreparation = true;
         timer = default_time;
     }

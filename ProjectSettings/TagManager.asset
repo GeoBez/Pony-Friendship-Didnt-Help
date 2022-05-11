@@ -18,6 +18,7 @@ TagManager:
   - Preparation
   - Coin
   - Prep UI
+  - XP Bar
   layers:
   - Default
   - TransparentFX
