@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
     public float speed;
     public float lifetime;
     public float coolDown;
-    public float damage=1;
+    public float damage;
 
     public Weapon shot_Point;
 

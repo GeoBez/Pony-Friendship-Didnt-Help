@@ -45,8 +45,11 @@ public class Player : MonoBehaviour
         Health = maxHealth;
         GetComponent<PlayerMovement>().speed = speed;
 
+       Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<Weapon>().detectionDistance);
+
         //Modes u = new Mode_Magnit();
-        //u.Activate();
+        //u.Activate();       
+        //Debug.Log(Coin.range);
     }
 
     private void Update()
