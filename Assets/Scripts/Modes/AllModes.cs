@@ -207,5 +207,21 @@ public class Mode_SimpleDistanteBattle : Modes //не работает
 }
 
 
-//Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<Weapon>().detectionDistance);
+public class Mode_SittingUpper : Modes //не работает
+{
+    public Mode_SittingUpper()
+    {
+        name = "—ижу высоко - стрел€ю далеко";
+        description = "”величивает радиус атаки";
+    }
+
+    public override void MainModeDo()
+    {
+        throw new System.Exception("You tried to use unworking Mode_SittingUpper");
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Weapon>().detectionDistance = 10;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMeleeAttacks>().attackRange = 5;
+    }
+}
+
 
