@@ -7,7 +7,7 @@ public interface ModeActivate{
     string GetName();
     string GetDescription();
 }
-public abstract class Modes : ModeActivate//MonoBehaviour, ModeActivate
+public abstract class Modes : MonoBehaviour//, ModeActivate
 {
     public static string name;
     public static string description;
@@ -28,7 +28,7 @@ public abstract class Modes : ModeActivate//MonoBehaviour, ModeActivate
     public string GetDescription() => description;
 }
 
-
+/*
 //все моды ниже
 public class Mode_Magnit : Modes
 {
@@ -210,5 +210,25 @@ public class Mode_PowerPlus : Modes
         player.damage += 5;
     }
 }
+
+public class Mode_SimpleDistanteBattle : Modes //не работает
+{
+    public Mode_SimpleDistanteBattle()
+    {
+        name = "Простой дальний бой";
+        description = "Меняет тип атаки на дальний";
+    }
+
+    public override void MainModeDo()
+    {
+        throw new System.Exception("You tried to use unworking Mode_SimpleDistanteBattle");
+        
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMeleeAttacks>().enabled = false;
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<Weapon>().enabled = true;        
+    }
+}
+
+*/
+
 
 

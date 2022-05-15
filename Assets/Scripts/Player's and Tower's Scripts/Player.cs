@@ -53,7 +53,8 @@ public class Player : MonoBehaviour
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
         //Modes u = new Mode_Magnit();
-        //u.Activate();
+        //u.Activate();       
+        //Debug.Log(Coin.range);
     }
 
     private void Update()

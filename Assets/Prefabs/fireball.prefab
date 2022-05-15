@@ -100,10 +100,7 @@ MonoBehaviour:
   speed: 6
   lifetime: 1.5
   coolDown: 0.7
-  damage: 6
-  whatIsAttack:
-    serializedVersion: 2
-    m_Bits: 64
+  damage: 1
   shot_Point: {fileID: 0}
 --- !u!70 &-3696831313024291865
 CapsuleCollider2D:

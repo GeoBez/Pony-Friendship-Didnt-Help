@@ -114,12 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  lifetime: 1.5
+  lifetime: 5
   coolDown: 0.8
-  damage: 1
-  whatIsAttack:
-    serializedVersion: 2
-    m_Bits: 128
+  damage: 2
   shot_Point: {fileID: 0}
 --- !u!50 &1135824468921411562
 Rigidbody2D:
