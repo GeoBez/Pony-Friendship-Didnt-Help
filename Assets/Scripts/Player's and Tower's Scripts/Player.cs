@@ -23,7 +23,9 @@ public class Player : MonoBehaviour
     public float damage;
 
     public bool inTowerCollider = false;
+
     public bool mode_YouShallNotPass;
+
     public bool mode_Magnit = false;
     public bool mode_Double_Denomination = false;
     public bool mode_Clover_Leaf = false;
@@ -37,14 +39,19 @@ public class Player : MonoBehaviour
     public bool mode_IAmPower = false;
     public bool mode_PowerPlus = false;
 
-    public bool isMeleeAttacker;        
+    public bool isMeleeAttacker;
 
-    private void Start()
+    Change_Attack change_Attack;
+
+    private void Awake()
     {
+        change_Attack = GetComponentInChildren<Change_Attack>();
         healthBar.SetMaxValue(maxHealth);
         Health = maxHealth;
         GetComponent<PlayerMovement>().speed = speed;
 
+        if (isMeleeAttacker)
+            change_Attack.ChangeAttack();
         //Modes u = new Mode_Magnit();
         //u.Activate();
     }

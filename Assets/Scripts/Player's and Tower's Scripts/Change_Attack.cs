@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Change_Attack : MonoBehaviour
 {
-    private void Start()
+    public void ChangeAttack()
     {
         if(GetComponentInParent<Player>().isMeleeAttacker)
         {
