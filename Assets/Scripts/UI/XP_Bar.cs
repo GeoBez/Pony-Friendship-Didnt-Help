@@ -13,7 +13,7 @@ public class XP_Bar : MonoBehaviour
     Slider fill_Value;
     Preparation_Script preparation;
 
-    GameObject skills_Canvas;
+    public GameObject skills_Canvas;
 
     void Start()
     {
@@ -23,12 +23,11 @@ public class XP_Bar : MonoBehaviour
         fill_Value = GetComponent<Slider>();
         fill_Value.value = 0;
         fill_Value.maxValue = Max_XP;
-        skills_Canvas = GameObject.Find("Skills_Canvas");
         skills_Canvas.SetActive(false);
         preparation = GameObject.FindGameObjectWithTag("Preparation").GetComponent<Preparation_Script>();
     }
 
-    private void Update()
+    public void TranslateSkillPoints()
     {
         if (skill_Points > 0 && preparation.inPreparation)
             SetSkillCanvas();
@@ -47,6 +46,9 @@ public class XP_Bar : MonoBehaviour
             xp = 0;
             xp += Rest_Of_XP;
         }
+
+        //if (skill_Points > 0 && preparation.inPreparation)
+        //    SetSkillCanvas();
     }
 
     public void SetSkillCanvas()

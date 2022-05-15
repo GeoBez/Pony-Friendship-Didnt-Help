@@ -14,11 +14,11 @@ public class Skill_Canvas : MonoBehaviour
 
     void Update()
     {
-        if(skill_Points == 0)
+        if(skill_Points <= 0)
         {
             Time.timeScale = 1;
             xp_Bar.skill_Points = 0;
             gameObject.SetActive(false);
-        }    
+        }
     }
 }

@@ -16,6 +16,7 @@ public class Preparation_Script : MonoBehaviour
 
     Text text;
     Button button;
+    Skill_Canvas skill_Canvas;
 
     XP_Bar xp_Bar;
 
@@ -26,6 +27,7 @@ public class Preparation_Script : MonoBehaviour
         text = GetComponentInChildren<Text>();
         button = GetComponentInChildren<Button>();
         xp_Bar = GameObject.Find("XP_Bar").GetComponent<XP_Bar>();
+        skill_Canvas.GetComponentInChildren<Skill_Canvas>();
     }
 
     private void Update()
@@ -59,6 +61,8 @@ public class Preparation_Script : MonoBehaviour
         {
             text.gameObject.SetActive(true);
             button.gameObject.SetActive(true);
+            if(xp_Bar.skill_Points > 0)
+                xp_Bar.TranslateSkillPoints();
         }
     }
 
