@@ -48,7 +48,7 @@ MonoBehaviour:
   detectionDistance: 10
   whatIsAttack:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
 --- !u!1 &6045906499427412218
 GameObject:
   m_ObjectHideFlags: 0

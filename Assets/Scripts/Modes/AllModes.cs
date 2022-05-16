@@ -231,11 +231,30 @@ public class Mode_IAmSpeed : Modes
 
     public override void MainModeDo()
     {
+        throw new System.Exception("Bugs fouded. Every time mod used coolDown firball low");
+
         var player = GameObject.FindGameObjectWithTag("Player");
         var obj = player.GetComponentInChildren<PlayerMeleeAttacks>();
         obj.SetCoolDown(obj.attackCoolDown / 2);
 
         player.GetComponentInChildren<Weapon>().projectile.coolDown /= 2;
+    }
+}
+
+public class Mode_YouShallNoPass : Modes
+{
+    public Mode_YouShallNoPass()
+    {
+        name = "Ты не пройдешь";
+        description = "Вы можете стрелять по врагам идущим к дереву";
+    }
+
+    public override void MainModeDo()
+    {
+        var player = GameObject.FindGameObjectWithTag("Player");
+
+        player.GetComponentInChildren<Weapon>().whatIsAttack = LayerMask.GetMask("Tower Enemy", "Enemy");
+        player.GetComponentInChildren<PlayerMeleeAttacks>().enemyLayer = LayerMask.GetMask("Tower Enemy", "Enemy");
     }
 }
 

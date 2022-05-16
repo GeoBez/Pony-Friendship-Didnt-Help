@@ -52,8 +52,8 @@ public class Weapon : MonoBehaviour
     }
     private void TargetSearch()
     {
-        targetsAtDetectionDistance = Physics2D.OverlapCircleAll(shotPoint.position, detectionDistance,  whatIsAttack);
-
+        targetsAtDetectionDistance = Physics2D.OverlapCircleAll(shotPoint.position, detectionDistance, whatIsAttack);
+        
         projectile.shot_Point = GetComponent<Weapon>();
         projectile.damage = damage;
 

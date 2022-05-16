@@ -748,6 +748,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1526462795, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: whatIsAttack.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526462795, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: whatIsAttack.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526462795, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: whatIsAttack.Array.data[0].m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 1901460010378308550, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: m_Name
       value: Player

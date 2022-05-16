@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         healthBar.SetMaxValue(maxHealth);
         Health = maxHealth;
         GetComponent<PlayerMovement>().speed = speed;
-
+               
 
         isMeleeAttacker = true;
         if (isMeleeAttacker)
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        //var u = new Mode_IAmSpeed();
+        //var u = new Mode_YouShallNoPass();
         //u.Activate();
     }
 
