@@ -50,11 +50,20 @@ public class Player : MonoBehaviour
         Health = maxHealth;
         GetComponent<PlayerMovement>().speed = speed;
 
+
+        isMeleeAttacker = true;
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
+
         //Modes u = new Mode_Magnit();
         //u.Activate();       
         //Debug.Log(Coin.range);
+    }
+
+    void Start()
+    {
+        var u = new Mode_SittingUpper();
+        u.Activate();
     }
 
     private void Update()

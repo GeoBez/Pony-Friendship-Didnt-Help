@@ -189,7 +189,7 @@ public class Mode_PowerPlus : Modes
     }
 }
 
-public class Mode_SimpleDistanteBattle : Modes //не работает
+public class Mode_SimpleDistanteBattle : Modes
 {
     public Mode_SimpleDistanteBattle()
     {
@@ -199,10 +199,8 @@ public class Mode_SimpleDistanteBattle : Modes //не работает
 
     public override void MainModeDo()
     {
-        throw new System.Exception("You tried to use unworking Mode_SimpleDistanteBattle");
-
-        GetComponent<PlayerMeleeAttacks>().enabled = false;
-        GetComponent<Weapon>().enabled = true;        
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isMeleeAttacker = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Change_Attack>().ChangeAttack();  
     }
 }
 
@@ -217,10 +215,10 @@ public class Mode_SittingUpper : Modes //не работает
 
     public override void MainModeDo()
     {
-        throw new System.Exception("You tried to use unworking Mode_SittingUpper");
+        //throw new System.Exception("You tried to use unworking Mode_SittingUpper");
 
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Weapon>().detectionDistance = 10;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMeleeAttacks>().attackRange = 5;
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Weapon>().detectionDistance = 10;
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerMeleeAttacks>().attackRange = 5;
     }
 }
 
