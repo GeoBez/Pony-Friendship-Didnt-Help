@@ -204,8 +204,7 @@ public class Mode_SimpleDistanteBattle : Modes
     }
 }
 
-
-public class Mode_SittingUpper : Modes //не работает
+public class Mode_SittingUpper : Modes 
 {
     public Mode_SittingUpper()
     {
@@ -221,5 +220,25 @@ public class Mode_SittingUpper : Modes //не работает
         GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerMeleeAttacks>().attackRange = 5;
     }
 }
+
+public class Mode_IAmSpeed : Modes
+{
+    public Mode_IAmSpeed()
+    {
+        name = "Я есть скорость";
+        description = "Повышает частоту атаки в 1.5 раза";
+    }
+
+    public override void MainModeDo()
+    {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        var obj = player.GetComponentInChildren<PlayerMeleeAttacks>();
+        obj.SetCoolDown(obj.attackCoolDown / 2);
+
+        player.GetComponentInChildren<Weapon>().projectile.coolDown /= 2;
+    }
+}
+
+
 
 

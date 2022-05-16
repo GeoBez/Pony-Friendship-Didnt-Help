@@ -54,16 +54,12 @@ public class Player : MonoBehaviour
         isMeleeAttacker = true;
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
-
-        //Modes u = new Mode_Magnit();
-        //u.Activate();       
-        //Debug.Log(Coin.range);
     }
 
     void Start()
     {
-        var u = new Mode_SittingUpper();
-        u.Activate();
+        //var u = new Mode_IAmSpeed();
+        //u.Activate();
     }
 
     private void Update()

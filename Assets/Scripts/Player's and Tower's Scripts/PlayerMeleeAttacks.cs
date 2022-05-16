@@ -14,6 +14,16 @@ public class PlayerMeleeAttacks : MonoBehaviour
     public LayerMask enemyLayer;
     [SerializeField] private Animator animator;
     
+    public void SetCoolDown(float coolDown)
+    {
+        if (coolDown > 0)
+        {
+            _currentAttackCoolDown = coolDown;
+            attackCoolDown = coolDown;
+            attackCoolDownBar.SetMaxValue(attackCoolDown);
+        }
+        else throw new System.Exception("You tried to set under 0 coolDown");
+    }
     void Start()
     {
         animator = GetComponentInParent<Animator>();
