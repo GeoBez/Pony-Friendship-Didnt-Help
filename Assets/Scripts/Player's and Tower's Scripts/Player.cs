@@ -45,20 +45,23 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        GetComponentInChildren<Weapon>().projectile.coolDown = 0.7F;
+        
         change_Attack = GetComponentInChildren<Change_Attack>();
         healthBar.SetMaxValue(maxHealth);
         Health = maxHealth;
         GetComponent<PlayerMovement>().speed = speed;
                
 
-        isMeleeAttacker = true;
+        isMeleeAttacker = false;
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
+
     }
 
     void Start()
     {
-        //var u = new Mode_YouShallNoPass();
+        //var u = new Mode_IAmSpeed();
         //u.Activate();
     }
 

@@ -231,7 +231,7 @@ public class Mode_IAmSpeed : Modes
 
     public override void MainModeDo()
     {
-        throw new System.Exception("Bugs fouded. Every time mod used coolDown firball low");
+        //throw new System.Exception("Bugs fouded. Every time mod used coolDown firball low");
 
         var player = GameObject.FindGameObjectWithTag("Player");
         var obj = player.GetComponentInChildren<PlayerMeleeAttacks>();
