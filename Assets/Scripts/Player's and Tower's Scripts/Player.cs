@@ -19,7 +19,16 @@ public class Player : MonoBehaviour
             }
         }
     }
-    public float speed;
+    private float speed = 11;// тут ручками теперь править нужно. Сорямба :)
+    public float Speed
+    {
+        get => speed;
+        set
+        {
+            speed = value;
+            GetComponent<PlayerMovement>().speed = value;
+        }
+    }
     public float damage;
 
     public bool inTowerCollider = false;
@@ -50,7 +59,7 @@ public class Player : MonoBehaviour
         change_Attack = GetComponentInChildren<Change_Attack>();
         healthBar.SetMaxValue(maxHealth);
         Health = maxHealth;
-        GetComponent<PlayerMovement>().speed = speed;
+        GetComponent<PlayerMovement>().speed = Speed;
                
 
         isMeleeAttacker = true;

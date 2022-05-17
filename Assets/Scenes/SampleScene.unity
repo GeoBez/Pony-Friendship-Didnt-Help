@@ -526,6 +526,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+--- !u!224 &628586080 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 349663822, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
+  m_PrefabInstance: {fileID: 6886516553780573944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &655015962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4997938405360212299, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
@@ -625,6 +630,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &752605195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752605196}
+  - component: {fileID: 752605197}
+  m_Layer: 5
+  m_Name: HealingLinkedUltManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &752605196
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752605195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 628586080}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &752605197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752605195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea49f254ea8dd2045a514c1bcf80e6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1945607876}
+  name: 
+  description: 
+  coolDown: 15
+  duration: 0
+  healPower: 5
 --- !u!114 &1251446578 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3383300391801751496, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
@@ -636,6 +695,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1652794162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652794163}
+  - component: {fileID: 1652794164}
+  m_Layer: 5
+  m_Name: IncreaseSpeedLinkedUltManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1652794163
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652794162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 628586080}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1652794164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652794162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b7d7878789f064a852295280d97cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1945607876}
+  name: 
+  description: 
+  coolDown: 5
+  duration: 5
+  increaseSpeedPower: 1.463
 --- !u!1 &1670688353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3159348074945514063, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
@@ -1132,6 +1245,18 @@ PrefabInstance:
       propertyPath: iceDestroyParticle
       value: 
       objectReference: {fileID: 2158173793540605992, guid: 37a9cd80bae92e9448803ba895da7dd3, type: 3}
+    - target: {fileID: 1777313181, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
+      propertyPath: ultLinkedUpgrade.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777313181, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
+      propertyPath: ultLinkedUpgrade.Array.data[0]
+      value: 
+      objectReference: {fileID: 1652794164}
+    - target: {fileID: 1777313181, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
+      propertyPath: ultLinkedUpgrade.Array.data[1]
+      value: 
+      objectReference: {fileID: 752605197}
     - target: {fileID: 2126379723, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
       propertyPath: m_IsActive
       value: 1
