@@ -24,62 +24,62 @@ public class Skill_Btn : MonoBehaviour
     {
         if (rnd == 0)
         {
-            Modes mode = new Mode_Magnit();
+            Modes mode = gameObject.AddComponent<Mode_Magnit>();
             text.text = mode.GetName();
         }
         else if (rnd == 1)
         {
-            Modes mode = new Mode_DoubleDenomination();
+            Modes mode = gameObject.AddComponent<Mode_DoubleDenomination>();
             text.text = mode.GetName();
         }
         else if (rnd == 2)
         {
-            Modes mode = new Mode_CleverLeaf();
+            Modes mode = gameObject.AddComponent<Mode_CleverLeaf>();
             text.text = mode.GetName();
         }
         else if (rnd == 3)
         {
-            Modes mode = new Mode_MoreBits();
+            Modes mode = gameObject.AddComponent<Mode_MoreBits>();
             text.text = mode.GetName();
         }
         else if (rnd == 4)
         {
-            Modes mode = new Mode_Sturdy();
+            Modes mode = gameObject.AddComponent<Mode_Sturdy>();
             text.text = mode.GetName();
         }
         else if (rnd == 5)
         {
-            Modes mode = new Mode_HealthyHealth();
+            Modes mode = gameObject.AddComponent<Mode_HealthyHealth>();
             text.text = mode.GetName();
         }
         else if (rnd == 6)
         {
-            Modes mode = new Mode_NewHorseshoes();
+            Modes mode = gameObject.AddComponent<Mode_NewHorseshoes>();
             text.text = mode.GetName();
         }
         else if (rnd == 7)
         {
-            Modes mode = new Mode_OneTimeTreatment();
+            Modes mode = gameObject.AddComponent<Mode_OneTimeTreatment>();
             text.text = mode.GetName();
         }
         else if (rnd == 8)
         {
-            Modes mode = new Mode_MoreHealth();
+            Modes mode = gameObject.AddComponent<Mode_MoreHealth>();
             text.text = mode.GetName();
         }
         else if (rnd == 9)
         {
-            Modes mode = new Mode_TimeIsMoney();
+            Modes mode = gameObject.AddComponent<Mode_TimeIsMoney>();
             text.text = mode.GetName();
         }
         else if (rnd == 10)
         {
-            Modes mode = new Mode_IAmPower();
+            Modes mode = gameObject.AddComponent<Mode_IAmPower>();
             text.text = mode.GetName();
         }
         else if (rnd == 11)
         {
-            Modes mode = new Mode_PowerPlus();
+            Modes mode = gameObject.AddComponent<Mode_PowerPlus>();
             text.text = mode.GetName();
         }
 
@@ -97,73 +97,73 @@ public class Skill_Btn : MonoBehaviour
         if(rnd == 0 && !player.mode_Magnit)
         {
             player.mode_Magnit = true;
-            Modes mode = new Mode_Magnit();
+            Modes mode = gameObject.AddComponent<Mode_Magnit>();
             ActivateMode(mode);
         }
         else if(rnd == 1 && !player.mode_Double_Denomination)
         {
             player.mode_Double_Denomination = true;
-            Modes mode = new Mode_DoubleDenomination();
+            Modes mode = gameObject.AddComponent<Mode_DoubleDenomination>();
             ActivateMode(mode);
         }
         else if (rnd == 2 && !player.mode_Clover_Leaf)
         {
             player.mode_Clover_Leaf = true;
-            Modes mode = new Mode_CleverLeaf();
+            Modes mode = gameObject.AddComponent<Mode_CleverLeaf>();
             ActivateMode(mode);
         }
         else if (rnd == 3 && !player.mode_MoreBits)
         {
             player.mode_MoreBits = true;
-            Modes mode = new Mode_MoreBits();
+            Modes mode = gameObject.AddComponent<Mode_MoreBits>();
             ActivateMode(mode);
         }
         else if (rnd == 4 && !player.mode_Sturdy)
         {
             player.mode_Sturdy = true;
-            Modes mode = new Mode_Sturdy();
+            Modes mode = gameObject.AddComponent<Mode_Sturdy>();
             ActivateMode(mode);
         }
         else if (rnd == 5 && !player.mode_HealthyHealth)
         {
             player.mode_HealthyHealth = true;
-            Modes mode = new Mode_HealthyHealth();
+            Modes mode = gameObject.AddComponent<Mode_HealthyHealth>();
             ActivateMode(mode);
         }
         else if (rnd == 6 && !player.mode_NewHorseshoes)
         {
             player.mode_NewHorseshoes = true;
-            Modes mode = new Mode_NewHorseshoes();
+            Modes mode = gameObject.AddComponent<Mode_NewHorseshoes>();
             ActivateMode(mode);
         }
         else if (rnd == 7 && !player.mode_OneTimeTreatment)
         {
             player.mode_OneTimeTreatment = true;
-            Modes mode = new Mode_OneTimeTreatment();
+            Modes mode = gameObject.AddComponent<Mode_OneTimeTreatment>();
             ActivateMode(mode);
         }
         else if (rnd == 8 && !player.mode_MoreHealth)
         {
             player.mode_MoreHealth = true;
-            Modes mode = new Mode_MoreHealth();
+            Modes mode = gameObject.AddComponent<Mode_MoreHealth>();
             ActivateMode(mode);
         }
         else if (rnd == 9 && !player.mode_TimeIsMoney)
         {
             player.mode_TimeIsMoney = true;
-            Modes mode = new Mode_TimeIsMoney();
+            Modes mode = gameObject.AddComponent<Mode_TimeIsMoney>();
             ActivateMode(mode);
         }
         else if (rnd == 10 && !player.mode_IAmPower)
         {
             player.mode_IAmPower = true;
-            Modes mode = new Mode_IAmPower();
+            Modes mode = gameObject.AddComponent<Mode_IAmPower>();
             ActivateMode(mode);
         }
         else if (rnd == 11 && !player.mode_PowerPlus)
         {
             player.mode_PowerPlus = true;
-            Modes mode = new Mode_PowerPlus();
+            Modes mode = gameObject.AddComponent<Mode_PowerPlus>();
             ActivateMode(mode);
         }
     }

@@ -10,31 +10,16 @@ public class Player : MonoBehaviour
     public float Health
     {
         get => health;
-        set
+        set  
         {
             if (value <= maxHealth)
             {
                 health = value;
+                healthBar.SetValue(value);
             }
-            else
-            {
-                health = maxHealth;
-            }
-            healthBar.SetValue(value);
         }
     }
-
-    private float speed = 10;
-    public float Speed
-    {
-        get => speed;
-        set
-        {
-            speed = value;
-            GetComponent<PlayerMovement>().speed = Speed;
-        }
-    }
-
+    public float speed;
     public float damage;
 
     public bool inTowerCollider = false;
@@ -60,16 +45,29 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        GetComponentInChildren<Weapon>().projectile.coolDown = 0.7F;
+        
         change_Attack = GetComponentInChildren<Change_Attack>();
         healthBar.SetMaxValue(maxHealth);
         Health = maxHealth;
-        GetComponent<PlayerMovement>().speed = Speed;
+        GetComponent<PlayerMovement>().speed = speed;
+               
 
+        isMeleeAttacker = true;
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
-        //Modes u = new Mode_Magnit();
-        //u.Activate();       
-        //Debug.Log(Coin.range);
+
+        gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
+
+    }
+
+    void Start()
+    {
+        //var u = gameObject.AddComponent<Mode_MoreBits>();
+        //u.Activate();
+
+        //var u = new Mode_IAmSpeed();
+        //u.Activate();
     }
 
     private void Update()

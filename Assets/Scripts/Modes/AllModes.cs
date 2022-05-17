@@ -132,8 +132,8 @@ public class Mode_MoreHealth : Modes
 {
     public Mode_MoreHealth()
     {
-        name = "";
-        description = "";
+        name = "Ѕольше здоровь€";
+        description = "«доровье дерева увеличиваетс€ на 20 единиц";
     }
 
     public override void MainModeDo()
@@ -189,7 +189,7 @@ public class Mode_PowerPlus : Modes
     }
 }
 
-public class Mode_SimpleDistanteBattle : Modes //не работает
+public class Mode_SimpleDistanteBattle : Modes
 {
     public Mode_SimpleDistanteBattle()
     {
@@ -199,15 +199,12 @@ public class Mode_SimpleDistanteBattle : Modes //не работает
 
     public override void MainModeDo()
     {
-        throw new System.Exception("You tried to use unworking Mode_SimpleDistanteBattle");
-
-        GetComponent<PlayerMeleeAttacks>().enabled = false;
-        GetComponent<Weapon>().enabled = true;        
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isMeleeAttacker = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Change_Attack>().ChangeAttack();  
     }
 }
 
-
-public class Mode_SittingUpper : Modes //не работает
+public class Mode_SittingUpper : Modes 
 {
     public Mode_SittingUpper()
     {
@@ -217,11 +214,50 @@ public class Mode_SittingUpper : Modes //не работает
 
     public override void MainModeDo()
     {
-        throw new System.Exception("You tried to use unworking Mode_SittingUpper");
+        //throw new System.Exception("You tried to use unworking Mode_SittingUpper");
 
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Weapon>().detectionDistance = 10;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMeleeAttacks>().attackRange = 5;
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Weapon>().detectionDistance = 10;
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerMeleeAttacks>().attackRange = 5;
     }
 }
+
+public class Mode_IAmSpeed : Modes
+{
+    public Mode_IAmSpeed()
+    {
+        name = "я есть скорость";
+        description = "ѕовышает частоту атаки в 1.5 раза";
+    }
+
+    public override void MainModeDo()
+    {
+        //throw new System.Exception("Bugs fouded. Every time mod used coolDown firball low");
+
+        var player = GameObject.FindGameObjectWithTag("Player");
+        var obj = player.GetComponentInChildren<PlayerMeleeAttacks>();
+        obj.SetCoolDown(obj.attackCoolDown / 2);
+
+        player.GetComponentInChildren<Weapon>().projectile.coolDown /= 2;
+    }
+}
+
+public class Mode_YouShallNoPass : Modes
+{
+    public Mode_YouShallNoPass()
+    {
+        name = "“ы не пройдешь";
+        description = "¬ы можете стрел€ть по врагам идущим к дереву";
+    }
+
+    public override void MainModeDo()
+    {
+        var player = GameObject.FindGameObjectWithTag("Player");
+
+        player.GetComponentInChildren<Weapon>().whatIsAttack = LayerMask.GetMask("Tower Enemy", "Enemy");
+        player.GetComponentInChildren<PlayerMeleeAttacks>().enemyLayer = LayerMask.GetMask("Tower Enemy", "Enemy");
+    }
+}
+
+
 
 
