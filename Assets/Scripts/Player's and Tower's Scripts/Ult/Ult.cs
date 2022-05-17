@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public abstract class Ult : MonoBehaviour
 {
+    [Header("Основаня часть")]
     [SerializeField] private Image image;
 
     private bool _isNeedRollback;
@@ -15,6 +16,10 @@ public abstract class Ult : MonoBehaviour
     [Range(1, 60)]public float duration;
     protected float _currentDuration;
     protected bool isUltEnd;
+
+    [Header("Привязанное к ульте улучшение")]
+
+    public UltLinkedUpgrades[] ultLinkedUpgrade;
 
     public void Start()
     {
@@ -57,6 +62,13 @@ public abstract class Ult : MonoBehaviour
         image.fillAmount = 0;
         _isNeedRollback = true;
         _isUltActive = true;
+
+        foreach(var upgrade in ultLinkedUpgrade)
+        {
+            upgrade.TryUse();
+        }
+
+
         return true;
     }
 }

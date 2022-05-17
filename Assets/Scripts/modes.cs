@@ -53,7 +53,7 @@ public class modes : MonoBehaviour
     void ActivateNewHorseshoes()
     {
         player.mode_NewHorseshoes = true;
-        player.speed += (float)(player.speed * 0.1);
+        player.Speed += (float)(player.Speed * 0.1);
     }
 
     void ActivateOneTimeTreatment()

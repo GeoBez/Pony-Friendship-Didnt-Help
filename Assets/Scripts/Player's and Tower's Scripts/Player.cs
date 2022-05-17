@@ -10,16 +10,31 @@ public class Player : MonoBehaviour
     public float Health
     {
         get => health;
-        set  
+        set
         {
             if (value <= maxHealth)
             {
                 health = value;
-                healthBar.SetValue(value);
             }
+            else
+            {
+                health = maxHealth;
+            }
+            healthBar.SetValue(value);
         }
     }
-    public float speed;
+
+    private float speed = 10;
+    public float Speed
+    {
+        get => speed;
+        set
+        {
+            speed = value;
+            GetComponent<PlayerMovement>().speed = Speed;
+        }
+    }
+
     public float damage;
 
     public bool inTowerCollider = false;
@@ -48,7 +63,7 @@ public class Player : MonoBehaviour
         change_Attack = GetComponentInChildren<Change_Attack>();
         healthBar.SetMaxValue(maxHealth);
         Health = maxHealth;
-        GetComponent<PlayerMovement>().speed = speed;
+        GetComponent<PlayerMovement>().speed = Speed;
 
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();

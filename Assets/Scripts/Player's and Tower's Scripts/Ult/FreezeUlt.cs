@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class FreezeUlt : Ult
 {
+    [Header("Поля для Freaze Ult")]
     public Ice iseEffect;
     public ParticleSystem iceDestroyParticle;
     public LayerMask mask;
