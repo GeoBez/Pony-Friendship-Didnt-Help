@@ -132,8 +132,8 @@ public class Mode_MoreHealth : Modes
 {
     public Mode_MoreHealth()
     {
-        name = "";
-        description = "";
+        name = "Больше здоровья";
+        description = "Здоровье дерева увеличивается на 20 единиц";
     }
 
     public override void MainModeDo()

@@ -53,16 +53,18 @@ public class Player : MonoBehaviour
         GetComponent<PlayerMovement>().speed = speed;
                
 
-        isMeleeAttacker = false;
+        isMeleeAttacker = true;
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
+
+        gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
 
     }
 
     void Start()
     {
-        var u = gameObject.AddComponent<Mode_MoreBits>();
-        u.Activate();
+        //var u = gameObject.AddComponent<Mode_MoreBits>();
+        //u.Activate();
 
         //var u = new Mode_IAmSpeed();
         //u.Activate();
