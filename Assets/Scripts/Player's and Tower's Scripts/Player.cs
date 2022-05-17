@@ -61,6 +61,9 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        var u = gameObject.AddComponent<Mode_MoreBits>();
+        u.Activate();
+
         //var u = new Mode_IAmSpeed();
         //u.Activate();
     }
