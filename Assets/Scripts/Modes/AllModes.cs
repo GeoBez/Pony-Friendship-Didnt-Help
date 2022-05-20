@@ -108,7 +108,7 @@ public class Mode_NewHorseshoes : Modes
     {
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
-        player.speed += (float)(player.speed * 0.1);
+        player.Speed += (float)(player.Speed * 0.1);
     }
 }
 

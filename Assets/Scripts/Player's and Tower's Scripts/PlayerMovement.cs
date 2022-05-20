@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        speed = GetComponent<Player>().speed;
+        speed = GetComponent<Player>().Speed;
 
         animator = GetComponentInChildren<Animator>();
 
