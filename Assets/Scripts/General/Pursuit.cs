@@ -6,7 +6,7 @@ public class Pursuit : MonoBehaviour
 {
 	public float speed;
 	private Transform _target;
-	public string target = "Player";
+	public string target;
 
 	private Animator _animator;
 
@@ -14,6 +14,8 @@ public class Pursuit : MonoBehaviour
 	{
 		_animator = GetComponent<Animator>();
 		_target = GameObject.FindGameObjectWithTag(target).GetComponent<Transform>();
+		if(gameObject.tag == "Enemy" || gameObject.tag == "Boss")
+			speed = GetComponent<Enemy>().speed;
 	}
 
 	void Update()
@@ -25,5 +27,8 @@ public class Pursuit : MonoBehaviour
 			transform.position = Vector2.MoveTowards(transform.position, _target.transform.position, speed * Time.deltaTime);
 		}
 		else if (_animator != null) _animator?.SetBool("isWalking", false);
+
+		if (speed != GetComponent<Enemy>().speed)
+			speed = GetComponent<Enemy>().speed;
 	}
 }

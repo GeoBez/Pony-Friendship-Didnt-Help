@@ -19,6 +19,8 @@ TagManager:
   - Coin
   - Prep UI
   - XP Bar
+  - Boss_Target
+  - Boss
   layers:
   - Default
   - TransparentFX

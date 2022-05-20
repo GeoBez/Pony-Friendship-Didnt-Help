@@ -15,7 +15,7 @@ public class Return_Speed_Script : MonoBehaviour
         {
             speed = GetComponent<PlayerMovement>().speed;
         }
-        else if (gameObject.tag == "Enemy" || gameObject.tag == "Tower Enemy")
+        else if (gameObject.tag == "Enemy" || gameObject.tag == "Tower Enemy" || gameObject.tag == "Boss")
         {
             speed = GetComponent<Enemy>().speed;
         }
@@ -34,7 +34,7 @@ public class Return_Speed_Script : MonoBehaviour
                 {
                     GetComponent<PlayerMovement>().speed = defaultSpeed;
                 }
-                else if(gameObject.tag == "Enemy" || gameObject.tag == "Tower Enemy")
+                else if (gameObject.tag == "Enemy" || gameObject.tag == "Tower Enemy" || gameObject.tag == "Boss")
                 {
                     GetComponent<Enemy>().speed = defaultSpeed;
                 }
