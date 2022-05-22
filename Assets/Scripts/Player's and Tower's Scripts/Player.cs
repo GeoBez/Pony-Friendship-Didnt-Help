@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
         GetComponent<PlayerMovement>().speed = Speed;
                
 
-        isMeleeAttacker = true;
+        //isMeleeAttacker = true;
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
 

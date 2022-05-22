@@ -363,7 +363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2877501745157864698}
   maxHealth: 80
-  speed: 10
   damage: 1
   inTowerCollider: 0
   mode_YouShallNotPass: 0

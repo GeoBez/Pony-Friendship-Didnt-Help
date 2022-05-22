@@ -45,21 +45,30 @@ public class Enemy : MonoBehaviour, IFreezable
 	{
 		all_Enemies.all_Enemies--;
 		float rnd = Random.Range(0, 99);
-		if (rnd < 5)
+
+		if (gameObject.tag == "Enemy" || gameObject.tag == "Tower Enemy")
 		{
+			if (rnd < 5)
+			{
+				Instantiate(fall_Object[0], gameObject.transform.position, Quaternion.identity);
+			}
+
+			//потом попытаюсь переделать, ибо с разных мобов могут падать разные плюшки
+			if (rnd < 30)
+			{
+				Instantiate(fall_Object[1], gameObject.transform.position, Quaternion.identity);
+			}
+
+			if (rnd < 70)
+			{
+				fall_Object[2].GetComponent<XP_Ball_Script>().xp_points = xp_points;
+				Instantiate(fall_Object[2], gameObject.transform.position, Quaternion.identity);
+			}
+		}
+		else if(gameObject.tag == "Boss")
+        {
+			fall_Object[0].GetComponent<XP_Ball_Script>().xp_points = xp_points;
 			Instantiate(fall_Object[0], gameObject.transform.position, Quaternion.identity);
-		}
-
-		//потом попытаюсь переделать, ибо с разных мобов могут падать разные плюшки
-		if (rnd < 30)
-		{
-			Instantiate(fall_Object[1], gameObject.transform.position, Quaternion.identity);
-		}
-
-		if (rnd < 70)
-		{
-			fall_Object[2].GetComponent<XP_Ball_Script>().xp_points = xp_points;
-			Instantiate(fall_Object[2], gameObject.transform.position, Quaternion.identity);
 		}
 
 		Wave_System RWN = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();

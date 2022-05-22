@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Enemy") || collider.CompareTag("Tower_Enemy"))
+        if (collider.CompareTag("Enemy") || collider.CompareTag("Tower_Enemy") || collider.CompareTag("Boss"))
         {
             collider.GetComponent<Enemy>().TakeDamage(damage); 
             DestroyProjectile();
