@@ -61,7 +61,7 @@ public class WaveController : MonoBehaviour
      {
          StartCoroutine(SpawnEnemyInWave());
      }*/
-}
+
 
 [System.Serializable]
 public class Waves
