@@ -8,8 +8,8 @@ public class Wave_System : MonoBehaviour
     public int Wave_Number;
     public int[] number_Of_Enemies;
     public int[] number_Of_Existed_Enemies;
-    public Preparation_Script preparation;
 
+    public Preparation_Script preparation;
     public void Start()
     {
         preparation = GameObject.FindGameObjectWithTag("Preparation").GetComponent<Preparation_Script>();
@@ -25,6 +25,8 @@ public class Wave_System : MonoBehaviour
 
     public void Rise_Wave_Number()
     {
+        Debug.Log(gameObject.name);
+
         if (Wave_Number == number_Of_Enemies.Length)
                 gameObject.SetActive(false);
         else if (number_Of_Enemies[Wave_Number] == 0 && number_Of_Existed_Enemies[Wave_Number] == 0)
@@ -39,3 +41,4 @@ public class Wave_System : MonoBehaviour
         Wave_Number++;
     }
 }
+
