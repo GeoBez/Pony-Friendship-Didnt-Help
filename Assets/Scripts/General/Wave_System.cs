@@ -25,8 +25,6 @@ public class Wave_System : MonoBehaviour
 
     public void Rise_Wave_Number()
     {
-        Debug.Log(gameObject.name);
-
         if (Wave_Number == number_Of_Enemies.Length)
                 gameObject.SetActive(false);
         else if (number_Of_Enemies[Wave_Number] == 0 && number_Of_Existed_Enemies[Wave_Number] == 0)
