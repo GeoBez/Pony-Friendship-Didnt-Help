@@ -9,8 +9,8 @@ public interface ModeActivate{
 }
 public abstract class Modes : MonoBehaviour//, ModeActivate
 {
-    public static string name;
-    public static string description;
+    public static string modeName;
+    public static string modeDescription;
     //ссылка на карточку
 
     public static  bool isBlocked = false; //пригодится для ограничений
@@ -24,8 +24,8 @@ public abstract class Modes : MonoBehaviour//, ModeActivate
     }
 
     public virtual void MainModeDo() {}
-    public string GetName() => name;
-    public string GetDescription() => description;
+    public string GetName() => modeName;
+    public string GetDescription() => modeDescription;
 }
 
 /*

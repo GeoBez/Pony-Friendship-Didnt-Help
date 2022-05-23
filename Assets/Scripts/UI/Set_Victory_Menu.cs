@@ -11,7 +11,7 @@ public class Set_Victory_Menu : MonoBehaviour
     private WaveController _waveController;
     private void Start()
     {
-        Victory_Menu = GameObject.FindGameObjectWithTag("Victory Menu");
+        //Victory_Menu = GameObject.FindGameObjectWithTag("Victory Menu");
         Victory_Menu.SetActive(false);
         number_Of_Enemies = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
         _waveController = GameObject.FindGameObjectWithTag("Wave Controller").GetComponent<WaveController>();

@@ -15,7 +15,7 @@ public class Skill_Btn : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        rnd = Random.RandomRange(0, NmrOfSkills - 1);
+        rnd = Random.Range(0, NmrOfSkills - 1);
         text = GetComponentInChildren<Text>();
         GetSkill();
     }
@@ -88,7 +88,7 @@ public class Skill_Btn : MonoBehaviour
             (rnd == 6 && player.mode_NewHorseshoes) || (rnd == 7 && player.mode_OneTimeTreatment) || (rnd == 8 && player.mode_MoreHealth)
             || (rnd == 9 && player.mode_TimeIsMoney) || (rnd == 10 && player.mode_IAmPower) || (rnd == 11 && player.mode_PowerPlus))
         {
-            rnd = Random.RandomRange(0, NmrOfSkills);
+            rnd = Random.Range(0, NmrOfSkills);
         }
     }
 
@@ -170,7 +170,7 @@ public class Skill_Btn : MonoBehaviour
 
     void ActivateMode(Modes mode)
     {
-        rnd = Random.RandomRange(0, NmrOfSkills);
+        rnd = Random.Range(0, NmrOfSkills);
         canvas.skill_Points--;
         xp_Bar.skill_Points--;
         mode.Activate();

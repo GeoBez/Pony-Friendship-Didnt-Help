@@ -12,8 +12,8 @@ public class Mode_Magnit : Modes
 {
     public Mode_Magnit()
     {
-        name = "Магнит";
-        description = "Увеличивает радиус сбора монет";
+        modeName = "Магнит";
+        modeDescription = "Увеличивает радиус сбора монет";
         //Activate();
     }
 
@@ -27,8 +27,8 @@ public class Mode_DoubleDenomination : Modes
 {
     public Mode_DoubleDenomination()
     {
-        name = "Двойной номинал";
-        description = "Все выпадающие монетки стоят 2";
+        modeName = "Двойной номинал";
+        modeDescription = "Все выпадающие монетки стоят 2";
     }
     public override void MainModeDo()
     {
@@ -40,8 +40,8 @@ public class Mode_CleverLeaf : Modes
 {
     public Mode_CleverLeaf()
     {
-        name = "Лист клевера";
-        description = "Увеличивает шанс выпадения монет на 10%";
+        modeName = "Лист клевера";
+        modeDescription = "Увеличивает шанс выпадения монет на 10%";
     }
     public override void MainModeDo()
     {
@@ -53,8 +53,8 @@ public class Mode_MoreBits : Modes
 {
     public Mode_MoreBits()
     {
-        name = "Больше битсов!";
-        description = "+100 монеток";
+        modeName = "Больше битсов!";
+        modeDescription = "+100 монеток";
     }
     public override void MainModeDo()
     {
@@ -66,8 +66,8 @@ public class Mode_Sturdy : Modes
 {
     public Mode_Sturdy()
     {
-        name = "Здоровяк";
-        description = "Увеличение количества жизни на 10%";
+        modeName = "Здоровяк";
+        modeDescription = "Увеличение количества жизни на 10%";
     }
 
     public override void MainModeDo()
@@ -83,8 +83,8 @@ public class Mode_HealthyHealth : Modes
 {
     public Mode_HealthyHealth()
     {
-        name = "Здорово, здоровье";
-        description = "Увеличение количества жизни на 20 хп";
+        modeName = "Здорово, здоровье";
+        modeDescription = "Увеличение количества жизни на 20 хп";
     }
 
     public override void MainModeDo()
@@ -100,8 +100,8 @@ public class Mode_NewHorseshoes : Modes
 {
     public Mode_NewHorseshoes()
     {
-        name = "Новые подковы";
-        description = "Повышение скорости передвижения на 5%";
+        modeName = "Новые подковы";
+        modeDescription = "Повышение скорости передвижения на 5%";
     }
 
     public override void MainModeDo()
@@ -116,8 +116,8 @@ public class Mode_OneTimeTreatment : Modes
 {
     public Mode_OneTimeTreatment()
     {
-        name = "Разовое лечение";
-        description = "Восстанавливает здоровье до максимума";
+        modeName = "Разовое лечение";
+        modeDescription = "Восстанавливает здоровье до максимума";
     }
 
     public override void MainModeDo()
@@ -132,8 +132,8 @@ public class Mode_MoreHealth : Modes
 {
     public Mode_MoreHealth()
     {
-        name = "Больше здоровья";
-        description = "Здоровье дерева увеличивается на 20 единиц";
+        modeName = "Больше здоровья";
+        modeDescription = "Здоровье дерева увеличивается на 20 единиц";
     }
 
     public override void MainModeDo()
@@ -149,8 +149,8 @@ public class Mode_TimeIsMoney : Modes
 {
     public Mode_TimeIsMoney()
     {
-        name = "Время - деньги";
-        description = "За пропуск волны дается в 2 раза больше монет";
+        modeName = "Время - деньги";
+        modeDescription = "За пропуск волны дается в 2 раза больше монет";
     }
 
     public override void MainModeDo()
@@ -163,8 +163,8 @@ public class Mode_IAmPower : Modes
 {
     public Mode_IAmPower()
     {
-        name = "Я есть сила";
-        description = "Повышает сила атаки в 2 раза";
+        modeName = "Я есть сила";
+        modeDescription = "Повышает сила атаки в 2 раза";
     }
 
     public override void MainModeDo()
@@ -178,8 +178,8 @@ public class Mode_PowerPlus : Modes
 {
     public Mode_PowerPlus()
     {
-        name = "Сила+";
-        description = "Увеличение урона на 5 единиц";
+        modeName = "Сила+";
+        modeDescription = "Увеличение урона на 5 единиц";
     }
 
     public override void MainModeDo()
@@ -193,8 +193,8 @@ public class Mode_SimpleDistanteBattle : Modes
 {
     public Mode_SimpleDistanteBattle()
     {
-        name = "Простой дальний бой";
-        description = "Меняет тип атаки на дальний";
+        modeName = "Простой дальний бой";
+        modeDescription = "Меняет тип атаки на дальний";
     }
 
     public override void MainModeDo()
@@ -208,8 +208,8 @@ public class Mode_SittingUpper : Modes
 {
     public Mode_SittingUpper()
     {
-        name = "Сижу высоко - стреляю далеко";
-        description = "Увеличивает радиус атаки";
+        modeName = "Сижу высоко - стреляю далеко";
+        modeDescription = "Увеличивает радиус атаки";
     }
 
     public override void MainModeDo()
@@ -225,8 +225,8 @@ public class Mode_IAmSpeed : Modes
 {
     public Mode_IAmSpeed()
     {
-        name = "Я есть скорость";
-        description = "Повышает частоту атаки в 1.5 раза";
+        modeName = "Я есть скорость";
+        modeDescription = "Повышает частоту атаки в 1.5 раза";
     }
 
     public override void MainModeDo()
@@ -245,8 +245,8 @@ public class Mode_YouShallNoPass : Modes
 {
     public Mode_YouShallNoPass()
     {
-        name = "Ты не пройдешь";
-        description = "Вы можете стрелять по врагам идущим к дереву";
+        modeName = "Ты не пройдешь";
+        modeDescription = "Вы можете стрелять по врагам идущим к дереву";
     }
 
     public override void MainModeDo()
