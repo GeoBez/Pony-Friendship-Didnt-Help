@@ -74,6 +74,8 @@ public class Enemy : MonoBehaviour, IFreezable
 		Wave_System RWN = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
 		RWN.number_Of_Existed_Enemies[RWN.Wave_Number]--;
 		RWN.Rise_Wave_Number();
+
+		var WC = WaveController.NeedToKill--;
 		Destroy(gameObject);
 	}
 
