@@ -10,6 +10,7 @@ public class WaveController : MonoBehaviour
     public static int NeedToKill;
 
     private bool _isWorking;
+    private bool isWavesEnd = false;
 
 
     private Preparation_Script preparation;
@@ -24,24 +25,35 @@ public class WaveController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(NeedToKill);
-        if (!preparation.inPreparation && !_isWorking)
-        {
-            _isWorking = true;
-            Rise_Wave();
-        }
-        else if (preparation.inPreparation && _isWorking)
-        {
-            _isWorking = false;
-        }
-        if (NeedToKill==0 && _isWorking)
-        {
-            if ((Waves.Length >= Wave_Number + 1) && (Waves[Wave_Number + 1].IsBoss))
-                preparation.GetComponent<Preparation_Script>().Reset_Timer_Boss();
-            else
-                preparation.GetComponent<Preparation_Script>().Reset_Timer();
+            //Debug.Log(isNotWavesEnd);
 
-            Wave_Number++;
+        if (!isWavesEnd)
+        {
+            if (NeedToKill == 0 && _isWorking)
+            {
+                if ((Waves.Length >= Wave_Number + 1) && (Waves[Wave_Number + 1].IsBoss))
+                    preparation.GetComponent<Preparation_Script>().Reset_Timer_Boss();
+                else
+                    preparation.GetComponent<Preparation_Script>().Reset_Timer();
+                Wave_Number++;
+
+                //Debug.Log("I do " + Wave_Number);
+            }
+            if (!preparation.inPreparation && !_isWorking)
+            {
+                _isWorking = true;
+                Rise_Wave();
+            }
+            else if (preparation.inPreparation && _isWorking)
+            {
+                _isWorking = false;
+            }
+
+            if (Wave_Number == Waves.Length-1 && NeedToKill==0)
+            {
+                Debug.Log("Win");
+                isWavesEnd = true;
+            }            
         }
     }
 

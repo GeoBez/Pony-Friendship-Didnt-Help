@@ -611,7 +611,7 @@ Transform:
   - {fileID: 1783025995}
   - {fileID: 556657114}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1670688353 stripped
 GameObject:
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 1743594973}
   m_Layer: 0
   m_Name: Wave_Controller
-  m_TagString: Untagged
+  m_TagString: Wave Controller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,12 +668,6 @@ MonoBehaviour:
       _max_Count_Enemy: 5
       Portal: {fileID: 1131102386}
     IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 8020799161829022176, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      _min_Count_Enemy: 1
-      _max_Count_Enemy: 1
-      Portal: {fileID: 2025412220}
-    IsBoss: 1
 --- !u!4 &1743594974
 Transform:
   m_ObjectHideFlags: 0
@@ -686,7 +680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1783025995 stripped
 Transform:
@@ -749,7 +743,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1940965197
 MonoBehaviour:
@@ -1033,7 +1027,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5511783964252276317, guid: 2b1af4f68759a91489ff0f96572a27cb, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5511783964252276317, guid: 2b1af4f68759a91489ff0f96572a27cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1639,10 +1633,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2723306482976906236, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3583346014712542607, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1655,13 +1645,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022176, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1702,10 +1688,6 @@ PrefabInstance:
     - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022206, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_FlipX
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}

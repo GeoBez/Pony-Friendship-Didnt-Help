@@ -28,8 +28,8 @@ public class Set_Victory_Menu : MonoBehaviour
         {
             Victory_Menu.SetActive(true);
         }*/
-
-        if (WaveController.Wave_Number > _waveController.Waves.Length)
+        
+        if (WaveController.Wave_Number == _waveController.Waves.Length-1 && WaveController.NeedToKill == 0)
         {
             Victory_Menu.SetActive(true);
         }
