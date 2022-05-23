@@ -51,7 +51,7 @@ public class WaveController : MonoBehaviour
 
             if (Wave_Number == Waves.Length-1 && NeedToKill==0)
             {
-                Debug.Log("Win");
+                //Debug.Log("Win");
                 isWavesEnd = true;
             }            
         }

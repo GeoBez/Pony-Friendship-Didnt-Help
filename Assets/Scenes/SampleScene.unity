@@ -668,6 +668,348 @@ MonoBehaviour:
       _max_Count_Enemy: 5
       Portal: {fileID: 1131102386}
     IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 5
+      _max_Count_Enemy: 10
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 5
+      _max_Count_Enemy: 15
+      Portal: {fileID: 1131102386}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 5
+      _max_Count_Enemy: 10
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 5
+      _max_Count_Enemy: 15
+      Portal: {fileID: 1131102386}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 5
+      _max_Count_Enemy: 10
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 5
+      _max_Count_Enemy: 15
+      Portal: {fileID: 1131102386}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 6
+      _max_Count_Enemy: 16
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 9
+      _max_Count_Enemy: 18
+      Portal: {fileID: 1131102386}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 6
+      _max_Count_Enemy: 16
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 9
+      _max_Count_Enemy: 18
+      Portal: {fileID: 1131102386}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 6
+      _max_Count_Enemy: 16
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 9
+      _max_Count_Enemy: 18
+      Portal: {fileID: 1131102386}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 6
+      _max_Count_Enemy: 16
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 9
+      _max_Count_Enemy: 18
+      Portal: {fileID: 1131102386}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 6
+      _max_Count_Enemy: 16
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 9
+      _max_Count_Enemy: 18
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 6
+      _max_Count_Enemy: 16
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 9
+      _max_Count_Enemy: 18
+      Portal: {fileID: 1131102386}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 8020799161829022176, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
+      _min_Count_Enemy: 1
+      _max_Count_Enemy: 1
+      Portal: {fileID: 2025412220}
+    IsBoss: 1
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 8
+      _max_Count_Enemy: 20
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 20
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 8
+      _max_Count_Enemy: 20
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 20
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 8
+      _max_Count_Enemy: 20
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 20
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 8
+      _max_Count_Enemy: 20
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 20
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 12
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 12
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 12
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 12
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 12
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 12
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 12
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 10
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 12
+      _max_Count_Enemy: 25
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 2
+      _max_Count_Enemy: 3
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 8020799161829022176, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
+      _min_Count_Enemy: 1
+      _max_Count_Enemy: 1
+      Portal: {fileID: 2025412220}
+    IsBoss: 1
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 30
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 17
+      _max_Count_Enemy: 35
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 20
+      _max_Count_Enemy: 35
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 17
+      _max_Count_Enemy: 35
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 20
+      _max_Count_Enemy: 35
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 17
+      _max_Count_Enemy: 35
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 20
+      _max_Count_Enemy: 35
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 17
+      _max_Count_Enemy: 35
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 20
+      _max_Count_Enemy: 35
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 5
+      _max_Count_Enemy: 8
+      Portal: {fileID: 2025412220}
+    - Enemy: {fileID: 8020799161829022176, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
+      _min_Count_Enemy: 1
+      _max_Count_Enemy: 1
+      Portal: {fileID: 2025412220}
+    IsBoss: 1
+  - waves:
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 1
+      _max_Count_Enemy: 1
+      Portal: {fileID: 2025412220}
+    IsBoss: 0
 --- !u!4 &1743594974
 Transform:
   m_ObjectHideFlags: 0
@@ -1626,68 +1968,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8645d4379ecec948962d3f1b41ebcf0, type: 3}
---- !u!1001 &8020799160644269614
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3583346014712542607, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3583346014712542607, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022176, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_Name
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.9185405
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.8735697
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020799161829022177, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
