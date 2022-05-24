@@ -15,10 +15,12 @@ public abstract class Modes : MonoBehaviour//, ModeActivate
 
     public static  bool isBlocked = false; //пригодится для ограничений
     public static bool isActive = false;
+    protected Player player;
     public virtual void Activate()
     {
         isActive = true;
         isBlocked = true;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         MainModeDo();
     }

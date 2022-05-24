@@ -6,6 +6,7 @@ public class Skill_Canvas : MonoBehaviour
 {
     XP_Bar xp_Bar;
     public int skill_Points;
+    [SerializeField] private GameObject skillsGroup;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class Skill_Canvas : MonoBehaviour
         {
             Time.timeScale = 1;
             xp_Bar.skill_Points = 0;
-            gameObject.SetActive(false);
+            skillsGroup.SetActive(false);
         }
     }
 }
