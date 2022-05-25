@@ -8,6 +8,7 @@ public class button_choose : MonoBehaviour
 
     public void MakeMoodActive()
     {
+        //Debug.Log("uyuyu");
         mod.Activate();
         var parent = GetComponentInParent<skill_choose>();
         foreach (var card in parent.cards)
