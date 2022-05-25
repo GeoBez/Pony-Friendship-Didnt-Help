@@ -75,7 +75,7 @@ public class skill_choose : MonoBehaviour
     int GenerateIndex()
     {
         int cout;
-        if (_allModes.Count > 2)
+        if (_allModes.Count > 4)
         {
             cout = Random.Range(0, _allModes.Count - 1);
 
