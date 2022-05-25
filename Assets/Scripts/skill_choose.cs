@@ -41,7 +41,7 @@ public class skill_choose : MonoBehaviour
 
             card.descriptionText.text = mod.GetDescription();
             card.nameText.text = mod.GetName();
-            card.image = mod.GetImage();
+            //card.image = mod.GetImage();
             Debug.Log(card.nameText);
         }
     } 
