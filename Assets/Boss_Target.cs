@@ -15,7 +15,7 @@ public class Boss_Target : MonoBehaviour
 
     void Update()
     {
-        if(!boss.isAttacking)
+        if(boss != null && !boss.isAttacking)
             transform.position = Player.position;
     }
 }

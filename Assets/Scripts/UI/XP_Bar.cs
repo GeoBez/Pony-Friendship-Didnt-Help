@@ -25,6 +25,7 @@ public class XP_Bar : MonoBehaviour
         fill_Value.maxValue = Max_XP;
         skills_Canvas.SetActive(false);
         preparation = GameObject.FindGameObjectWithTag("Preparation").GetComponent<Preparation_Script>();
+        xp = 0;
     }
 
     public void TranslateSkillPoints()
@@ -54,7 +55,7 @@ public class XP_Bar : MonoBehaviour
     public void SetSkillCanvas()
     {
         skills_Canvas.SetActive(true);
-        skills_Canvas.GetComponent<Skill_Canvas>().skill_Points = skill_Points;
+        skills_Canvas.GetComponentInChildren<Skill_Canvas>().skill_Points = skill_Points;
         Time.timeScale = 0;
         fill_Value.value = xp;
         if (level < 7)

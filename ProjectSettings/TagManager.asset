@@ -21,6 +21,8 @@ TagManager:
   - XP Bar
   - Boss_Target
   - Boss
+  - Wave Controller
+  - ModeManager
   layers:
   - Default
   - TransparentFX

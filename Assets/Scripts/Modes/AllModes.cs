@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AllModes : MonoBehaviour
+public class AllModes:MonoBehaviour
 {
-
+    
 }
 
 //все моды ниже
@@ -12,14 +12,15 @@ public class Mode_Magnit : Modes
 {
     public Mode_Magnit()
     {
-        name = "Магнит";
-        description = "Увеличивает радиус сбора монет";
+        modeName = "Магнит";
+        modeDescription = "Увеличивает радиус сбора монет";
         //Activate();
     }
 
     public override void MainModeDo()
     {
         Coin.range = 12;
+        player.mode_Magnit = true;
     }
 }
 
@@ -27,12 +28,13 @@ public class Mode_DoubleDenomination : Modes
 {
     public Mode_DoubleDenomination()
     {
-        name = "Двойной номинал";
-        description = "Все выпадающие монетки стоят 2";
+        modeName = "Двойной номинал";
+        modeDescription = "Все выпадающие монетки стоят 2";
     }
     public override void MainModeDo()
     {
         Coin.coin_Denomination = 2;
+        player.mode_Double_Denomination = true;
     }
 }
 
@@ -40,12 +42,13 @@ public class Mode_CleverLeaf : Modes
 {
     public Mode_CleverLeaf()
     {
-        name = "Лист клевера";
-        description = "Увеличивает шанс выпадения монет на 10%";
+        modeName = "Лист клевера";
+        modeDescription = "Увеличивает шанс выпадения монет на 10%";
     }
     public override void MainModeDo()
     {
         Coin.probability = 40;
+        player.mode_Clover_Leaf = true;
     }
 }
 
@@ -53,12 +56,13 @@ public class Mode_MoreBits : Modes
 {
     public Mode_MoreBits()
     {
-        name = "Больше битсов!";
-        description = "+100 монеток";
+        modeName = "Больше битсов!";
+        modeDescription = "+100 монеток";
     }
     public override void MainModeDo()
     {
         Coin_Count_Text.coin_Count += 100;
+        player.mode_MoreBits = true;
     }
 }
 
@@ -66,8 +70,8 @@ public class Mode_Sturdy : Modes
 {
     public Mode_Sturdy()
     {
-        name = "Здоровяк";
-        description = "Увеличение количества жизни на 10%";
+        modeName = "Здоровяк";
+        modeDescription = "Увеличение количества жизни на 10%";
     }
 
     public override void MainModeDo()
@@ -76,6 +80,7 @@ public class Mode_Sturdy : Modes
 
         player.maxHealth += (int)(player.maxHealth * 0.1);
         player.Health += (int)(player.maxHealth * 0.1);
+        player.mode_Sturdy = true;
     }
 }
 
@@ -83,8 +88,8 @@ public class Mode_HealthyHealth : Modes
 {
     public Mode_HealthyHealth()
     {
-        name = "Здорово, здоровье";
-        description = "Увеличение количества жизни на 20 хп";
+        modeName = "Здорово, здоровье";
+        modeDescription = "Увеличение количества жизни на 20 хп";
     }
 
     public override void MainModeDo()
@@ -93,6 +98,7 @@ public class Mode_HealthyHealth : Modes
 
         player.maxHealth += 20;
         player.Health += 20;
+        player.mode_HealthyHealth = true;
     }
 }
 
@@ -100,8 +106,8 @@ public class Mode_NewHorseshoes : Modes
 {
     public Mode_NewHorseshoes()
     {
-        name = "Новые подковы";
-        description = "Повышение скорости передвижения на 5%";
+        modeName = "Новые подковы";
+        modeDescription = "Повышение скорости передвижения на 5%";
     }
 
     public override void MainModeDo()
@@ -109,6 +115,7 @@ public class Mode_NewHorseshoes : Modes
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         player.Speed += (float)(player.Speed * 0.1);
+        player.mode_NewHorseshoes = true;
     }
 }
 
@@ -116,8 +123,8 @@ public class Mode_OneTimeTreatment : Modes
 {
     public Mode_OneTimeTreatment()
     {
-        name = "Разовое лечение";
-        description = "Восстанавливает здоровье до максимума";
+        modeName = "Разовое лечение";
+        modeDescription = "Восстанавливает здоровье до максимума";
     }
 
     public override void MainModeDo()
@@ -125,6 +132,8 @@ public class Mode_OneTimeTreatment : Modes
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         player.Health = player.maxHealth;
+
+        player.mode_OneTimeTreatment = true;
     }
 }
 
@@ -132,8 +141,8 @@ public class Mode_MoreHealth : Modes
 {
     public Mode_MoreHealth()
     {
-        name = "Больше здоровья";
-        description = "Здоровье дерева увеличивается на 20 единиц";
+        modeName = "Больше здоровья";
+        modeDescription = "Здоровье дерева увеличивается на 20 единиц";
     }
 
     public override void MainModeDo()
@@ -142,6 +151,7 @@ public class Mode_MoreHealth : Modes
 
         tree.maxHealth += 20;
         tree.health += 20;
+        player.mode_MoreHealth = true;
     }
 }
 
@@ -149,13 +159,14 @@ public class Mode_TimeIsMoney : Modes
 {
     public Mode_TimeIsMoney()
     {
-        name = "Время - деньги";
-        description = "За пропуск волны дается в 2 раза больше монет";
+        modeName = "Время - деньги";
+        modeDescription = "За пропуск волны дается в 2 раза больше монет";
     }
 
     public override void MainModeDo()
     {
         Coin.coinForWavePass *= 2;
+        player.mode_TimeIsMoney = true;
     }
 }
 
@@ -163,14 +174,15 @@ public class Mode_IAmPower : Modes
 {
     public Mode_IAmPower()
     {
-        name = "Я есть сила";
-        description = "Повышает сила атаки в 2 раза";
+        modeName = "Я есть сила";
+        modeDescription = "Повышает сила атаки в 2 раза";
     }
 
     public override void MainModeDo()
     {
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player.damage *= 2;
+        player.mode_IAmPower = true;
     }
 }
 
@@ -178,14 +190,15 @@ public class Mode_PowerPlus : Modes
 {
     public Mode_PowerPlus()
     {
-        name = "Сила+";
-        description = "Увеличение урона на 5 единиц";
+        modeName = "Сила+";
+        modeDescription = "Увеличение урона на 5 единиц";
     }
 
     public override void MainModeDo()
     {
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player.damage += 5;
+        player.mode_PowerPlus = true;
     }
 }
 
@@ -193,8 +206,8 @@ public class Mode_SimpleDistanteBattle : Modes
 {
     public Mode_SimpleDistanteBattle()
     {
-        name = "Простой дальний бой";
-        description = "Меняет тип атаки на дальний";
+        modeName = "Простой дальний бой";
+        modeDescription = "Меняет тип атаки на дальний";
     }
 
     public override void MainModeDo()
@@ -208,8 +221,8 @@ public class Mode_SittingUpper : Modes
 {
     public Mode_SittingUpper()
     {
-        name = "Сижу высоко - стреляю далеко";
-        description = "Увеличивает радиус атаки";
+        modeName = "Сижу высоко - стреляю далеко";
+        modeDescription = "Увеличивает радиус атаки";
     }
 
     public override void MainModeDo()
@@ -218,6 +231,7 @@ public class Mode_SittingUpper : Modes
 
         GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Weapon>().detectionDistance = 10;
         GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerMeleeAttacks>().attackRange = 5;
+        //player.mode_ = true;
     }
 }
 
@@ -225,8 +239,8 @@ public class Mode_IAmSpeed : Modes
 {
     public Mode_IAmSpeed()
     {
-        name = "Я есть скорость";
-        description = "Повышает частоту атаки в 1.5 раза";
+        modeName = "Я есть скорость";
+        modeDescription = "Повышает частоту атаки в 1.5 раза";
     }
 
     public override void MainModeDo()
@@ -245,16 +259,18 @@ public class Mode_YouShallNoPass : Modes
 {
     public Mode_YouShallNoPass()
     {
-        name = "Ты не пройдешь";
-        description = "Вы можете стрелять по врагам идущим к дереву";
+        modeName = "Ты не пройдешь";
+        modeDescription = "Вы можете стрелять по врагам идущим к дереву";
     }
 
     public override void MainModeDo()
     {
-        var player = GameObject.FindGameObjectWithTag("Player");
+        player.mode_YouShallNotPass = true;
 
-        player.GetComponentInChildren<Weapon>().whatIsAttack = LayerMask.GetMask("Tower Enemy", "Enemy");
-        player.GetComponentInChildren<PlayerMeleeAttacks>().enemyLayer = LayerMask.GetMask("Tower Enemy", "Enemy");
+        var _player = GameObject.FindGameObjectWithTag("Player");
+
+        _player.GetComponentInChildren<Weapon>().whatIsAttack = LayerMask.GetMask("Tower Enemy", "Enemy");
+        _player.GetComponentInChildren<PlayerMeleeAttacks>().enemyLayer = LayerMask.GetMask("Tower Enemy", "Enemy");
     }
 }
 
