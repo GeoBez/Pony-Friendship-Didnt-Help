@@ -7,6 +7,10 @@ public class skill_choose : MonoBehaviour
 {
     public List<Modes> _allModes = new List<Modes>();
     public ButtonCard[] cards;
+    public GameObject skills_Canvas;
+
+    private bool isStartWas = false;
+    private bool _isItWork = false;
 
     void Start()
     {
@@ -32,20 +36,32 @@ public class skill_choose : MonoBehaviour
             if (mode.isUsed)
                 mode.Activate();
         }
-        Debug.Log("Its " + _allModes.Count);
     }
 
     public void MakeCard()
-    {
-        Debug.Log("Its "+_allModes.Count);
-        foreach (var card in cards){
-            Debug.Log("I start");
-            var mod = GenerateCard();
+    {        
+        if (!isStartWas)
+        {
+            isStartWas = true;
+            Start();
+        }
 
-            card.descriptionText.text = mod.GetDescription();
-            card.nameText.text = mod.GetName();
-            //card.image = mod.GetImage();
-            Debug.Log(card.nameText);
+
+        if (!_isItWork)
+        {
+            _isItWork = true;
+            foreach (var card in cards)
+            {
+                var mod =  GenerateCard();
+                //Debug.Log("Shoosed");
+                card.descriptionText.text = mod.GetDescription();
+                card.nameText.text = mod.GetName();
+                
+
+                card.button.GetComponent<button_choose>().mod = mod;
+
+                //card.image = mod.GetImage();
+            }
         }
     } 
 
@@ -53,12 +69,12 @@ public class skill_choose : MonoBehaviour
     {
         int cout = Random.Range(0, _allModes.Count-1);
 
-        Debug.Log("try");
         while (_allModes[cout].isUsed)
         {
-            Debug.Log("steel try");
             cout = Random.Range(0, _allModes.Count - 1);
         }
+
+        _allModes[cout].isUsed = true;
         return _allModes[cout];
     }
 }
