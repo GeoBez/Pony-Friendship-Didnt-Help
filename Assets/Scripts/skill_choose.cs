@@ -8,9 +8,10 @@ public class skill_choose : MonoBehaviour
     public List<Modes> _allModes = new List<Modes>();
     public ButtonCard[] cards;
     public GameObject skills_Canvas;
+    public XP_Bar xp_Bar;
 
     private bool isStartWas = false;
-    private bool _isItWork = false;
+    public bool _isItWork = false;
 
     void Start()
     {
@@ -52,20 +53,22 @@ public class skill_choose : MonoBehaviour
             _isItWork = true;
             foreach (var card in cards)
             {
-                var mod =  GenerateCard();
-                //Debug.Log("Shoosed");
+                var count =  GenerateIndex();
+                var mod = _allModes[count];
+                                
                 card.descriptionText.text = mod.GetDescription();
                 card.nameText.text = mod.GetName();
-                
 
-                card.button.GetComponent<button_choose>().mod = mod;
+                var Cardbutton = card.button.GetComponent<button_choose>();
+                Cardbutton.mod = mod;
+                Cardbutton.index = count;
 
                 //card.image = mod.GetImage();
             }
         }
     } 
 
-    Modes GenerateCard()
+    int GenerateIndex()
     {
         int cout = Random.Range(0, _allModes.Count-1);
 
@@ -75,7 +78,7 @@ public class skill_choose : MonoBehaviour
         }
 
         _allModes[cout].isUsed = true;
-        return _allModes[cout];
+        return cout;
     }
 }
 
