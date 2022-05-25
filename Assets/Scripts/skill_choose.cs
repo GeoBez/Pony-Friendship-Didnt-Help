@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class skill_choose : MonoBehaviour
 {
-    List<Modes> _allModes;
+    public List<Modes> _allModes = new List<Modes>();
     public ButtonCard[] cards;
 
     void Start()
@@ -32,11 +32,14 @@ public class skill_choose : MonoBehaviour
             if (mode.isUsed)
                 mode.Activate();
         }
+        Debug.Log("Its " + _allModes.Count);
     }
 
     public void MakeCard()
     {
+        Debug.Log("Its "+_allModes.Count);
         foreach (var card in cards){
+            Debug.Log("I start");
             var mod = GenerateCard();
 
             card.descriptionText.text = mod.GetDescription();
@@ -50,8 +53,10 @@ public class skill_choose : MonoBehaviour
     {
         int cout = Random.Range(0, _allModes.Count-1);
 
-        while (!_allModes[cout].isUsed)
+        Debug.Log("try");
+        while (_allModes[cout].isUsed)
         {
+            Debug.Log("steel try");
             cout = Random.Range(0, _allModes.Count - 1);
         }
         return _allModes[cout];
