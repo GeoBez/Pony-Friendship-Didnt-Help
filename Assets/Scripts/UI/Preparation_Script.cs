@@ -38,7 +38,7 @@ public class Preparation_Script : MonoBehaviour
         }
         else if(timer <= 0)
         {
-            inPreparation = false;            
+            inPreparation = false;
         }
 
         minutes = (int)timer / 60;
@@ -90,12 +90,5 @@ public class Preparation_Script : MonoBehaviour
         xp_Bar.Update_Bar(0);
         inPreparation = true;
         timer = default_time;
-    }
-
-    public void Reset_Timer_Boss()
-    {
-        xp_Bar.Update_Bar(0);
-        inPreparation = true;
-        timer = bossTimer;
     }
 }

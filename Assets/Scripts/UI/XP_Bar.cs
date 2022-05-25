@@ -56,7 +56,7 @@ public class XP_Bar : MonoBehaviour
     public void SetSkillCanvas()
     {
         skills_Canvas.SetActive(true);
-        skills_Canvas.GetComponentInChildren<Skill_Canvas>().skill_Points = skill_Points;
+        skills_Canvas.GetComponent<Skill_Canvas>().skill_Points = skill_Points;
         Time.timeScale = 0;
         fill_Value.value = xp;
         if (level < 7)

@@ -46,9 +46,6 @@ public class Enemy : MonoBehaviour, IFreezable
 		all_Enemies.all_Enemies--;
 		float rnd = Random.Range(0, 99);
 
-		Destroy(gameObject);
-		WaveController.NeedToKill--;
-
 		if (gameObject.tag == "Enemy" || gameObject.tag == "Tower Enemy")
 		{
 			if (rnd < 5)
@@ -75,9 +72,9 @@ public class Enemy : MonoBehaviour, IFreezable
 		}
 
 		Wave_System RWN = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
-		//RWN.number_Of_Existed_Enemies[RWN.Wave_Number]--;
+		RWN.number_Of_Existed_Enemies[RWN.Wave_Number]--;
 		RWN.Rise_Wave_Number();
-
+		Destroy(gameObject);
 	}
 
 	public void TakeDamage(float damage)

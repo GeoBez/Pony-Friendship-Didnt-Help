@@ -12,8 +12,6 @@ public class Enemy_Spawn : MonoBehaviour
     float default_Time;
     Wave_System wave_System;
 
-    private int _enemy_Count;
-
     void Start()
     {
         preparation = GameObject.FindGameObjectWithTag("Preparation").GetComponent<Preparation_Script>();
@@ -25,7 +23,7 @@ public class Enemy_Spawn : MonoBehaviour
         }
     }
 
-    /*void Update()
+    void Update()
     {
         inPreparation = preparation.inPreparation;
         if (!inPreparation)
@@ -45,28 +43,5 @@ public class Enemy_Spawn : MonoBehaviour
                 time = default_Time;
             }
         }
-    }*/
-
-    public void SpawnEnemy(GameObject enemy, int enemy_Count)
-    {        
-        this.enemy = enemy;
-        _enemy_Count = enemy_Count;
-
-        if (enemy.tag == "Tower_Enemy")
-        {
-            enemy.GetComponent<FollowPath>().MyPath = gameObject.GetComponentInChildren<MovementPath>();
-        }
-
-        StartCoroutine(CreateEnemyFor2Seconds());
-        StopCoroutine(CreateEnemyFor2Seconds());
-    }
-       
-    private IEnumerator CreateEnemyFor2Seconds()
-    {
-        for (int i = 0; i < _enemy_Count; i++)
-        {
-            Instantiate(enemy, transform.position, transform.rotation);
-            yield return new WaitForSeconds(2);
-        }        
     }
 }

@@ -9,25 +9,23 @@ public interface ModeActivate{
 }
 public abstract class Modes : MonoBehaviour//, ModeActivate
 {
-    public static string modeName;
-    public static string modeDescription;
+    public static string name;
+    public static string description;
     //ссылка на карточку
 
     public static  bool isBlocked = false; //пригодится для ограничений
     public static bool isActive = false;
-    protected Player player;
     public virtual void Activate()
     {
         isActive = true;
         isBlocked = true;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         MainModeDo();
     }
 
     public virtual void MainModeDo() {}
-    public string GetName() => modeName;
-    public string GetDescription() => modeDescription;
+    public string GetName() => name;
+    public string GetDescription() => description;
 }
 
 /*
