@@ -18,6 +18,8 @@ public class Skill_Btn : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         rnd = Random.Range(0, NmrOfSkills - 1);
         GetSkill();
+
+
     }
 
     private void Update()

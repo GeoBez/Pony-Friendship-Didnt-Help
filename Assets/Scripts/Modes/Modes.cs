@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 public interface ModeActivate{
     void Activate();
     void MainModeDo();
@@ -11,10 +12,12 @@ public abstract class Modes : MonoBehaviour//, ModeActivate
 {
     public static string modeName;
     public static string modeDescription;
+    public Image Image;
     //ссылка на карточку
 
     public static  bool isBlocked = false; //пригодится для ограничений
     public static bool isActive = false;
+    public bool isUsed = false;
     protected Player player;
     public virtual void Activate()
     {
@@ -28,6 +31,7 @@ public abstract class Modes : MonoBehaviour//, ModeActivate
     public virtual void MainModeDo() {}
     public string GetName() => modeName;
     public string GetDescription() => modeDescription;
+    public Image GetImage() => Image;
 }
 
 /*
