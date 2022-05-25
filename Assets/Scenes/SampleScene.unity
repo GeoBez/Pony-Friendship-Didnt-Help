@@ -6641,7 +6641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4927f8c4dafa30549b74ff9e82239d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill_Points: 2
+  skill_Points: 0
   skillsGroup: {fileID: 3797918223296649343}
 --- !u!222 &5768682607708892075
 CanvasRenderer:
@@ -7050,7 +7050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5888600446a4c1e4c99f0500850ec0cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill_Points: 3
+  skill_Points: 0
   skills_Canvas: {fileID: 3797918223296649343}
 --- !u!224 &6147984106883873340
 RectTransform:
