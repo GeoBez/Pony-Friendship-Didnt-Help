@@ -274,6 +274,22 @@ public class Mode_YouShallNoPass : Modes
     }
 }
 
+public class Mode_Extra : Modes//Это скорее исключение, чем улучшение
+{
+    public Mode_Extra()
+    {
+        modeName = "Уууупс. Кажется ошибка:D";
+        modeDescription = "Это улучшение почти невозможно получить";
+    }
+
+    public override void MainModeDo()
+    {
+        Coin_Count_Text.coin_Count += 50;
+    }
+}
+
+
+
 
 
 

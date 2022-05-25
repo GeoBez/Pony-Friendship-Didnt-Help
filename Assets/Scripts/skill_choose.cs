@@ -53,9 +53,13 @@ public class skill_choose : MonoBehaviour
             _isItWork = true;
             foreach (var card in cards)
             {
+                Modes mod;
                 var count =  GenerateIndex();
-                var mod = _allModes[count];
-                                
+                if (count != -1)
+                    mod = _allModes[count];
+                else
+                    mod = gameObject.AddComponent<Mode_Extra>();
+
                 card.descriptionText.text = mod.GetDescription();
                 card.nameText.text = mod.GetName();
 
@@ -70,14 +74,23 @@ public class skill_choose : MonoBehaviour
 
     int GenerateIndex()
     {
-        int cout = Random.Range(0, _allModes.Count-1);
-
-        while (_allModes[cout].isUsed)
+        int cout;
+        if (_allModes.Count > 2)
         {
             cout = Random.Range(0, _allModes.Count - 1);
-        }
 
-        _allModes[cout].isUsed = true;
+            while (_allModes[cout].isUsed)
+            {
+                cout = Random.Range(0, _allModes.Count - 1);
+            }
+
+            _allModes[cout].isUsed = true;
+        }
+        else
+        {
+            Debug.Log("Улучшения кончились!!");
+            cout = -1;
+        }
         return cout;
     }
 }

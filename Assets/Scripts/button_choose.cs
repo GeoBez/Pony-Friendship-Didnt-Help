@@ -24,7 +24,8 @@ public class button_choose : MonoBehaviour
         }
               
         //parent._allModes.Remove(mod);
-        parent._allModes.RemoveAt(index);
+        if (index != -1)
+            parent._allModes.RemoveAt(index);
 
         skill_canvas.skill_Points--;
         parent.xp_Bar.skill_Points--;
