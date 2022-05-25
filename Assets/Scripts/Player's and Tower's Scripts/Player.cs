@@ -47,6 +47,10 @@ public class Player : MonoBehaviour
     public bool mode_TimeIsMoney = false;
     public bool mode_IAmPower = false;
     public bool mode_PowerPlus = false;
+    public bool mode_SimpleDistanteBattle = false;
+    public bool mode_SittingUpper = false;
+    public bool mode_IAmSpeed = false;
+    public bool mode_YouShallNoPass = false;
 
     public bool isMeleeAttacker;
 
@@ -65,8 +69,8 @@ public class Player : MonoBehaviour
         //isMeleeAttacker = true;
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
-
-        gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
+        
+        //gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
 
     }
 

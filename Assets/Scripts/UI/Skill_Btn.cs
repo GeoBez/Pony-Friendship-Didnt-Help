@@ -94,11 +94,38 @@ public class Skill_Btn : MonoBehaviour
             nameText.text = mode.GetName();
             descriptionText.text = mode.GetDescription();
         }
+        else if (rnd == 12)
+        {
+            Modes mode = gameObject.AddComponent<Mode_SimpleDistanteBattle>();
+            nameText.text = mode.GetName();
+            descriptionText.text = mode.GetDescription();
+        }
+        else if (rnd == 13)
+        {
+            Modes mode = gameObject.AddComponent<Mode_SittingUpper>();
+            nameText.text = mode.GetName();
+            descriptionText.text = mode.GetDescription();
+        }
+        else if (rnd == 14)
+        {
+            Modes mode = gameObject.AddComponent<Mode_IAmSpeed>();
+            nameText.text = mode.GetName();
+            descriptionText.text = mode.GetDescription();
+        }
+        else if (rnd == 15)
+        {
+            Modes mode = gameObject.AddComponent<Mode_YouShallNoPass>();
+            nameText.text = mode.GetName();
+            descriptionText.text = mode.GetDescription();
+        }
+
 
         if ((rnd == 0 && player.mode_Magnit) || (rnd == 1 && player.mode_Double_Denomination) || (rnd == 2 && player.mode_Clover_Leaf)
             || (rnd == 3 && player.mode_MoreBits) || (rnd == 4 && player.mode_Sturdy) || (rnd == 5 && player.mode_HealthyHealth) ||
             (rnd == 6 && player.mode_NewHorseshoes) || (rnd == 7 && player.mode_OneTimeTreatment) || (rnd == 8 && player.mode_MoreHealth)
-            || (rnd == 9 && player.mode_TimeIsMoney) || (rnd == 10 && player.mode_IAmPower) || (rnd == 11 && player.mode_PowerPlus))
+            || (rnd == 9 && player.mode_TimeIsMoney) || (rnd == 10 && player.mode_IAmPower) || (rnd == 11 && player.mode_PowerPlus)
+            || (rnd == 12 && player.mode_SimpleDistanteBattle) || (rnd == 13 && player.mode_SittingUpper)
+            || (rnd == 14 && player.mode_IAmSpeed) || (rnd == 1 && player.mode_YouShallNoPass))
         {
             rnd = Random.Range(0, NmrOfSkills - 1);
         }
@@ -177,6 +204,30 @@ public class Skill_Btn : MonoBehaviour
         {
             player.mode_PowerPlus = true;
             Modes mode = gameObject.AddComponent<Mode_PowerPlus>();
+            ActivateMode(mode);
+        }
+        else if (rnd == 12 && !player.mode_SimpleDistanteBattle)
+        {
+            player.mode_SimpleDistanteBattle = true;
+            Modes mode = gameObject.AddComponent<Mode_SimpleDistanteBattle>();
+            ActivateMode(mode);
+        }
+        else if (rnd == 13 && !player.mode_SittingUpper)///
+        {
+            player.mode_SittingUpper = true;
+            Modes mode = gameObject.AddComponent<Mode_SittingUpper>();
+            ActivateMode(mode);
+        }
+        else if (rnd == 14 && !player.mode_IAmSpeed)
+        {
+            player.mode_IAmSpeed = true;
+            Modes mode = gameObject.AddComponent<Mode_IAmSpeed>();
+            ActivateMode(mode);
+        }
+        else if (rnd == 15 && !player.mode_YouShallNoPass)
+        {
+            player.mode_YouShallNoPass = true;
+            Modes mode = gameObject.AddComponent<Mode_YouShallNoPass>();
             ActivateMode(mode);
         }
     }
