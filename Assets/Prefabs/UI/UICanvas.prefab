@@ -407,6 +407,7 @@ MonoBehaviour:
   image: {fileID: 1777313183}
   coolDown: 10
   duration: 3
+  ultLinkedUpgrade: []
   iseEffect: {fileID: 0}
   iceDestroyParticle: {fileID: 0}
   mask:
@@ -1590,7 +1591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skill_Points: 0
-  skills_Canvas: {fileID: 0}
+  skills_Canvas: {fileID: 4997938405360212299}
 --- !u!1 &3159348074945514063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2301,7 +2302,7 @@ MonoBehaviour:
   rnd: 0
   NmrOfSkills: 12
   canvas: {fileID: 1203930293507245886}
-  xp_Bar: {fileID: 0}
+  xp_Bar: {fileID: 853194371690350426}
 --- !u!1 &6886516553125014314
 GameObject:
   m_ObjectHideFlags: 0

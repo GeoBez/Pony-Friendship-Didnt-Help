@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
 
-        gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
+        //gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
 
     }
 

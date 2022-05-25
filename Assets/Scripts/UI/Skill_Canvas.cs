@@ -10,6 +10,7 @@ public class Skill_Canvas : MonoBehaviour
     private void Start()
     {
         xp_Bar = GameObject.Find("XP_Bar").GetComponent<XP_Bar>();
+        skill_Points = 0;
     }
 
     void Update()
