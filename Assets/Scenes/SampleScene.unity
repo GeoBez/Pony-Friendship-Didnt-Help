@@ -1163,6 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mod: {fileID: 0}
+  index: 0
 --- !u!1 &728250440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,6 +1665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mod: {fileID: 0}
+  index: 0
 --- !u!1 &1130660992
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,6 +5201,8 @@ MonoBehaviour:
     nameText: {fileID: 195502501}
     descriptionText: {fileID: 187065589}
   skills_Canvas: {fileID: 3797918223296649343}
+  xp_Bar: {fileID: 6072811159382618530}
+  _isItWork: 0
 --- !u!114 &1954029893899588974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6286,6 +6290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mod: {fileID: 0}
+  index: 0
 --- !u!114 &4309471914939588256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6961,7 +6966,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931459499189022643}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4927f8c4dafa30549b74ff9e82239d6a, type: 3}
   m_Name: 
