@@ -57,19 +57,12 @@ public class skill_choose : MonoBehaviour
                 if (count != -1)
                     mod = _allModes[count];
                 else
-<<<<<<< Updated upstream
-                    mod = new Mode_Extra();//gameObject.AddComponent<Mode_Extra>();
-=======
-<<<<<<< Updated upstream
-                    mod = gameObject.AddComponent<Mode_Extra>();
->>>>>>> Stashed changes
+                mod = new Mode_Extra();//gameObject.AddComponent<Mode_Extra>();
+                //mod = gameObject.AddComponent<Mode_Extra>();
 
-=======
-                    mod = new Mode_Extra();//gameObject.AddComponent<Mode_Extra>();
-                card.image = mod.GetImage();
->>>>>>> Stashed changes
                 card.descriptionText.text = mod.GetDescription();
                 card.nameText.text = mod.GetName();
+                card.image = mod.GetImage();
 
                 var Cardbutton = card.button.GetComponent<button_choose>();
                 Cardbutton.mod = mod;
