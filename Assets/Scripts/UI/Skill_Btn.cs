@@ -17,14 +17,13 @@ public class Skill_Btn : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         rnd = Random.Range(0, NmrOfSkills - 1);
-        GetSkill();
-
+        //GetSkill();
 
     }
 
     private void Update()
     {
-        if (rnd == 0)
+        /*if (rnd == 0)
         {
             Modes mode = gameObject.AddComponent<Mode_Magnit>();
             nameText.text = mode.GetName();
@@ -130,9 +129,9 @@ public class Skill_Btn : MonoBehaviour
             || (rnd == 14 && player.mode_IAmSpeed) || (rnd == 1 && player.mode_YouShallNoPass))
         {
             rnd = Random.Range(0, NmrOfSkills - 1);
-        }
+        }*/
     }
-
+    /*
     public void GetSkill()
     {
         if (rnd == 0 && !player.mode_Magnit)
@@ -223,5 +222,5 @@ public class Skill_Btn : MonoBehaviour
         canvas.skill_Points--;
         xp_Bar.skill_Points--;
         mode.Activate();
-    }
+    }*/
 }

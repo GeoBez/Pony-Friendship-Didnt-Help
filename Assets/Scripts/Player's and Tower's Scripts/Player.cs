@@ -69,7 +69,8 @@ public class Player : MonoBehaviour
         //isMeleeAttacker = true;
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
-        
+
+        new Mode_MoreBits().Activate();
         //gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
 
     }

@@ -8,7 +8,7 @@ public interface ModeActivate{
     string GetName();
     string GetDescription();
 }
-public abstract class Modes : MonoBehaviour//, ModeActivate
+public abstract class Modes : ModeActivate//: MonoBehaviour//, ModeActivate
 {
     public string modeName;
     public string modeDescription;

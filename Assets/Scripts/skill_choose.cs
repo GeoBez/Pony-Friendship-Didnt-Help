@@ -15,22 +15,22 @@ public class skill_choose : MonoBehaviour
 
     void Start()
     {
-        _allModes = new List<Modes>() {gameObject.AddComponent<Mode_Magnit>(),
-            gameObject.AddComponent<Mode_DoubleDenomination>(),
-            gameObject.AddComponent<Mode_CleverLeaf>(),
-            gameObject.AddComponent<Mode_MoreBits>(),
-            gameObject.AddComponent<Mode_Sturdy>(),
-            gameObject.AddComponent<Mode_HealthyHealth>(),
-            gameObject.AddComponent<Mode_NewHorseshoes>(),
-            gameObject.AddComponent<Mode_OneTimeTreatment>(),
-            gameObject.AddComponent<Mode_MoreHealth>(),
-            gameObject.AddComponent<Mode_TimeIsMoney>(),
-            gameObject.AddComponent<Mode_IAmPower>(),
-            gameObject.AddComponent<Mode_PowerPlus>(),
-            gameObject.AddComponent<Mode_SimpleDistanteBattle>(),
-            gameObject.AddComponent<Mode_SittingUpper>(),
-            gameObject.AddComponent<Mode_IAmSpeed>(),
-            gameObject.AddComponent<Mode_YouShallNoPass>()};
+        _allModes = new List<Modes>() {new Mode_Magnit(),
+            new Mode_DoubleDenomination(),
+            new Mode_CleverLeaf(),
+            new Mode_MoreBits(),
+            new Mode_Sturdy(),
+            new Mode_HealthyHealth(),
+            new Mode_NewHorseshoes(),
+            new Mode_OneTimeTreatment(),
+            new Mode_MoreHealth(),
+            new Mode_TimeIsMoney(),
+            new Mode_IAmPower(),
+            new Mode_PowerPlus(),
+            new Mode_SimpleDistanteBattle(),
+            new Mode_SittingUpper(),
+            new Mode_IAmSpeed(),
+            new Mode_YouShallNoPass()};
 
         foreach(var mode in _allModes)
         {
@@ -47,7 +47,6 @@ public class skill_choose : MonoBehaviour
             Start();
         }
 
-
         if (!_isItWork)
         {
             _isItWork = true;
@@ -58,7 +57,7 @@ public class skill_choose : MonoBehaviour
                 if (count != -1)
                     mod = _allModes[count];
                 else
-                    mod = gameObject.AddComponent<Mode_Extra>();
+                    mod = new Mode_Extra();//gameObject.AddComponent<Mode_Extra>();
 
                 card.descriptionText.text = mod.GetDescription();
                 card.nameText.text = mod.GetName();
