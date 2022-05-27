@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour, IFreezable
 	public void Death()
 	{
 		all_Enemies.all_Enemies--;
+		Statistic.enemyDeathCount++;
 		float rnd = Random.Range(0, 99);
 
 		Destroy(gameObject);
