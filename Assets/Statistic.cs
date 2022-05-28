@@ -22,7 +22,7 @@ public class Statistic : MonoBehaviour
         if (timeText.gameObject.activeInHierarchy && !_finished)
         {
             _finished = true;
-            timeText.text = $"Вы продержались {Mathf.Round(Time.time - _startTime)} минут.\nПопробуйте снова";
+            timeText.text = $"Вы продержались {Mathf.Round(Time.time - _startTime)/60} минут.\nПопробуйте снова";
             enemyDeathCountText.text = enemyDeathCount.ToString();
             enemyDeathCountTextVictMenu.text = enemyDeathCount.ToString();
         }

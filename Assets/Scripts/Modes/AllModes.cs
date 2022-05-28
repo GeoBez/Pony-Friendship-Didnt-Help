@@ -14,7 +14,7 @@ public class Mode_Magnit : Modes
     {
         modeName = "Магнит";
         modeDescription = "Увеличивает радиус сбора монет";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
         //Activate();
     }
 
@@ -31,7 +31,7 @@ public class Mode_DoubleDenomination : Modes
     {
         modeName = "Двойной номинал";
         modeDescription = "Все выпадающие монетки стоят 2";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
     public override void MainModeDo()
     {
@@ -46,7 +46,7 @@ public class Mode_CleverLeaf : Modes
     {
         modeName = "Лист клевера";
         modeDescription = "Увеличивает шанс выпадения монет на 10%";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
     public override void MainModeDo()
     {
@@ -61,7 +61,7 @@ public class Mode_MoreBits : Modes
     {
         modeName = "Больше битсов!";
         modeDescription = "+100 монеток";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
     public override void MainModeDo()
     {
@@ -76,7 +76,7 @@ public class Mode_Sturdy : Modes
     {
         modeName = "Здоровяк";
         modeDescription = "Увеличение количества жизни на 10%";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -95,7 +95,7 @@ public class Mode_HealthyHealth : Modes
     {
         modeName = "Здорово, здоровье";
         modeDescription = "Увеличение количества жизни на 20 хп";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -114,7 +114,7 @@ public class Mode_NewHorseshoes : Modes
     {
         modeName = "Новые подковы";
         modeDescription = "Повышение скорости передвижения на 5%";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -132,7 +132,7 @@ public class Mode_OneTimeTreatment : Modes
     {
         modeName = "Разовое лечение";
         modeDescription = "Восстанавливает здоровье до максимума";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -151,7 +151,7 @@ public class Mode_MoreHealth : Modes
     {
         modeName = "Больше здоровья";
         modeDescription = "Здоровье дерева увеличивается на 20 единиц";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -170,7 +170,7 @@ public class Mode_TimeIsMoney : Modes
     {
         modeName = "Время - деньги";
         modeDescription = "За пропуск волны дается в 2 раза больше монет";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -186,7 +186,7 @@ public class Mode_IAmPower : Modes
     {
         modeName = "Я есть сила";
         modeDescription = "Повышает сила атаки в 2 раза";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -203,7 +203,7 @@ public class Mode_PowerPlus : Modes
     {
         modeName = "Сила+";
         modeDescription = "Увеличение урона на 5 единиц";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+       // Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -220,7 +220,7 @@ public class Mode_SimpleDistanteBattle : Modes
     {
         modeName = "Простой дальний бой";
         modeDescription = "Меняет тип атаки на дальний";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -236,7 +236,7 @@ public class Mode_SittingUpper : Modes
     {
         modeName = "Сижу высоко - стреляю далеко";
         modeDescription = "Увеличивает радиус атаки";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -255,7 +255,7 @@ public class Mode_IAmSpeed : Modes
     {
         modeName = "Я есть скорость";
         modeDescription = "Повышает частоту атаки в 1.5 раза";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -276,7 +276,7 @@ public class Mode_YouShallNoPass : Modes
     {
         modeName = "Ты не пройдешь";
         modeDescription = "Вы можете стрелять по врагам идущим к дереву";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
@@ -296,7 +296,7 @@ public class Mode_Extra : Modes//Это скорее исключение, чем улучшение
     {
         modeName = "Уууупс. Кажется ошибка:D";
         modeDescription = "Это улучшение почти невозможно получить";
-        Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
     public override void MainModeDo()
