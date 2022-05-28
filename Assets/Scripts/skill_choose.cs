@@ -50,7 +50,7 @@ public class skill_choose : MonoBehaviour
         if (!_isItWork)
         {
             _isItWork = true;
-            /*foreach (var card in cards)
+            foreach (var card in cards)
             {
                 Modes mod;
                 var count =  GenerateIndex();
@@ -61,12 +61,12 @@ public class skill_choose : MonoBehaviour
 
                 card.descriptionText.text = mod.GetDescription();
                 card.nameText.text = mod.GetName();
-                card.image = mod.GetImage();
+                //card.image = mod.GetImage();
 
                 var Cardbutton = card.button.GetComponent<button_choose>();
                 Cardbutton.mod = mod;
                 Cardbutton.index = count;
-            }*/
+            }
         }
     } 
 
