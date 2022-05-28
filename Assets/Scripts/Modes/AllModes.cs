@@ -15,7 +15,6 @@ public class Mode_Magnit : Modes
         modeName = "Магнит";
         modeDescription = "Увеличивает радиус сбора монет";
         Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
-        //Activate();
     }
 
     public override void MainModeDo()
@@ -245,7 +244,7 @@ public class Mode_SittingUpper : Modes
 
         GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Weapon>().detectionDistance = 10;
         GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerMeleeAttacks>().attackRange = 5;
-        //player.mode_ = true;
+        //player.mode = true;
     }
 }
 
@@ -294,8 +293,8 @@ public class Mode_Extra : Modes//Это скорее исключение, чем улучшение
 {
     public Mode_Extra()
     {
-        modeName = "Уууупс. Кажется ошибка:D";
-        modeDescription = "Это улучшение почти невозможно получить";
+        modeName = "Уууупс:D";
+        modeDescription = "Это улучшение невозможно получить";
         Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 

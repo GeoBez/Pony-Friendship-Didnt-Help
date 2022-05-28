@@ -38,7 +38,8 @@ public class XP_Bar : MonoBehaviour
     {
         xp += xp_points;
         fill_Value.value = xp;
-        
+        Debug.Log(xp + " "+ level);
+
         if(xp>=Max_XP)
         {
             skill_Points++;

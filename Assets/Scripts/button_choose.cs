@@ -17,7 +17,7 @@ public class button_choose : MonoBehaviour
 
     public void MakeMoodActive()
     {
-        mod.Activate();
+        /*mod.Activate();
         foreach (var card in parent.cards)
         {
             card.button.GetComponent<button_choose>().mod.isUsed = false;
@@ -25,7 +25,7 @@ public class button_choose : MonoBehaviour
               
         //parent._allModes.Remove(mod);
         if (index != -1)
-            parent._allModes.RemoveAt(index);
+            parent._allModes.RemoveAt(index);*/
 
         skill_canvas.skill_Points--;
         parent.xp_Bar.skill_Points--;

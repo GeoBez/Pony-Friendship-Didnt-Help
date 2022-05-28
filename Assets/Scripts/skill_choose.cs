@@ -50,15 +50,14 @@ public class skill_choose : MonoBehaviour
         if (!_isItWork)
         {
             _isItWork = true;
-            foreach (var card in cards)
+            /*foreach (var card in cards)
             {
                 Modes mod;
                 var count =  GenerateIndex();
                 if (count != -1)
                     mod = _allModes[count];
                 else
-                mod = new Mode_Extra();//gameObject.AddComponent<Mode_Extra>();
-                //mod = gameObject.AddComponent<Mode_Extra>();
+                    mod = new Mode_Extra();
 
                 card.descriptionText.text = mod.GetDescription();
                 card.nameText.text = mod.GetName();
@@ -67,14 +66,14 @@ public class skill_choose : MonoBehaviour
                 var Cardbutton = card.button.GetComponent<button_choose>();
                 Cardbutton.mod = mod;
                 Cardbutton.index = count;
-
-                //card.image = mod.GetImage();
-            }
+            }*/
         }
     } 
 
     int GenerateIndex()
     {
+        //Debug.Log(_allModes.Count);
+
         int cout;
         if (_allModes.Count > 4)
         {
