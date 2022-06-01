@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Tower_Area_Script : MonoBehaviour
 {
+    Player player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();    
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag =="Player")
         {
-            collision.GetComponent<Player>().inTowerCollider = true;
+            player.GetComponent<Player>().inTowerCollider = true;
         }
     }
 
@@ -16,7 +23,7 @@ public class Tower_Area_Script : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.GetComponent<Player>().inTowerCollider = false;
+            player.GetComponent<Player>().inTowerCollider = false;
         }
     }
 }
