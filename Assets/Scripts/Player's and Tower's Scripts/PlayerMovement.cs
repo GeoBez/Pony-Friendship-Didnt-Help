@@ -62,19 +62,14 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("X", x);
         animator.SetFloat("Y", y);
-        if (x != 0 && y != 0) 
+        if (x != 0 || y != 0) 
         {   
             animator.SetBool("isMoving", true);
-            shotPoint.localPosition = new Vector2(x, y);
         }
         else
         {
-            shotPoint.localPosition = new Vector2(0, -1);
             animator.SetBool("isMoving", false);
         }
-
-
-        shotPoint.localPosition = new Vector2(x, y);
 
         moveVelicity = moveInput.normalized * speed;
 
