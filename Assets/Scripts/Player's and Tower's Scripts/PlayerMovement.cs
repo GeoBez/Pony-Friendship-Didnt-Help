@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         joystickNum = lastJoysticNum = PlayerPrefs.HasKey("joystickType") ? PlayerPrefs.GetInt("joystickType") : 0;
         SwitchJoystick(joystickNum);
 
-        _controlType = ControlType.Phone;
+        _controlType = ControlType.PC;
         rb = GetComponent<Rigidbody2D>();
         if (_controlType == ControlType.PC) { _joystick.gameObject.SetActive(false); }
         defaultSpeed = speed;
