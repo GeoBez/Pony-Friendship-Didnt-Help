@@ -11648,6 +11648,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 150542173}
+        m_TargetAssemblyTypeName: YandexSDK, Assembly-CSharp
+        m_MethodName: ShowInterstitial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6886516553033634649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12195,6 +12207,7 @@ MonoBehaviour:
   timer: 30
   bossTimer: 45
   inPreparation: 0
+  skill_Canvas: {fileID: 5702940763124724166}
 --- !u!114 &6886516553803484214
 MonoBehaviour:
   m_ObjectHideFlags: 0
