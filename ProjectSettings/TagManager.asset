@@ -23,6 +23,7 @@ TagManager:
   - Boss
   - Wave Controller
   - ModeManager
+  - Tower Enemy Spawn
   layers:
   - Default
   - TransparentFX

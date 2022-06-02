@@ -14,6 +14,8 @@ public class Enemy_Spawn : MonoBehaviour
 
     private int _enemy_Count;
 
+    bool isSpawning;
+
     void Start()
     {
         preparation = GameObject.FindGameObjectWithTag("Preparation").GetComponent<Preparation_Script>();
@@ -25,40 +27,44 @@ public class Enemy_Spawn : MonoBehaviour
         }
     }
 
-    /*void Update()
+    void Update()
     {
-        inPreparation = preparation.inPreparation;
-        if (!inPreparation)
+        //inPreparation = preparation.inPreparation;
+        //if (!inPreparation)
+        //{
+        //    if (time >= 0)
+        //    {
+        //        time -= Time.deltaTime;
+        //    }
+        //    else if (time < 0)
+        //    {
+        //        int wave_Number = wave_System.Wave_Number;
+        //        if (wave_System.number_Of_Enemies[wave_Number] > 0)
+        //        {
+        //            Instantiate(enemy, transform.position, transform.rotation);
+        //            wave_System.number_Of_Enemies[wave_Number]--;
+        //        }
+        //        time = default_Time;
+        //    }
+        //}
+
+        if (isSpawning)
         {
-            if (time >= 0)
+            if (enemy.tag == "Tower_Enemy")
             {
-                time -= Time.deltaTime;
+                enemy.GetComponent<FollowPath>().MyPath = gameObject.GetComponentInChildren<MovementPath>();
             }
-            else if (time < 0)
-            {
-                int wave_Number = wave_System.Wave_Number;
-                if (wave_System.number_Of_Enemies[wave_Number] > 0)
-                {
-                    Instantiate(enemy, transform.position, transform.rotation);
-                    wave_System.number_Of_Enemies[wave_Number]--;
-                }
-                time = default_Time;
-            }
+            StartCoroutine(CreateEnemyFor2Seconds());
+            StopCoroutine(CreateEnemyFor2Seconds());
         }
-    }*/
+    }
 
     public void SpawnEnemy(GameObject enemy, int enemy_Count)
     {        
         this.enemy = enemy;
         _enemy_Count = enemy_Count;
 
-        if (enemy.tag == "Tower_Enemy")
-        {
-            enemy.GetComponent<FollowPath>().MyPath = gameObject.GetComponentInChildren<MovementPath>();
-        }
-
-        StartCoroutine(CreateEnemyFor2Seconds());
-        StopCoroutine(CreateEnemyFor2Seconds());
+        isSpawning = true;
     }
        
     private IEnumerator CreateEnemyFor2Seconds()
@@ -66,6 +72,7 @@ public class Enemy_Spawn : MonoBehaviour
         for (int i = 0; i < _enemy_Count; i++)
         {
             Instantiate(enemy, transform.position, transform.rotation);
+            isSpawning = false;
             yield return new WaitForSeconds(2);
         }        
     }
