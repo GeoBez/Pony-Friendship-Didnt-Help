@@ -16,7 +16,7 @@ public class Preparation_Script : MonoBehaviour
 
     Text text;
     Button button;
-    Skill_Canvas skill_Canvas;
+    [SerializeField] Skill_Canvas skill_Canvas;
 
     XP_Bar xp_Bar;
 
@@ -27,7 +27,7 @@ public class Preparation_Script : MonoBehaviour
         text = GetComponentInChildren<Text>();
         button = GetComponentInChildren<Button>();
         xp_Bar = GameObject.Find("XP_Bar").GetComponent<XP_Bar>();
-        skill_Canvas.GetComponentInChildren<Skill_Canvas>();
+        //skill_Canvas.GetComponentInChildren<Skill_Canvas>();
     }
 
     private void Update()
