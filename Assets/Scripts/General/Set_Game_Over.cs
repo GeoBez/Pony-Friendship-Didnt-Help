@@ -8,6 +8,7 @@ public class Set_Game_Over : MonoBehaviour
     public Player PHealth;
     public Tower MTHealth;
     public GameObject GameOverMenu;
+    public YandexSDK YandexSDK;
 
 
     private void Start()
@@ -16,6 +17,7 @@ public class Set_Game_Over : MonoBehaviour
         MTHealth = GameObject.FindGameObjectWithTag("Main Tower").GetComponent<Tower>();
         //GameOverMenu = GameObject.FindGameObjectWithTag("GameOver");
         GameOverMenu.SetActive(false);
+        YandexSDK.ShowInterstitial();
     }
 
     private void Update()

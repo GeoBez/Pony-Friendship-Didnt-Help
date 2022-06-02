@@ -7,10 +7,12 @@ public class Set_Victory_Menu : MonoBehaviour
     public Wave_System number_Of_Enemies;
     public GameObject Victory_Menu;
     public int all_Enemies;
+    public YandexSDK YandexSDK;
 
     private WaveController _waveController;
     private void Start()
     {
+        YandexSDK.ShowInterstitial();
         //Victory_Menu = GameObject.FindGameObjectWithTag("Victory Menu");
         Victory_Menu.SetActive(false);
         number_Of_Enemies = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
