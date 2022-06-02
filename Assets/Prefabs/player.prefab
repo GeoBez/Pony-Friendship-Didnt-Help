@@ -282,7 +282,7 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 5410e4ceb8ebc0847b7002d94a9c6f9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.12, y: 0.08}
@@ -401,6 +401,7 @@ MonoBehaviour:
   - {fileID: 0}
   _controlType: 0
   shotPoint: {fileID: 1901460011688975648}
+  stats: {fileID: 1855472323}
 --- !u!114 &5232870316641352980
 MonoBehaviour:
   m_ObjectHideFlags: 0

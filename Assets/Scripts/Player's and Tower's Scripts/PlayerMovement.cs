@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform shotPoint;
 
+    public Transform stats;
 
     void Start()
     {
@@ -46,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (_controlType == ControlType.PC) { _joystick.gameObject.SetActive(false); }
         defaultSpeed = speed;
+
+        
     }
 
     void Update()
@@ -73,9 +76,29 @@ public class PlayerMovement : MonoBehaviour
 
         moveVelicity = moveInput.normalized * speed;
 
+        if (moveVelicity != new Vector2(0, 0))
+        {
+            animator.Play("player_run");
+        }
+        else
+        {
+            animator.Play("player_idle");
+        }
+
         if(speed != defaultSpeed)
         {
             GetComponent<Return_Speed_Script>().speed = speed; 
+        }
+
+        if(x>0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            stats.localScale = new Vector3(0.5f, .5f, 1);
+        }
+        else if(x<0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+            stats.localScale = new Vector3(-0.5f, .5f, 1);
         }
     }
 
