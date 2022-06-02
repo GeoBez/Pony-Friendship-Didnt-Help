@@ -93,34 +93,28 @@ public class YandexSDK : MonoBehaviour {
     /// Callback from index.html
     /// </summary>
     /// <param name="error"></param>
-    public void OnInterstitialError(string error) {
-        onInterstitialFailed(error);
+    public void OnInterstitialError() {
     }
 
     /// <summary>
     /// Callback from index.html
     /// </summary>
     /// <param name="placement"></param>
-    public void OnRewardedOpen(int placement) {
-        onRewardedAdOpened(placement);
+    public void OnRewardedOpen() {
     }
 
     /// <summary>
     /// Callback from index.html
     /// </summary>
     /// <param name="placement"></param>
-    public void OnRewarded(int placement) {
-        if (placement == rewardedAdPlacementsAsInt.Dequeue()) {
-            onRewardedAdReward.Invoke(rewardedAdsPlacements.Dequeue());
-        }
+    public void OnRewarded() {
     }
 
     /// <summary>
     /// Callback from index.html
     /// </summary>
     /// <param name="placement"></param>
-    public void OnRewardedClose(int placement) {
-        onRewardedAdClosed(placement);
+    public void OnRewardedClose() {
     }
 
     /// <summary>
