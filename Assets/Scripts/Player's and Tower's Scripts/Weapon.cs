@@ -14,12 +14,13 @@ public class Weapon : MonoBehaviour
     public float detectionDistance = 10;
     private float damage;
     public LayerMask whatIsAttack;
+    public StatsBar attackCoolDownBar;
 
     void Start()
     {
         _coolDown = 0;
         _resetCoolDown = projectile.coolDown;
-        //TargetSearch();
+        attackCoolDownBar?.SetMaxValue(_resetCoolDown);
 
         if (gameObject.tag == "Player")
             damage = GetComponentInParent<Player>().damage;
@@ -32,12 +33,10 @@ public class Weapon : MonoBehaviour
 
         if (currentTarget != null)
         {
-            
-
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, Mathf.Atan2(currentTarget.position.y - transform.position.y, currentTarget.position.x - transform.position.x) * Mathf.Rad2Deg - 90);
-
-
-            //shotPoint.transform.rotation = Quaternion.AngleAxis(Vector2.Angle(shotPoint.transform.position, currentTarget.position) + 90, Vector3.forward);
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x,
+                transform.rotation.eulerAngles.y,
+                Mathf.Atan2(currentTarget.position.y - transform.position.y,
+                currentTarget.position.x - transform.position.x) * Mathf.Rad2Deg - 90);
         }
 
         if (_coolDown <= 0 && currentTarget != null)
@@ -49,6 +48,7 @@ public class Weapon : MonoBehaviour
         {
             _coolDown -= Time.deltaTime;
         }
+        attackCoolDownBar?.SetValue(_resetCoolDown - _coolDown);
     }
     private void TargetSearch()
     {
