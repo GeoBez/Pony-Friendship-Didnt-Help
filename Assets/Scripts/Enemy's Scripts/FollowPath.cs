@@ -23,13 +23,16 @@ public class FollowPath : MonoBehaviour
 
     private Animator _animator;
 
-    private void Start()
+    float distance=1000;
+    GameObject[] Tower_Enemy_Spawners;
+
+    private void Awake()
     {
         _animator = GetComponent<Animator>();
         if (MyPath == null)
         {
-            Debug.Log("Путь забыл");
-            return;
+            //Debug.Log("Путь забыл");
+            Find_Path();
         }
 
         pointInPath = GetNextPathPoint();
@@ -50,6 +53,11 @@ public class FollowPath : MonoBehaviour
 
     private void Update()
     {
+        //if(MyPath == null)
+        //{
+        //    Find_Path();
+        //}    
+
         if (pointInPath == null || pointInPath.Current == null)
         {
             return;
@@ -125,6 +133,19 @@ public class FollowPath : MonoBehaviour
                 {
                     moveingTo = MyPath.PathElements.Length - 1;
                 }
+            }
+        }
+    }
+
+    void Find_Path()
+    {
+        Tower_Enemy_Spawners = GameObject.FindGameObjectsWithTag("Tower Enemy Spawn");
+        for (int i = 0; i < Tower_Enemy_Spawners.Length; i++)
+        {
+            if (Vector2.Distance(Tower_Enemy_Spawners[i].transform.position, transform.position) < distance)
+            {
+                distance = Vector2.Distance(Tower_Enemy_Spawners[i].transform.position, transform.position);
+                MyPath = Tower_Enemy_Spawners[i].GetComponentInChildren<MovementPath>();
             }
         }
     }

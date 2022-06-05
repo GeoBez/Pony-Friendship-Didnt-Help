@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 5785949298957262049}
   m_Layer: 0
   m_Name: Tower_Enemy_Spawn
-  m_TagString: Untagged
+  m_TagString: Tower Enemy Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -18,6 +18,7 @@ public class Boss_Script : MonoBehaviour
     private void Start()
     {
         Target = GameObject.FindGameObjectWithTag("Boss_Target").transform;
+        Target.GetComponent<Boss_Target>().boss = this;
         enemy_Script = GetComponent<Enemy>();
         rnd = Random.Range(0, 100);
         pastAttack = -1;
