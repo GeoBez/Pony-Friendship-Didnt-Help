@@ -13,7 +13,7 @@ public class Pursuit : MonoBehaviour
 	void Start()
 	{
 		_animator = GetComponent<Animator>();
-		_target = GameObject.FindGameObjectWithTag(target).GetComponent<Transform>();
+		_target = GameObject.FindGameObjectWithTag(target)?.GetComponent<Transform>();
 		if(gameObject.tag == "Enemy" || gameObject.tag == "Boss")
 			speed = GetComponent<Enemy>().speed;
 	}

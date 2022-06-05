@@ -30,9 +30,9 @@ public class Enemy_Attack : MonoBehaviour
             else if (time < 0)
             {
                 if (What_Attack.tag == "Player")
-                    What_Attack.GetComponent<Player>().TakeDamage(damage);
+                    What_Attack.GetComponent<Player>()?.TakeDamage(damage);
                 else if (What_Attack.tag == Main_Tower)
-                    What_Attack.GetComponent<Tower>().TakeDamage(damage);
+                    What_Attack.GetComponent<Tower>()?.TakeDamage(damage);
                 time = default_Time;
             }
         }
