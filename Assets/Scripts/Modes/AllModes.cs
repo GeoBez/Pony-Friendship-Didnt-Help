@@ -73,7 +73,7 @@ public class Mode_Sturdy : Modes
 {
     public Mode_Sturdy()
     {
-        modeName = "Здоровяк";
+        modeName = "Здоровяк(!)";
         modeDescription = "Увеличение количества жизни на 10%";
         //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
@@ -84,7 +84,7 @@ public class Mode_Sturdy : Modes
 
         player.maxHealth += (int)(player.maxHealth * 0.1);
         player.Health += (int)(player.maxHealth * 0.1);
-        //player.mode_Sturdy = true;
+        //player.mode_Sturdy = true; ошибка!
     }
 }
 
@@ -92,7 +92,7 @@ public class Mode_HealthyHealth : Modes
 {
     public Mode_HealthyHealth()
     {
-        modeName = "Здорово, здоровье";
+        modeName = "Здорово, здоровье (!)";
         modeDescription = "Увеличение количества жизни на 20 хп";
         //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
@@ -103,7 +103,8 @@ public class Mode_HealthyHealth : Modes
 
         player.maxHealth += 20;
         player.Health += 20;
-        //player.mode_HealthyHealth = true; Есть ошибка
+
+        //player.mode_HealthyHealth = true; Есть ошибка!
     }
 }
 
@@ -111,8 +112,8 @@ public class Mode_NewHorseshoes : Modes
 {
     public Mode_NewHorseshoes()
     {
-        modeName = "Новые подковы";
-        modeDescription = "Повышение скорости передвижения на 5%";
+        modeName = "Новые подковы (!)";
+        modeDescription = "Повышение скорости передвижения на 20%";
         //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
 
@@ -120,8 +121,8 @@ public class Mode_NewHorseshoes : Modes
     {
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
-        player.Speed += (float)(player.Speed * 0.1);
-        //player.mode_NewHorseshoes = true; есть ошибка
+        player.Speed += (float)(player.Speed * 0.2);
+        //player.mode_NewHorseshoes = true; есть ошибка, не закрывает карточку!
     }
 }
 
@@ -129,7 +130,7 @@ public class Mode_OneTimeTreatment : Modes
 {
     public Mode_OneTimeTreatment()
     {
-        modeName = "Разовое лечение";
+        modeName = "Разовое лечение (!)";
         modeDescription = "Восстанавливает здоровье до максимума";
         //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
     }
@@ -137,10 +138,9 @@ public class Mode_OneTimeTreatment : Modes
     public override void MainModeDo()
     {
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-
         player.Health = player.maxHealth;
 
-        //player.mode_OneTimeTreatment = true; ошибка есть
+        //player.mode_OneTimeTreatment = true; ошибка есть!
     }
 }
 

@@ -29,9 +29,9 @@ public class skill_choose : MonoBehaviour
             new Mode_PowerPlus(),
             new Mode_SimpleDistanteBattle(),
             new Mode_SittingUpper(),
-            new Mode_IAmSpeed(),
-            new Mode_YouShallNoPass()};
+            new Mode_IAmSpeed()};
 
+        //тут надо как-то сделать активацию начальных скилов (перенести из старта )
         foreach(var mode in _allModes)
         {
             if (mode.isUsed)

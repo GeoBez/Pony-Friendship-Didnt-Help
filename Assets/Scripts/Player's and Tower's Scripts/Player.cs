@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
             }
         }
     }
+    
     private float speed = 11;// тут ручками теперь править нужно. Сорямба :)
     public float Speed
     {
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
             GetComponent<PlayerMovement>().speed = value;
         }
     }
+
     public float damage;
 
     public bool inTowerCollider = false;
@@ -70,6 +72,7 @@ public class Player : MonoBehaviour
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
 
+        new Mode_YouShallNoPass().Activate();
         //new Mode_MoreBits().Activate();
         //gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
 
