@@ -9,6 +9,8 @@ public class FreezeUlt : Ult
     public LayerMask mask;
     private Camera _camera;
     private List<IFreezable> _freezableEnemy;
+    [Range(1, 99)] public float ultDamage;
+    [SerializeField] private Animator playerAnimator;
 
     new void Start()
     {
@@ -43,6 +45,8 @@ public class FreezeUlt : Ult
             return;
         }
 
+        playerAnimator.Play("player_ultUsing");
+
         _freezableEnemy.Clear();
 
         var w = Screen.width;
@@ -59,6 +63,7 @@ public class FreezeUlt : Ult
             if (freezable != null)
             {
                 _freezableEnemy.Add(freezable);
+                e.GetComponent<Enemy>().TakeDamage(ultDamage);
                 freezable.FreezingAnimationStart();
             }
         }
