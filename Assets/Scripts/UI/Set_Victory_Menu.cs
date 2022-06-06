@@ -14,13 +14,13 @@ public class Set_Victory_Menu : MonoBehaviour
     {
         //Victory_Menu = GameObject.FindGameObjectWithTag("Victory Menu");
         Victory_Menu.SetActive(false);
-        number_Of_Enemies = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
+        //number_Of_Enemies = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
         _waveController = GameObject.FindGameObjectWithTag("Wave Controller").GetComponent<WaveController>();
 
-        for (int i = 0; i < number_Of_Enemies.number_Of_Enemies.Length; i++)
+        /*for (int i = 0; i < number_Of_Enemies.number_Of_Enemies.Length; i++)
         {
             all_Enemies += number_Of_Enemies.number_Of_Enemies[i];
-        }
+        }*/
 
         /*YandexSDK = YandexSDK.instance;
         YandexSDK.ShowInterstitial();*/
