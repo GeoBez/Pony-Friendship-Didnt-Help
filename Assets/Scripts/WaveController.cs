@@ -25,8 +25,8 @@ public class WaveController : MonoBehaviour
 
     private void FixedUpdate()
     {
-            //Debug.Log(isNotWavesEnd);
-
+        //Debug.Log(isNotWavesEnd);
+        //Debug.Log(Wave_Number + " Need to kill " +NeedToKill);
         if (!isWavesEnd)
         {
             if (NeedToKill == 0 && _isWorking)
@@ -51,7 +51,7 @@ public class WaveController : MonoBehaviour
 
             if (Wave_Number == Waves.Length-1 && NeedToKill==0)
             {
-                //Debug.Log("Win");
+                Debug.Log("Win");
                 isWavesEnd = true;
             }            
         }
