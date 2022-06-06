@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 8;
+    [HideInInspector] public float speed = 8;
     private float defaultSpeed;
 
     #region Animation

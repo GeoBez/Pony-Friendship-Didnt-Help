@@ -85,11 +85,11 @@ GameObject:
   - component: {fileID: 7847343715933001954}
   - component: {fileID: 1251975493671866793}
   - component: {fileID: 3157189002367614647}
-  - component: {fileID: 3273722354616540097}
   - component: {fileID: -867046405696707068}
   - component: {fileID: 4857665649270067289}
   - component: {fileID: 7804605480881736885}
   - component: {fileID: 1676982295}
+  - component: {fileID: 3491333249178657464}
   m_Layer: 6
   m_Name: zombi
   m_TagString: Enemy
@@ -186,22 +186,6 @@ MonoBehaviour:
   - {fileID: 4743943494906487930, guid: 7e473dde17d4b4e4885da255f7a18164, type: 3}
   - {fileID: 8974354507945617733, guid: 689e9bcad43e6c142970c1dc2173d82a, type: 3}
   - {fileID: 3100191239330530495, guid: ae87fdd1d57095446a92312b45115a3d, type: 3}
---- !u!70 &3273722354616540097
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9175673980754752827}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.055476665, y: -0.12482262}
-  m_Size: {x: 2.2204876, y: 2.6365628}
-  m_Direction: 0
 --- !u!50 &-867046405696707068
 Rigidbody2D:
   serializedVersion: 4
@@ -270,6 +254,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &3491333249178657464
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9175673980754752827}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.055476665, y: -0.12482262}
+  m_Size: {x: 2.2204876, y: 2.6365628}
+  m_Direction: 0
 --- !u!1001 &7358106356192359680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -287,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105912, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_SortingOrder
-      value: 6
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105913, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_PresetInfoIsWorld
