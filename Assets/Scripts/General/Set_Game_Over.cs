@@ -29,6 +29,7 @@ public class Set_Game_Over : MonoBehaviour
             {
                 Destroy(PHealth.gameObject);
                 GameOverMenu.SetActive(true);
+                Time.timeScale = 0;
             }
 
         if (MTHealth != null)
@@ -36,6 +37,7 @@ public class Set_Game_Over : MonoBehaviour
             {
                 Destroy(MTHealth.gameObject);
                 GameOverMenu.SetActive(true);
+                Time.timeScale = 0;
             }
     }
 }

@@ -49,6 +49,7 @@ MonoBehaviour:
   whatIsAttack:
     serializedVersion: 2
     m_Bits: 192
+  attackCoolDownBar: {fileID: 0}
 --- !u!1 &6045906499427412218
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,8 +60,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6045906499427412220}
   - component: {fileID: 6045906499427412219}
-  - component: {fileID: 6045906499427412223}
   - component: {fileID: 6045906499427412222}
+  - component: {fileID: 6045906499427412223}
+  - component: {fileID: 1455326}
   m_Layer: 0
   m_Name: MainTower
   m_TagString: Main Tower
@@ -135,22 +137,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!70 &6045906499427412223
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6045906499427412218}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.1288358, y: 1.9534171}
-  m_Size: {x: 2.4553359, y: 4.165027}
-  m_Direction: 0
 --- !u!114 &6045906499427412222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +153,38 @@ MonoBehaviour:
   health: 80
   damage: 1
   price: 0
+--- !u!70 &6045906499427412223
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045906499427412218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.17756152, y: -0.84286785}
+  m_Size: {x: 2.9529557, y: 9.329042}
+  m_Direction: 0
+--- !u!58 &1455326
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045906499427412218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0890007, y: 1.6465158}
+  serializedVersion: 2
+  m_Radius: 4.431981
 --- !u!1001 &3429451199521206655
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class Set_Victory_Menu : MonoBehaviour
         if (WaveController.Wave_Number == _waveController.Waves.Length-1 && WaveController.NeedToKill == 0)
         {
             Victory_Menu.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
