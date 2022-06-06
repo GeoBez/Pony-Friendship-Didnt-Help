@@ -6,7 +6,7 @@ public class WaveController : MonoBehaviour
 {
     public Waves[] Waves;
 
-    public static int Wave_Number;
+    [SerializeField]public static int Wave_Number;
     public static int NeedToKill;
 
     private bool _isWorking;

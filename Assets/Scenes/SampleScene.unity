@@ -1104,7 +1104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &150542173
 MonoBehaviour:
@@ -2066,53 +2066,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
---- !u!1 &338458421
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 338458423}
-  - component: {fileID: 338458422}
-  m_Layer: 0
-  m_Name: Wave_System
-  m_TagString: Wave System
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &338458422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338458421}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2822a12520eb8364c95081c1cbebbef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Wave_Number: 0
-  number_Of_Enemies: 05000000060000000a0000000b000000
-  number_Of_Existed_Enemies: 
-  preparation: {fileID: 6886516553803484213}
---- !u!4 &338458423
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338458421}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &350498879
 GameObject:
   m_ObjectHideFlags: 0
@@ -4224,7 +4177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &996129773
 GameObject:
@@ -4861,7 +4814,7 @@ Transform:
   m_LocalScale: {x: 1.9887279, y: 1.9887279, z: 1.9887279}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1174846601
 GameObject:
@@ -7204,7 +7157,7 @@ Transform:
   - {fileID: 1532313948}
   - {fileID: 1189687808}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1624276722
 GameObject:
@@ -7375,7 +7328,7 @@ Transform:
   - {fileID: 1600864020}
   - {fileID: 1610838559}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1721914410
 GameObject:
@@ -7479,7 +7432,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 2
       _max_Count_Enemy: 5
-      Portal: {fileID: 148429826}
+      Portal: {fileID: 1361756283}
     IsBoss: 0
   - waves:
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
@@ -7529,7 +7482,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 3
       _max_Count_Enemy: 6
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 300475134}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 3
       _max_Count_Enemy: 9
@@ -7537,7 +7490,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 3
       _max_Count_Enemy: 6
-      Portal: {fileID: 148429826}
+      Portal: {fileID: 1741058971}
     IsBoss: 0
   - waves:
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
@@ -7615,7 +7568,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 9
       _max_Count_Enemy: 18
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 6
       _max_Count_Enemy: 15
@@ -7661,7 +7614,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 10
       _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 6
       _max_Count_Enemy: 15
@@ -7697,7 +7650,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 10
       _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 10
       _max_Count_Enemy: 15
@@ -7737,7 +7690,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
@@ -7751,7 +7704,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
@@ -7769,7 +7722,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 20
@@ -7787,7 +7740,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 20
@@ -7809,7 +7762,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 15
@@ -7831,7 +7784,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
@@ -7849,7 +7802,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 20
@@ -7895,7 +7848,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 15
       _max_Count_Enemy: 30
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 15
       _max_Count_Enemy: 20
@@ -7913,7 +7866,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 15
       _max_Count_Enemy: 30
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 15
       _max_Count_Enemy: 30
@@ -8087,7 +8040,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1754428377
 GameObject:
@@ -8800,7 +8753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bafba1ab9fa38af4c835c8f828c7ad80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number_Of_Enemies: {fileID: 338458422}
+  number_Of_Enemies: {fileID: 0}
   Victory_Menu: {fileID: 6013985683177515926}
   all_Enemies: 0
   YandexSDK: {fileID: 150542173}
