@@ -43,7 +43,6 @@ public class Enemy : MonoBehaviour, IFreezable
 
 	public void Death()
 	{
-		all_Enemies.all_Enemies--;
 		Statistic.enemyDeathCount++;
 		float rnd = Random.Range(0, 99);
 
@@ -74,11 +73,14 @@ public class Enemy : MonoBehaviour, IFreezable
 			fall_Object[0].GetComponent<XP_Ball_Script>().xp_points = xp_points;
 			Instantiate(fall_Object[0], gameObject.transform.position, Quaternion.identity);
 		}
+<<<<<<< Updated upstream
 
 		//var RWN = GameObject.FindGameObjectWithTag("Wave Controller").GetComponent<WaveController>();
 		//RWN.number_Of_Existed_Enemies[RWN.Wave_Number]--;
 		//RWN.Rise_Wave_Number();
 
+=======
+>>>>>>> Stashed changes
 	}
 
 	public void TakeDamage(float damage)
