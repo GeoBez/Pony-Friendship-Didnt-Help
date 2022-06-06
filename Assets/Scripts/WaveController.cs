@@ -26,7 +26,7 @@ public class WaveController : MonoBehaviour
     private void FixedUpdate()
     {
         //Debug.Log(isNotWavesEnd);
-        Debug.Log(Wave_Number + " Need to kill " +NeedToKill);
+        //Debug.Log(Wave_Number + " Need to kill " +NeedToKill);
         if (!isWavesEnd)
         {
             if (NeedToKill == 0 && _isWorking)
