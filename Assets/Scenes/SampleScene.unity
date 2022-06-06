@@ -3539,7 +3539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310380309450497641, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1310380309450497641, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3771,7 +3771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310380309450497641, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1310380309450497641, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4921,9 +4921,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1783025995}
-  - {fileID: 1965685739}
   - {fileID: 922696038}
   - {fileID: 903359544}
+  - {fileID: 1965685739}
   m_Father: {fileID: 1617244884}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7262,7 +7262,7 @@ MonoBehaviour:
     - Enemy: {fileID: 8020799161829022176, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
       _min_Count_Enemy: 1
       _max_Count_Enemy: 1
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 522376286}
     IsBoss: 1
   - waves:
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
@@ -7380,6 +7380,7 @@ MonoBehaviour:
       _max_Count_Enemy: 1
       Portal: {fileID: 2025412220}
     IsBoss: 0
+  Wave_Number4Check: 0
 --- !u!4 &1743594974
 Transform:
   m_ObjectHideFlags: 0
@@ -8178,7 +8179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310380309450497641, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1310380309450497641, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8222,7 +8223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5648764687271863318, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
       propertyPath: m_Name
-      value: Enemy_Spawn
+      value: Enemy_Spawn (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8695254475125547850, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
       propertyPath: time
