@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Set_Victory_Menu : MonoBehaviour
 {
+    public Wave_System number_Of_Enemies;
     public GameObject Victory_Menu;
+    public int all_Enemies;
     public YandexSDK YandexSDK;
 
     private WaveController _waveController;
@@ -12,7 +14,6 @@ public class Set_Victory_Menu : MonoBehaviour
     {
         //Victory_Menu = GameObject.FindGameObjectWithTag("Victory Menu");
         Victory_Menu.SetActive(false);
-<<<<<<< Updated upstream
         //number_Of_Enemies = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
         _waveController = GameObject.FindGameObjectWithTag("Wave Controller").GetComponent<WaveController>();
 
@@ -21,16 +22,17 @@ public class Set_Victory_Menu : MonoBehaviour
             all_Enemies += number_Of_Enemies.number_Of_Enemies[i];
         }*/
 
-=======
-        _waveController = GameObject.FindGameObjectWithTag("Wave Controller").GetComponent<WaveController>();
-
->>>>>>> Stashed changes
         /*YandexSDK = YandexSDK.instance;
         YandexSDK.ShowInterstitial();*/
     }
 
     private void Update()
-    {   
+    {
+        /*if (all_Enemies <= 0)
+        {
+            Victory_Menu.SetActive(true);
+        }*/
+        
         if (WaveController.Wave_Number == _waveController.Waves.Length-1 && WaveController.NeedToKill == 0)
         {
             Victory_Menu.SetActive(true);

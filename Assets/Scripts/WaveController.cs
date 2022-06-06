@@ -9,9 +9,6 @@ public class WaveController : MonoBehaviour
     public static int Wave_Number;
     public static int NeedToKill;
 
-    public int WaveNumber4Check;
-    public int NeedToKill4Check;
-
     private bool _isWorking;
     private bool isWavesEnd = false;
 
@@ -29,13 +26,7 @@ public class WaveController : MonoBehaviour
     private void FixedUpdate()
     {
         //Debug.Log(isNotWavesEnd);
-<<<<<<< Updated upstream
         //Debug.Log(Wave_Number + " Need to kill " +NeedToKill);
-=======
-        NeedToKill4Check = NeedToKill;
-        WaveNumber4Check = Wave_Number;
-
->>>>>>> Stashed changes
         if (!isWavesEnd)
         {
             if (NeedToKill == 0 && _isWorking)
@@ -62,7 +53,7 @@ public class WaveController : MonoBehaviour
             {
                 Debug.Log("Win");
                 isWavesEnd = true;
-            }           
+            }            
         }
     }
 

@@ -10,6 +10,7 @@ public class Enemy_Spawn : MonoBehaviour
     Preparation_Script preparation;
     bool inPreparation;
     float default_Time;
+    Wave_System wave_System;
 
     private int _enemy_Count;
 
@@ -18,6 +19,7 @@ public class Enemy_Spawn : MonoBehaviour
     void Start()
     {
         preparation = GameObject.FindGameObjectWithTag("Preparation").GetComponent<Preparation_Script>();
+        wave_System = GameObject.FindGameObjectWithTag("Wave System").GetComponent<Wave_System>();
         default_Time = time;
         if (enemy.tag == "Tower_Enemy")
         {
