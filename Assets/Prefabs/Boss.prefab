@@ -280,7 +280,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7d235e64078d88244a86a86e844223ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9db862d5d87a47b47b353853f7004799, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -330,7 +330,6 @@ MonoBehaviour:
   attackTime: 2
   fall_Object:
   - {fileID: 3100191239330530495, guid: ae87fdd1d57095446a92312b45115a3d, type: 3}
-  all_Enemies: {fileID: 0}
 --- !u!61 &8020799161829022207
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -348,7 +347,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.03, y: 3.22}
+    oldSize: {x: 3, y: 4}
     newSize: {x: 3.03, y: 3.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -395,7 +394,7 @@ Animator:
   m_GameObject: {fileID: 8020799161829022176}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d907a5b62520f04580d41ecc6f195cf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

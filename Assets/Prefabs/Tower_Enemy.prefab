@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8717309689762189231}
   - component: {fileID: 2368099218257057564}
   - component: {fileID: 5992756538967872429}
-  - component: {fileID: 2697241584133851839}
   - component: {fileID: 1700984239178791006}
+  - component: {fileID: 8333388199183338076}
   m_Layer: 7
   m_Name: Tower_Enemy
   m_TagString: Tower_Enemy
@@ -111,7 +111,6 @@ MonoBehaviour:
   - {fileID: 4743943494906487930, guid: 7e473dde17d4b4e4885da255f7a18164, type: 3}
   - {fileID: 8974354507945617733, guid: 689e9bcad43e6c142970c1dc2173d82a, type: 3}
   - {fileID: 3100191239330530495, guid: ae87fdd1d57095446a92312b45115a3d, type: 3}
-  all_Enemies: {fileID: 0}
 --- !u!50 &2368099218257057564
 Rigidbody2D:
   serializedVersion: 4
@@ -150,22 +149,6 @@ MonoBehaviour:
   maxDistance: 0.1
   moveingTo: 0
   movementDirection: 1
---- !u!70 &2697241584133851839
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3205444235630396451}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0048837815, y: -0.12274398}
-  m_Size: {x: 2.2125208, y: 1.4213823}
-  m_Direction: 1
 --- !u!95 &1700984239178791006
 Animator:
   serializedVersion: 3
@@ -185,6 +168,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &8333388199183338076
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205444235630396451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0048837815, y: -0.12274398}
+  m_Size: {x: 2.2125208, y: 1.4213823}
+  m_Direction: 1
 --- !u!1 &4797170538265270533
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +262,10 @@ PrefabInstance:
     - target: {fileID: 2501777744747369407, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501777746399105912, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105913, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_PresetInfoIsWorld

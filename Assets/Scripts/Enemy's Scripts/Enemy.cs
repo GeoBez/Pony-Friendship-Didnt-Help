@@ -13,13 +13,11 @@ public class Enemy : MonoBehaviour, IFreezable
 	float defaultSpeed;
 	public float attackTime;
 	public GameObject[] fall_Object;
-	public Set_Victory_Menu all_Enemies;
 
 	private Animator _animator;
 
 	private void Start()
 	{
-		all_Enemies = GameObject.FindGameObjectWithTag("Game Instance").GetComponent<Set_Victory_Menu>();
 		_animator = GetComponent<Animator>();
 		healthBar = GetComponentInChildren<StatsBar>();
 		healthBar?.SetMaxValue(maxHealth);
@@ -43,7 +41,6 @@ public class Enemy : MonoBehaviour, IFreezable
 
 	public void Death()
 	{
-		all_Enemies.all_Enemies--;
 		Statistic.enemyDeathCount++;
 		float rnd = Random.Range(0, 99);
 
