@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class Player : MonoBehaviour
 {
     public StatsBar healthBar;
@@ -66,16 +68,14 @@ public class Player : MonoBehaviour
         healthBar.SetMaxValue(maxHealth);
         Health = maxHealth;
         GetComponent<PlayerMovement>().speed = Speed;
-               
-
+              
         //isMeleeAttacker = true;
         if (isMeleeAttacker)
             change_Attack.ChangeAttack();
 
-        new Mode_YouShallNoPass().Activate();
+        gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
         //new Mode_MoreBits().Activate();
         //gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
-
     }
 
     void Start()

@@ -12,9 +12,11 @@ public class UprgadeSpritesManager : MonoBehaviour
         {
             if (sprite.name.Equals(name))
             {
+                //Debug.Log("True");
                 return sprite;
             }
         }
+        //Debug.Log("False");
         return sprites[0]; //error sprite here
     }
 }
