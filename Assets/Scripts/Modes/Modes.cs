@@ -7,12 +7,13 @@ public interface ModeActivate{
     void MainModeDo();
     string GetName();
     string GetDescription();
+    Sprite GetImage();
 }
-public abstract class Modes : ModeActivate//: MonoBehaviour//, ModeActivate
+public abstract class Modes : MonoBehaviour, ModeActivate
 {
     public string modeName;
     public string modeDescription;
-    public Image Image;
+    public Sprite Image;
     //ссылка на карточку
 
     public bool isBlocked = false; //пригодится для ограничений
@@ -31,7 +32,7 @@ public abstract class Modes : ModeActivate//: MonoBehaviour//, ModeActivate
     public virtual void MainModeDo() {}
     public string GetName() => modeName;
     public string GetDescription() => modeDescription;
-    public Image GetImage() => Image;
+    public Sprite GetImage() => Image;
 }
 
 

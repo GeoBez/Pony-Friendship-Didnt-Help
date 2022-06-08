@@ -24,6 +24,7 @@ TagManager:
   - Wave Controller
   - ModeManager
   - Tower Enemy Spawn
+  - UprgadeSpritesManager
   layers:
   - Default
   - TransparentFX

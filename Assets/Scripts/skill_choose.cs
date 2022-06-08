@@ -15,21 +15,22 @@ public class skill_choose : MonoBehaviour
 
     void Start()
     {
-        _allModes = new List<Modes>() {new Mode_Magnit(),
-            new Mode_DoubleDenomination(),
-            new Mode_CleverLeaf(),
-            new Mode_MoreBits(),
-            new Mode_Sturdy(),
-            new Mode_HealthyHealth(),
-            new Mode_NewHorseshoes(),
-            new Mode_OneTimeTreatment(),
-            new Mode_MoreHealth(),
-            new Mode_TimeIsMoney(),
-            new Mode_IAmPower(),
-            new Mode_PowerPlus(),
-            new Mode_SimpleDistanteBattle(),
-            new Mode_SittingUpper(),
-            new Mode_IAmSpeed()};
+        _allModes = new List<Modes>() {
+            gameObject.AddComponent<Mode_Magnit>(),
+            gameObject.AddComponent<Mode_DoubleDenomination>(),
+            gameObject.AddComponent<Mode_CleverLeaf>(),
+            gameObject.AddComponent<Mode_MoreBits>(),
+            gameObject.AddComponent<Mode_Sturdy>(),
+            gameObject.AddComponent<Mode_HealthyHealth>(),
+            gameObject.AddComponent<Mode_NewHorseshoes>(),
+            gameObject.AddComponent<Mode_OneTimeTreatment>(),
+            gameObject.AddComponent<Mode_MoreHealth>(),
+            gameObject.AddComponent<Mode_TimeIsMoney>(),
+            gameObject.AddComponent<Mode_IAmPower>(),
+            gameObject.AddComponent<Mode_PowerPlus>(),
+            gameObject.AddComponent<Mode_SimpleDistanteBattle>(),
+            gameObject.AddComponent<Mode_SittingUpper>(),
+            gameObject.AddComponent<Mode_IAmSpeed>()};
 
         //тут надо как-то сделать активацию начальных скилов (перенести из старта )
         foreach(var mode in _allModes)
@@ -40,7 +41,7 @@ public class skill_choose : MonoBehaviour
     }
 
     public void MakeCard()
-    {        
+    {
         if (!isStartWas)
         {
             isStartWas = true;
@@ -54,26 +55,41 @@ public class skill_choose : MonoBehaviour
             {
                 Modes mod;
                 var count =  GenerateIndex();
+                                
                 if (count != -1)
                     mod = _allModes[count];
                 else
-                    mod = new Mode_Extra();
+                    mod = gameObject.AddComponent<Mode_Extra>();
+                                
+                try
+                {
+                    if (mod.GetName() == null || mod.GetDescription() == null)
+                    {
+                        count = -1;
+                        mod = gameObject.AddComponent<Mode_Extra>();
+                        throw new System.Exception("Mods name or description is null!");
+                    }
+                }
+                catch (System.Exception e)
+                {
+                    Debug.Log(e);
+                }
+                finally
+                {
+                    card.descriptionText.text = mod.GetDescription();
+                    card.nameText.text = mod.GetName();
+                    card.image.sprite = mod.GetImage();
 
-                card.descriptionText.text = mod.GetDescription();
-                card.nameText.text = mod.GetName();
-                //card.image = mod.GetImage();
-
-                var Cardbutton = card.button.GetComponent<button_choose>();
-                Cardbutton.mod = mod;
-                Cardbutton.index = count;
+                    var Cardbutton = card.button.GetComponent<button_choose>();
+                    Cardbutton.mod = mod;
+                    Cardbutton.index = count;
+                }
             }
         }
     } 
 
     int GenerateIndex()
     {
-        //Debug.Log(_allModes.Count);
-
         int cout;
         if (_allModes.Count > 4)
         {

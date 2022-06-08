@@ -66,6 +66,7 @@ public class XP_Bar : MonoBehaviour
 
     public void SetSkillCanvas()
     {
+        //Debug.Log("Iiii");
         skills_Canvas.SetActive(true);
         skills_Canvas.GetComponentInChildren<skill_choose>().MakeCard();
         skills_Canvas.GetComponentInChildren<Skill_Canvas>().skill_Points = skill_Points;

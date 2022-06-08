@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AllModes:MonoBehaviour
 {
@@ -10,11 +11,14 @@ public class AllModes:MonoBehaviour
 //все моды ниже
 public class Mode_Magnit : Modes
 {
-    public Mode_Magnit()
+    public void Start()
     {
         modeName = "Магнит";
         modeDescription = "Увеличивает радиус сбора монет";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager")
+            .GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -26,11 +30,13 @@ public class Mode_Magnit : Modes
 
 public class Mode_DoubleDenomination : Modes
 {
-    public Mode_DoubleDenomination()
+    public void Start()
     {
         modeName = "Двойной номинал";
         modeDescription = "Все выпадающие монетки стоят 2";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
     public override void MainModeDo()
     {
@@ -41,11 +47,13 @@ public class Mode_DoubleDenomination : Modes
 
 public class Mode_CleverLeaf : Modes
 {
-    public Mode_CleverLeaf()
+    public void Start()
     {
         modeName = "Лист клевера";
         modeDescription = "Увеличивает шанс выпадения монет на 10%";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
     public override void MainModeDo()
     {
@@ -56,11 +64,13 @@ public class Mode_CleverLeaf : Modes
 
 public class Mode_MoreBits : Modes
 {
-    public Mode_MoreBits()
+    public void Start()
     {
         modeName = "Больше битсов!";
         modeDescription = "+100 монеток";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
     public override void MainModeDo()
     {
@@ -71,11 +81,13 @@ public class Mode_MoreBits : Modes
 
 public class Mode_Sturdy : Modes
 {
-    public Mode_Sturdy()
+    public void Start()
     {
-        modeName = "Здоровяк(!)";
-        modeDescription = "Увеличение количества жизни на 10%";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        modeName = "Здоровяк";
+        modeDescription = "(!)Увеличение количества жизни на 10%";
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -90,11 +102,13 @@ public class Mode_Sturdy : Modes
 
 public class Mode_HealthyHealth : Modes
 {
-    public Mode_HealthyHealth()
+    public void Start()
     {
-        modeName = "Здорово, здоровье (!)";
-        modeDescription = "Увеличение количества жизни на 20 хп";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        modeName = "Здорово, здоровье";
+        modeDescription = "(!) Увеличение количества жизни на 20 хп";
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName("Здорово здоровье".ToLower());
     }
 
     public override void MainModeDo()
@@ -110,11 +124,13 @@ public class Mode_HealthyHealth : Modes
 
 public class Mode_NewHorseshoes : Modes
 {
-    public Mode_NewHorseshoes()
+    public void Start()
     {
-        modeName = "Новые подковы (!)";
-        modeDescription = "Повышение скорости передвижения на 20%";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        modeName = "Новые подковы";
+        modeDescription = "(!) Повышение скорости передвижения на 20%";
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -128,11 +144,13 @@ public class Mode_NewHorseshoes : Modes
 
 public class Mode_OneTimeTreatment : Modes
 {
-    public Mode_OneTimeTreatment()
+    public void Start()
     {
-        modeName = "Разовое лечение (!)";
-        modeDescription = "Восстанавливает здоровье до максимума";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+        modeName = "Разовое лечение";
+        modeDescription = "(!) Восстанавливает здоровье до максимума";
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -144,13 +162,15 @@ public class Mode_OneTimeTreatment : Modes
     }
 }
 
-public class Mode_MoreHealth : Modes
+public class Mode_MoreHealth : Modes ///here
 {
-    public Mode_MoreHealth()
+    public void Start()
     {
         modeName = "Больше здоровья";
         modeDescription = "Здоровье дерева увеличивается на 20 единиц";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -163,13 +183,15 @@ public class Mode_MoreHealth : Modes
     }
 }
 
-public class Mode_TimeIsMoney : Modes
+public class Mode_TimeIsMoney : Modes //here
 {
-    public Mode_TimeIsMoney()
+    public void Start()
     {
         modeName = "Время - деньги";
         modeDescription = "За пропуск волны дается в 2 раза больше монет";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -181,11 +203,13 @@ public class Mode_TimeIsMoney : Modes
 
 public class Mode_IAmPower : Modes
 {
-    public Mode_IAmPower()
+    public void Start()
     {
         modeName = "Я есть сила";
         modeDescription = "Повышает сила атаки в 2 раза";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -196,13 +220,15 @@ public class Mode_IAmPower : Modes
     }
 }
 
-public class Mode_PowerPlus : Modes
+public class Mode_PowerPlus : Modes //here
 {
-    public Mode_PowerPlus()
+    public void Start()
     {
         modeName = "Сила+";
         modeDescription = "Увеличение урона на 5 единиц";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -213,13 +239,15 @@ public class Mode_PowerPlus : Modes
     }
 }
 
-public class Mode_SimpleDistanteBattle : Modes
+public class Mode_SimpleDistanteBattle : Modes //here
 {
-    public Mode_SimpleDistanteBattle()
+    public void Start()
     {
         modeName = "Простой дальний бой";
         modeDescription = "Меняет тип атаки на дальний";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -231,11 +259,13 @@ public class Mode_SimpleDistanteBattle : Modes
 
 public class Mode_SittingUpper : Modes 
 {
-    public Mode_SittingUpper()
+    public void Start()
     {
         modeName = "Сижу высоко - стреляю далеко";
         modeDescription = "Увеличивает радиус атаки";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -250,11 +280,13 @@ public class Mode_SittingUpper : Modes
 
 public class Mode_IAmSpeed : Modes
 {
-    public Mode_IAmSpeed()
+    public void Start()
     {
         modeName = "Я есть скорость";
         modeDescription = "Повышает частоту атаки в 1.5 раза";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -271,11 +303,13 @@ public class Mode_IAmSpeed : Modes
 
 public class Mode_YouShallNoPass : Modes
 {
-    public Mode_YouShallNoPass()
+    public void Start()
     {
         modeName = "Ты не пройдешь";
         modeDescription = "Вы можете стрелять по врагам идущим к дереву";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
     public override void MainModeDo()
@@ -291,11 +325,13 @@ public class Mode_YouShallNoPass : Modes
 
 public class Mode_Extra : Modes//Это скорее исключение, чем улучшение
 {
-    public Mode_Extra()
+    public void Start()
     {
         modeName = "Уууупс:D";
         modeDescription = "Это улучшение невозможно получить";
-        //Image.sprite = Resources.Load("Sprites/Upgrades/больше битсов") as Sprite;
+
+        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
+        Image = manager.GetSpriteByName("Улучшение - ошибка");
     }
 
     public override void MainModeDo()
