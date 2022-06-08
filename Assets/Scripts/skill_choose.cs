@@ -47,44 +47,49 @@ public class skill_choose : MonoBehaviour
             isStartWas = true;
             Start();
         }
+
         if (!_isItWork)
-        {            
+        {
             _isItWork = true;
             foreach (var card in cards)
             {
                 Modes mod;
                 var count =  GenerateIndex();
-                //Debug.Log(count);
-                
+                                
                 if (count != -1)
                     mod = _allModes[count];
                 else
                     mod = gameObject.AddComponent<Mode_Extra>();
+                                
+                try
+                {
+                    if (mod.GetName() == null || mod.GetDescription() == null)
+                    {
+                        count = -1;
+                        mod = gameObject.AddComponent<Mode_Extra>();
+                        throw new System.Exception("Mods name or description is null!");
+                    }
+                }
+                catch (System.Exception e)
+                {
+                    Debug.Log(e);
+                }
+                finally
+                {
+                    card.descriptionText.text = mod.GetDescription();
+                    card.nameText.text = mod.GetName();
+                    card.image.sprite = mod.GetImage();
 
-               // if (mod.GetDescription() == null)
-                    //Debug.Log("Is Null");
-
-                card.descriptionText.text = mod.GetDescription();
-                card.nameText.text = mod.GetName();
-
-                //if (card.image == null)
-                    //Debug.Log("Null");
-                //else
-                    //Debug.Log("Not Null");
-
-                card.image.sprite = mod.GetImage();
-
-                var Cardbutton = card.button.GetComponent<button_choose>();
-                Cardbutton.mod = mod;
-                Cardbutton.index = count;
+                    var Cardbutton = card.button.GetComponent<button_choose>();
+                    Cardbutton.mod = mod;
+                    Cardbutton.index = count;
+                }
             }
         }
     } 
 
     int GenerateIndex()
     {
-        //Debug.Log(_allModes.Count);
-
         int cout;
         if (_allModes.Count > 4)
         {
