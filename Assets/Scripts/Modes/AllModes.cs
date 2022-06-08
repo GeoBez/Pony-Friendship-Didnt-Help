@@ -250,7 +250,7 @@ public class Mode_SimpleDistanteBattle : Modes //here
         Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
-    public override void MainModeDo()
+    public override void MainModeDo()//не работате
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isMeleeAttacker = false;
         GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Change_Attack>().ChangeAttack();  
