@@ -8883,6 +8883,10 @@ PrefabInstance:
       propertyPath: attackCoolDownBar
       value: 
       objectReference: {fileID: 517931199}
+    - target: {fileID: 1855472325, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1901460010057848812, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: m_FlipX
       value: 1
