@@ -46,9 +46,10 @@ public class PlayerMeleeAttacks : MonoBehaviour
 
     private void Attack(Collider2D[] hitEnemies)
     {
-        animator.SetTrigger("Attack");
+        //animator.SetTrigger("Attack");
+        animator.Play("Slash");
 
-        foreach(var enemy in hitEnemies)
+        foreach (var enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
         }
