@@ -8,12 +8,12 @@ public class Tower_Area_Script : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();    
+        player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();    
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag =="Player")
+        if(collision.tag =="MainPlayer")
         {
             player.GetComponent<Player>().inTowerCollider = true;
         }
@@ -21,7 +21,7 @@ public class Tower_Area_Script : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "MainPlayer")
         {
             player.GetComponent<Player>().inTowerCollider = false;
         }

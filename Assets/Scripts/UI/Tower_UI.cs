@@ -17,7 +17,7 @@ public class Tower_UI : MonoBehaviour
     public void Start()
     {
         tower = Tower.GetComponent<Tower>();
-        Player = GameObject.FindGameObjectWithTag("Player");
+        Player = GameObject.FindGameObjectWithTag("MainPlayer");
         CTB = GameObject.FindGameObjectWithTag("CTB").GetComponent<Button>();
         cost = CTB.GetComponentInChildren<Text>();
         cost.text = tower.price.ToString();
@@ -27,7 +27,7 @@ public class Tower_UI : MonoBehaviour
     {
         if (Player != null)
         {
-            if (Player.GetComponent<Player>().inTowerCollider)
+            if (Player.GetComponentInChildren<Player>().inTowerCollider)
             {
                 CTB.interactable = false;
             }

@@ -70,7 +70,7 @@ public class Mode_MoreBits : Modes
         modeDescription = "+100 монеток";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
+        Image = manager.GetSpriteByName("Больше битсов".ToLower());
     }
     public override void MainModeDo()
     {
@@ -84,7 +84,7 @@ public class Mode_Sturdy : Modes
     public void Start()
     {
         modeName = "Здоровяк";
-        modeDescription = "(!)Увеличение количества жизни на 10%";
+        modeDescription = "Увеличение количества жизни на 10%";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName(modeName.ToLower());
@@ -92,7 +92,7 @@ public class Mode_Sturdy : Modes
 
     public override void MainModeDo()
     {
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
 
         player.maxHealth += (int)(player.maxHealth * 0.1);
         player.Health += (int)(player.maxHealth * 0.1);
@@ -105,7 +105,7 @@ public class Mode_HealthyHealth : Modes
     public void Start()
     {
         modeName = "Здорово, здоровье";
-        modeDescription = "(!) Увеличение количества жизни на 20 хп";
+        modeDescription = "Увеличение количества жизни на 20 хп";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName("Здорово здоровье".ToLower());
@@ -113,7 +113,7 @@ public class Mode_HealthyHealth : Modes
 
     public override void MainModeDo()
     {
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
 
         player.maxHealth += 20;
         player.Health += 20;
@@ -127,7 +127,7 @@ public class Mode_NewHorseshoes : Modes
     public void Start()
     {
         modeName = "Новые подковы";
-        modeDescription = "(!) Повышение скорости передвижения на 20%";
+        modeDescription = "Повышение скорости передвижения на 20%";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName(modeName.ToLower());
@@ -135,7 +135,7 @@ public class Mode_NewHorseshoes : Modes
 
     public override void MainModeDo()
     {
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
 
         player.Speed += (float)(player.Speed * 0.2);
         //player.mode_NewHorseshoes = true; есть ошибка, не закрывает карточку!
@@ -147,7 +147,7 @@ public class Mode_OneTimeTreatment : Modes
     public void Start()
     {
         modeName = "Разовое лечение";
-        modeDescription = "(!) Восстанавливает здоровье до максимума";
+        modeDescription = "Восстанавливает здоровье до максимума";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName(modeName.ToLower());
@@ -155,7 +155,7 @@ public class Mode_OneTimeTreatment : Modes
 
     public override void MainModeDo()
     {
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
         player.Health = player.maxHealth;
 
         //player.mode_OneTimeTreatment = true; ошибка есть!
@@ -214,7 +214,7 @@ public class Mode_IAmPower : Modes
 
     public override void MainModeDo()
     {
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
         player.damage *= 2;
         //player.mode_IAmPower = true;
     }
@@ -233,7 +233,7 @@ public class Mode_PowerPlus : Modes //here
 
     public override void MainModeDo()
     {
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
         player.damage += 5;
         //player.mode_PowerPlus = true;
     }
@@ -250,10 +250,14 @@ public class Mode_SimpleDistanteBattle : Modes //here
         Image = manager.GetSpriteByName(modeName.ToLower());
     }
 
-    public override void MainModeDo()//не работате
+    public override void MainModeDo()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isMeleeAttacker = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Change_Attack>().ChangeAttack();  
+        var player = GameObject.FindGameObjectWithTag("MainPlayer");
+        player.GetComponentInChildren<PlayerMeleeAttacks>().enabled = false;
+        player.GetComponentInChildren<Weapon>().enabled = true;
+
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isMeleeAttacker = false;
+        //GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Change_Attack>().ChangeAttack();  
     }
 }
 
@@ -272,8 +276,8 @@ public class Mode_SittingUpper : Modes
     {
         //throw new System.Exception("You tried to use unworking Mode_SittingUpper");
 
-        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Weapon>().detectionDistance = 10;
-        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerMeleeAttacks>().attackRange = 5;
+        GameObject.FindGameObjectWithTag("MainPlayer").GetComponentInChildren<Weapon>().detectionDistance = 10;
+        GameObject.FindGameObjectWithTag("MainPlayer").GetComponentInChildren<PlayerMeleeAttacks>().attackRange = 8;
         //player.mode = true;
     }
 }
@@ -293,7 +297,7 @@ public class Mode_IAmSpeed : Modes
     {
         //throw new System.Exception("Bugs fouded. Every time mod used coolDown firball low");
 
-        var player = GameObject.FindGameObjectWithTag("Player");
+        var player = GameObject.FindGameObjectWithTag("MainPlayer");
         var obj = player.GetComponentInChildren<PlayerMeleeAttacks>();
         obj.SetCoolDown(obj.attackCoolDown / 2);
 
@@ -314,9 +318,9 @@ public class Mode_YouShallNoPass : Modes
 
     public override void MainModeDo()
     {
-        player.mode_YouShallNotPass = true;
+        //player.mode_YouShallNotPass = true;
 
-        var _player = GameObject.FindGameObjectWithTag("Player");
+        var _player = GameObject.FindGameObjectWithTag("MainPlayer");
 
         _player.GetComponentInChildren<Weapon>().whatIsAttack = LayerMask.GetMask("Tower Enemy", "Enemy");
         _player.GetComponentInChildren<PlayerMeleeAttacks>().enemyLayer = LayerMask.GetMask("Tower Enemy", "Enemy");

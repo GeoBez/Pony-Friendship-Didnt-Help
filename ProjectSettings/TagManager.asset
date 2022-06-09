@@ -25,6 +25,7 @@ TagManager:
   - ModeManager
   - Tower Enemy Spawn
   - UprgadeSpritesManager
+  - MainPlayer
   layers:
   - Default
   - TransparentFX

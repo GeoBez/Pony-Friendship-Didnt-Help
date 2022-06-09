@@ -8,7 +8,7 @@ public class Heal_Ball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.tag == "MainPlayer")
         {
             collision.GetComponent<Player>().Health += add_Health;
             Destroy(gameObject);

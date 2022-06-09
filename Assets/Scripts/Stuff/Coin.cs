@@ -22,7 +22,7 @@ public class Coin : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "MainPlayer")
         {
             Coin_Count_Text.coin_Count += coin_Denomination;
             Finances.Coins++;
