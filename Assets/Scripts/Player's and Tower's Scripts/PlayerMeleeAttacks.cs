@@ -13,6 +13,7 @@ public class PlayerMeleeAttacks : MonoBehaviour
     public float attackRange;
     public LayerMask enemyLayer;
     [SerializeField] private Animator animator;
+    [SerializeField] GameObject Melee_Damage_Effect;
     
     public void SetCoolDown(float coolDown)
     {
@@ -47,11 +48,11 @@ public class PlayerMeleeAttacks : MonoBehaviour
     private void Attack(Collider2D[] hitEnemies)
     {
         //animator.SetTrigger("Attack");
-        animator.Play("Slash");
 
         foreach (var enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
+            Instantiate(Melee_Damage_Effect, enemy.transform.position, Quaternion.identity);
         }
 
         _isNeedRollback = true;

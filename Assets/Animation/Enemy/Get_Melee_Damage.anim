@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slash
+  m_Name: Get_Melee_Damage
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -28,6 +28,8 @@ AnimationClip:
     - time: 0.3
       value: {fileID: 21300000, guid: 28ea3932acfba2c46a7f9cfa5c7f18c6, type: 3}
     - time: 0.4
+      value: {fileID: 21300000, guid: a280e6b5eba79aa428c93ab818b5065e, type: 3}
+    - time: 0.48333332
       value: {fileID: 21300000, guid: a280e6b5eba79aa428c93ab818b5065e, type: 3}
     attribute: m_Sprite
     path: 
@@ -53,12 +55,13 @@ AnimationClip:
     - {fileID: 21300000, guid: 964dc5a2f07d16c4c856be41a674ed32, type: 3}
     - {fileID: 21300000, guid: 28ea3932acfba2c46a7f9cfa5c7f18c6, type: 3}
     - {fileID: 21300000, guid: a280e6b5eba79aa428c93ab818b5065e, type: 3}
+    - {fileID: 21300000, guid: a280e6b5eba79aa428c93ab818b5065e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4166667
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
