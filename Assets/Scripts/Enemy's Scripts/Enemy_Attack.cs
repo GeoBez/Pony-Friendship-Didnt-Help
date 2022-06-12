@@ -29,7 +29,7 @@ public class Enemy_Attack : MonoBehaviour
             }
             else if (time < 0)
             {
-                if (What_Attack.tag == "Player")
+                if (What_Attack.tag == "MainPlayer")
                     What_Attack.GetComponent<Player>()?.TakeDamage(damage);
                 else if (What_Attack.tag == Main_Tower)
                     What_Attack.GetComponent<Tower>()?.TakeDamage(damage);
@@ -40,7 +40,7 @@ public class Enemy_Attack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !isTowerEnemy)
+        if (collision.tag == "MainPlayer" && !isTowerEnemy)
         {
             SetTargetObject(collision.gameObject);
         }
@@ -52,7 +52,7 @@ public class Enemy_Attack : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !isTowerEnemy)
+        if (collision.tag == "MainPlayer" && !isTowerEnemy)
         {
             What_Attack = null;
         }

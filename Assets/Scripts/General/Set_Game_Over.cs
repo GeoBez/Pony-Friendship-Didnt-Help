@@ -13,7 +13,7 @@ public class Set_Game_Over : MonoBehaviour
 
     private void Start()
     {
-        PHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        PHealth = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
         MTHealth = GameObject.FindGameObjectWithTag("Main Tower").GetComponent<Tower>();
         //GameOverMenu = GameObject.FindGameObjectWithTag("GameOver");
         GameOverMenu.SetActive(false);
