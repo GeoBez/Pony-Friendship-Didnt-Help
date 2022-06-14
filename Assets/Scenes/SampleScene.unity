@@ -4030,7 +4030,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: 552736115
   m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &1130660996
@@ -4551,6 +4551,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7144287020467786779}
     m_Modifications:
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 130.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 68.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 55.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9843137
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4116563793477321714, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_Name
       value: SkillCard (1)
@@ -4621,11 +4653,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8592373882517916171, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.16
+      value: 258.1401
       objectReference: {fileID: 0}
     - target: {fileID: 8592373882517916171, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -207
+      value: -230.81442
       objectReference: {fileID: 0}
     - target: {fileID: 8592373882517916171, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4653,6 +4685,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7144287020467786779}
     m_Modifications:
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 130.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 67.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 53.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9843137
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4116563793477321714, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_Name
       value: SkillCard
@@ -4723,11 +4787,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8592373882517916171, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 97.72
+      value: 86.04669
       objectReference: {fileID: 0}
     - target: {fileID: 8592373882517916171, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -207
+      value: -230.81442
       objectReference: {fileID: 0}
     - target: {fileID: 8592373882517916171, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5264,6 +5328,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7144287020467786779}
     m_Modifications:
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 128.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 69.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 497885542450927482, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 54.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9843137
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719010959676992034, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4116563793477321714, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_Name
       value: SkillCard (2)
@@ -5334,11 +5430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8592373882517916171, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 488.6
+      value: 430.2335
       objectReference: {fileID: 0}
     - target: {fileID: 8592373882517916171, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -207
+      value: -230.81442
       objectReference: {fileID: 0}
     - target: {fileID: 8592373882517916171, guid: 18c15f9627e38ed4bbb0aa16bfb2f8e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7053,43 +7149,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 2
       _max_Count_Enemy: 5
-      Portal: {fileID: 148429826}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 5
-      _max_Count_Enemy: 10
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 5
-      _max_Count_Enemy: 15
-      Portal: {fileID: 1131102386}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 5
-      _max_Count_Enemy: 9
-      Portal: {fileID: 148429826}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 5
-      _max_Count_Enemy: 9
-      Portal: {fileID: 300475134}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 5
-      _max_Count_Enemy: 10
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 3
-      _max_Count_Enemy: 10
-      Portal: {fileID: 1131102386}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 3
-      _max_Count_Enemy: 10
       Portal: {fileID: 1361756283}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 3
-      _max_Count_Enemy: 9
-      Portal: {fileID: 522376286}
     IsBoss: 0
   - waves:
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
@@ -7100,18 +7160,14 @@ MonoBehaviour:
       _min_Count_Enemy: 5
       _max_Count_Enemy: 15
       Portal: {fileID: 1131102386}
+    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
+      _min_Count_Enemy: 5
+      _max_Count_Enemy: 9
+      Portal: {fileID: 148429826}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 3
-      _max_Count_Enemy: 6
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 3
+      _min_Count_Enemy: 5
       _max_Count_Enemy: 9
       Portal: {fileID: 300475134}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 3
-      _max_Count_Enemy: 6
-      Portal: {fileID: 148429826}
     IsBoss: 0
   - waves:
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
@@ -7148,56 +7204,6 @@ MonoBehaviour:
       _min_Count_Enemy: 6
       _max_Count_Enemy: 13
       Portal: {fileID: 1741058971}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 6
-      _max_Count_Enemy: 16
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 9
-      _max_Count_Enemy: 18
-      Portal: {fileID: 1131102386}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 6
-      _max_Count_Enemy: 15
-      Portal: {fileID: 148429826}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 6
-      _max_Count_Enemy: 13
-      Portal: {fileID: 300475134}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 6
-      _max_Count_Enemy: 16
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 9
-      _max_Count_Enemy: 18
-      Portal: {fileID: 1131102386}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 9
-      _max_Count_Enemy: 18
-      Portal: {fileID: 148429826}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 6
-      _max_Count_Enemy: 16
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 9
-      _max_Count_Enemy: 18
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 6
-      _max_Count_Enemy: 15
-      Portal: {fileID: 522376286}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 6
-      _max_Count_Enemy: 15
-      Portal: {fileID: 148429826}
     IsBoss: 0
   - waves:
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
@@ -7235,7 +7241,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 10
       _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1131102386}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 6
       _max_Count_Enemy: 15
@@ -7253,7 +7259,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 10
       _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 300475134}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 10
       _max_Count_Enemy: 15
@@ -7265,125 +7271,13 @@ MonoBehaviour:
     IsBoss: 0
   - waves:
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 8
-      _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 15
-      Portal: {fileID: 1361756283}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 15
-      Portal: {fileID: 148429826}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 8
-      _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 20
-      Portal: {fileID: 522376286}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 15
-      Portal: {fileID: 115629398}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 15
-      Portal: {fileID: 1741058971}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 10
       _max_Count_Enemy: 25
       Portal: {fileID: 2025412220}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 25
-      Portal: {fileID: 522376286}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 20
-      Portal: {fileID: 1361756283}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 20
-      Portal: {fileID: 148429826}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 20
-      Portal: {fileID: 1361756283}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 20
-      Portal: {fileID: 300475134}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 15
-      Portal: {fileID: 1741058971}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 15
-      Portal: {fileID: 1361756283}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 10
-      _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 12
-      _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1131102386}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 15
@@ -7405,7 +7299,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1131102386}
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
@@ -7423,7 +7317,7 @@ MonoBehaviour:
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 25
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 1741058971}
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 12
       _max_Count_Enemy: 20
@@ -7459,72 +7353,8 @@ MonoBehaviour:
     - Enemy: {fileID: 8020799161829022176, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
       _min_Count_Enemy: 1
       _max_Count_Enemy: 1
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 115629398}
     IsBoss: 1
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 20
-      Portal: {fileID: 1741058971}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 16
-      Portal: {fileID: 1361756283}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
-      Portal: {fileID: 522376286}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 20
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 20
-      Portal: {fileID: 1741058971}
-    IsBoss: 0
-  - waves:
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
-      Portal: {fileID: 2025412220}
-    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
-      Portal: {fileID: 1741058971}
-    - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
-      _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
-      Portal: {fileID: 522376286}
-    IsBoss: 0
   - waves:
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 15
@@ -7536,7 +7366,11 @@ MonoBehaviour:
       Portal: {fileID: 300475134}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 15
-      _max_Count_Enemy: 30
+      _max_Count_Enemy: 20
+      Portal: {fileID: 1741058971}
+    - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
+      _min_Count_Enemy: 15
+      _max_Count_Enemy: 16
       Portal: {fileID: 1361756283}
     IsBoss: 0
   - waves:
@@ -7597,7 +7431,7 @@ MonoBehaviour:
     - Enemy: {fileID: 9175673980754752827, guid: 0769165112f9ade4fb3fac4681b51f8c, type: 3}
       _min_Count_Enemy: 17
       _max_Count_Enemy: 35
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 115629398}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 20
       _max_Count_Enemy: 35
@@ -7637,7 +7471,7 @@ MonoBehaviour:
     - Enemy: {fileID: 8020799161829022176, guid: 7419cb8cc5ca910458359a69873521c3, type: 3}
       _min_Count_Enemy: 1
       _max_Count_Enemy: 1
-      Portal: {fileID: 2025412220}
+      Portal: {fileID: 522376286}
     - Enemy: {fileID: 3205444235630396451, guid: 0c4503d9d1bf6da409d771b904c8db10, type: 3}
       _min_Count_Enemy: 5
       _max_Count_Enemy: 10
@@ -8596,6 +8430,14 @@ PrefabInstance:
     - target: {fileID: 1526462795, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: detectionDistance
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855472324, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855472324, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 552736115
       objectReference: {fileID: 0}
     - target: {fileID: 1855472325, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -10562,9 +10404,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 950191526957752839, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 552736115
+      objectReference: {fileID: 0}
     - target: {fileID: 6045906499427412218, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
       propertyPath: m_Name
       value: MainTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045906499427412219, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6045906499427412220, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
       propertyPath: m_RootOrder
@@ -10609,22 +10459,6 @@ PrefabInstance:
     - target: {fileID: 6045906499427412220, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045906499427412223, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
-      propertyPath: m_Size.x
-      value: 2.9529557
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045906499427412223, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
-      propertyPath: m_Size.y
-      value: 9.329042
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045906499427412223, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.17756152
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045906499427412223, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.84286785
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfcb3ef1e3517374f8fe5b7ca9db83fd, type: 3}
