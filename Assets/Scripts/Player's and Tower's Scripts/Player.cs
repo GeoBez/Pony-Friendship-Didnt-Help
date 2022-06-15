@@ -58,6 +58,11 @@ public class Player : MonoBehaviour
 
     public bool isMeleeAttacker;
 
+    bool isImmortality;
+
+    float immortality_Timer = .5f;
+    float default_Immortality_Timer;
+
     Change_Attack change_Attack;
 
     private void Awake()
@@ -76,6 +81,7 @@ public class Player : MonoBehaviour
         gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
         //new Mode_MoreBits().Activate();
         //gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
+        default_Immortality_Timer = immortality_Timer;
     }
 
     void Start()
@@ -89,15 +95,24 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //if(Health > maxHealth)
-        //{
-        //    Health = maxHealth;
-        //}
+        if(isImmortality)
+        {
+            immortality_Timer -= Time.deltaTime;
+            if(immortality_Timer <= 0)
+            {
+                isImmortality = false;
+                immortality_Timer = default_Immortality_Timer;
+            }    
+        }
     }
 
     public void TakeDamage(float damage)
     {
-        Health -= damage;
+        if (!isImmortality)
+        {
+            Health -= damage;
+            isImmortality = true;
+        }
         //healthBar.SetHealth(Health);
     }
 }

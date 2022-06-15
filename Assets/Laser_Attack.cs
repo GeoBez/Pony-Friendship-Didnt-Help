@@ -22,7 +22,7 @@ public class Laser_Attack : MonoBehaviour
     {
         enemy = GetComponentInParent<Enemy>();
         boss = GetComponentInParent<Boss_Script>();
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        Player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
         defaultAttackTime = enemy.attackTime;
         sprite = GetComponent<SpriteRenderer>();
         collider = GetComponent<BoxCollider2D>();
@@ -60,7 +60,7 @@ public class Laser_Attack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.tag == "MainPlayer")
         {
             Player.TakeDamage(damage);
         }
