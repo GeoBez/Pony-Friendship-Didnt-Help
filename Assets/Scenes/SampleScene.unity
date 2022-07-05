@@ -8094,8 +8094,9 @@ GameObject:
   - component: {fileID: 1875539567}
   - component: {fileID: 1875539569}
   - component: {fileID: 1875539568}
+  - component: {fileID: 1875539570}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8153,7 +8154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lv. 1
+  m_Text: Lv. 99999999
 --- !u!222 &1875539569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8162,6 +8163,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875539566}
   m_CullTransparentMesh: 1
+--- !u!114 &1875539570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875539566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1778e13e4dec8a4b84f819e8806e0cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xP_Bar: {fileID: 6072811159382618530}
 --- !u!1001 &1893854337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8481,7 +8495,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 305.4, y: -185.5}
-  m_SizeDelta: {x: 101.09, y: 31.87}
+  m_SizeDelta: {x: 75.46, y: 31.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1965568492
 MonoBehaviour:
@@ -8516,7 +8530,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0417\u0430\u043C\u043E\u0440\u043E\u0437\u043A\u0430 (Space)"
+  m_Text: "\u0417\u0430\u043C\u043E\u0440\u043E\u0437\u043A\u0430 (R)"
 --- !u!222 &1965568493
 CanvasRenderer:
   m_ObjectHideFlags: 0
