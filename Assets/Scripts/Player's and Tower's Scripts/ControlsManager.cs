@@ -9,7 +9,7 @@ public class ControlsManager : MonoBehaviour
     public 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetKeyDown(KeyCode.R)){
             freezeUlt.TryUse();
         }
         if (Input.GetKeyDown(KeyCode.F)){
