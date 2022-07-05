@@ -70,7 +70,7 @@ public class Preparation_Script : MonoBehaviour
     {
         if (timer > 0)
         {
-           var coin = Coin.coinForWavePass;
+           var coin = Coins.coinForWavePass;
 
            if (timer > (int)(0.8*default_time))
                 Coin_Count_Text.coin_Count += coin;

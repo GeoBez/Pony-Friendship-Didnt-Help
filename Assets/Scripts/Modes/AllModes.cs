@@ -23,7 +23,7 @@ public class Mode_Magnit : Modes
 
     public override void MainModeDo()
     {
-        Coin.range = 12;
+        Coins.range = 12;
         //player.mode_Magnit = true;
     }
 }
@@ -40,7 +40,7 @@ public class Mode_DoubleDenomination : Modes
     }
     public override void MainModeDo()
     {
-        Coin.coin_Denomination = 2;
+        Coins.coin_Denomination = 2;
         //player.mode_Double_Denomination = true;
     }
 }
@@ -57,7 +57,7 @@ public class Mode_CleverLeaf : Modes
     }
     public override void MainModeDo()
     {
-        Coin.probability = 40;
+        Coins.probability = 40;
         //player.mode_Clover_Leaf = true;
     }
 }
@@ -196,7 +196,7 @@ public class Mode_TimeIsMoney : Modes //here
 
     public override void MainModeDo()
     {
-        Coin.coinForWavePass *= 2;
+        Coins.coinForWavePass *= 2;
         //player.mode_TimeIsMoney = true;
     }
 }

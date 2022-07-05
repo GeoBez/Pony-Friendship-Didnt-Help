@@ -3507,7 +3507,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0049438477, y: 0}
+  m_AnchoredPosition: {x: -0.005004883, y: 0}
   m_SizeDelta: {x: 0.010009766, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932177074
@@ -8355,6 +8355,10 @@ PrefabInstance:
       propertyPath: detectionDistance
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1526462795, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: whatIsAttack.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1855472324, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: m_SortingOrder
       value: 0
@@ -8437,11 +8441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1901460011688975648, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.76
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 1901460011688975648, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.84
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 3984970939799630470, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: img
@@ -8458,6 +8462,10 @@ PrefabInstance:
     - target: {fileID: 5552646316575787500, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: attackRange
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552646316575787500, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6489787237821227859, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
       propertyPath: _joysticks.Array.data[0]
@@ -8483,7 +8491,8 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.08181536
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1818820588, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
 --- !u!1 &2025412220 stripped
 GameObject:

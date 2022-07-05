@@ -6,9 +6,28 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public float damage;
+    public bool inTowerCollider = false;    
+    public bool mode_YouShallNotPass = false;
+
+    public bool isMeleeAttacker;
+    bool isImmortality;
+    float immortality_Timer = .5f;
+    float default_Immortality_Timer;
+
+    Change_Attack change_Attack;
+
     public StatsBar healthBar;
     public float maxHealth = 10;
     private float health;
+    private float RadiusMagnit;
+    private float PowerMagnit;
+
+    private void Start()
+    {
+        RadiusMagnit = 5F;
+        PowerMagnit = 1.5F;        
+    }
     public float Health
     {
         get => health;
@@ -33,38 +52,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    public float damage;
-
-    public bool inTowerCollider = false;
-
-    public bool mode_YouShallNotPass;
-
-    public bool mode_Magnit = false;
-    public bool mode_Double_Denomination = false;
-    public bool mode_Clover_Leaf = false;
-    public bool mode_MoreBits = false;
-    public bool mode_Sturdy = false;
-    public bool mode_HealthyHealth = false;
-    public bool mode_NewHorseshoes = false;
-    public bool mode_OneTimeTreatment = false;
-    public bool mode_MoreHealth = false;
-    public bool mode_TimeIsMoney = false;
-    public bool mode_IAmPower = false;
-    public bool mode_PowerPlus = false;
-    public bool mode_SimpleDistanteBattle = false;
-    public bool mode_SittingUpper = false;
-    public bool mode_IAmSpeed = false;
-    public bool mode_YouShallNoPass = false;
-
-    public bool isMeleeAttacker;
-
-    bool isImmortality;
-
-    float immortality_Timer = .5f;
-    float default_Immortality_Timer;
-
-    Change_Attack change_Attack;
-
     private void Awake()
     {
         GetComponentInChildren<Weapon>().projectile.coolDown = 0.7F;
@@ -79,18 +66,7 @@ public class Player : MonoBehaviour
             change_Attack.ChangeAttack();
 
         gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
-        //new Mode_MoreBits().Activate();
-        //gameObject.AddComponent<Mode_YouShallNoPass>().Activate();
         default_Immortality_Timer = immortality_Timer;
-    }
-
-    void Start()
-    {
-        //var u = gameObject.AddComponent<Mode_MoreBits>();
-        //u.Activate();
-
-        //var u = new Mode_IAmSpeed();
-        //u.Activate();
     }
 
     private void Update()
@@ -104,6 +80,12 @@ public class Player : MonoBehaviour
                 immortality_Timer = default_Immortality_Timer;
             }    
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            {
+            LootEngine.AddLoot(new Coin(), new Vector3(transform.position.x + 10, transform.position.y,
+transform.position.z));
+        }
     }
 
     public void TakeDamage(float damage)
@@ -114,5 +96,46 @@ public class Player : MonoBehaviour
             isImmortality = true;
         }
         //healthBar.SetHealth(Health);
+    }
+
+    private void LootActivate(GameObject _loot)
+    {
+        LootEngine loot = _loot.GetComponent<LootEngine>();
+        if (!loot)
+            return;
+        if (loot.Loot == null)
+            return;
+        loot.Loot.Action();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Eeee");
+        LootActivate(collision.gameObject);
+    }
+
+    public void FixedUpdate()
+    {
+        Collider2D[] collider2D = Physics2D.OverlapCircleAll(transform.position, RadiusMagnit, LayerMask.GetMask("Item"));
+        
+        foreach (Collider2D collider in collider2D)
+        {
+            var loot = collider.gameObject.GetComponent<LootEngine>();
+            
+            if (loot == null || loot.Rigidbody == null || loot.isStatic)//|| (loot.Loot is not Coin))
+            {
+                continue;
+            }
+
+            Rigidbody2D rb = loot.Rigidbody;
+            if (rb)
+            {
+                float dictanceToPlayer = Vector2.Distance(collider.transform.position, transform.position);
+                if (dictanceToPlayer <= RadiusMagnit)
+                {
+                    rb.velocity = (transform.position - loot.transform.position) * PowerMagnit;
+                }
+                else rb.velocity = new Vector2(0, 0);
+            }
+        }
     }
 }

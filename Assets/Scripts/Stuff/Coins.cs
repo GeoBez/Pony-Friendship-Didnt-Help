@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Coin : MonoBehaviour
+public class Coins : MonoBehaviour
 {
     private Text count_Coin_Text;
     private Rigidbody2D physic;
