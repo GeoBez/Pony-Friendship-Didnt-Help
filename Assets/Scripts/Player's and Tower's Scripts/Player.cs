@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public static Player MainPlayer;
+
     public float damage;
     public bool inTowerCollider = false;    
     public bool mode_YouShallNotPass = false;
@@ -83,7 +85,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
             {
-            LootEngine.AddLoot(new Coin(), new Vector3(transform.position.x + 10, transform.position.y,
+            LootEngine.AddLoot(new Experience(), new Vector3(transform.position.x + 10, transform.position.y,
 transform.position.z));
         }
     }
@@ -109,7 +111,6 @@ transform.position.z));
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Eeee");
         LootActivate(collision.gameObject);
     }
 
