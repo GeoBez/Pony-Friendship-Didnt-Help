@@ -4,7 +4,7 @@ using UnityEngine;
 
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Player : EntityEngine
 {
     public static Player MainPlayer;
 
@@ -19,9 +19,6 @@ public class Player : MonoBehaviour
 
     Change_Attack change_Attack;
 
-    public StatsBar healthBar;
-    public float maxHealth = 10;
-    private float health;
     private float RadiusMagnit;
     private float PowerMagnit;
 
@@ -29,33 +26,13 @@ public class Player : MonoBehaviour
     {
         RadiusMagnit = 5F;
         PowerMagnit = 1.5F;        
-    }
-    public float Health
-    {
-        get => health;
-        set  
-        {
-            if (value <= maxHealth)
-            {
-                health = value;
-                healthBar.SetValue(value);
-            }
-        }
-    }
-    
-    private float speed = 11;// тут ручками теперь править нужно. Сорямба :)
-    public float Speed
-    {
-        get => speed;
-        set
-        {
-            speed = value;
-            GetComponent<PlayerMovement>().speed = value;
-        }
-    }
+    }  
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
+
+        MainPlayer = this;
         GetComponentInChildren<Weapon>().projectile.coolDown = 0.7F;
         
         change_Attack = GetComponentInChildren<Change_Attack>();
@@ -81,12 +58,6 @@ public class Player : MonoBehaviour
                 isImmortality = false;
                 immortality_Timer = default_Immortality_Timer;
             }    
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            {
-            LootEngine.AddLoot(new Experience(), new Vector3(transform.position.x + 10, transform.position.y,
-transform.position.z));
         }
     }
 
@@ -138,5 +109,11 @@ transform.position.z));
                 else rb.velocity = new Vector2(0, 0);
             }
         }
+    }
+
+    public override void Dead()
+    {
+        this.health = -10;
+        //Menu.GetGameOver();
     }
 }

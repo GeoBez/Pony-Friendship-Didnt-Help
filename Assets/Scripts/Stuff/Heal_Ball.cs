@@ -10,7 +10,7 @@ public class Heal_Ball : MonoBehaviour
     {
         if(collision.tag == "MainPlayer")
         {
-            collision.GetComponent<Player>().Health += add_Health;
+            Player.MainPlayer.Heal(add_Health);
             Destroy(gameObject);
         }
     }

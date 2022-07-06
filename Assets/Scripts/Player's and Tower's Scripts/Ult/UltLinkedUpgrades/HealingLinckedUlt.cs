@@ -15,7 +15,7 @@ public class HealingLinckedUlt : UltLinkedUpgrades
 
         if(!base.TryUse()) return false;
 
-        player.Health += healPower;
+        player.Heal(healPower);
         return true;
 
     }

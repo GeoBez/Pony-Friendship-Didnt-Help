@@ -94,9 +94,7 @@ public class Mode_Sturdy : Modes
     {
         Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
 
-        player.maxHealth += (int)(player.maxHealth * 0.1);
-        player.Health += (int)(player.maxHealth * 0.1);
-        //player.mode_Sturdy = true; ошибка!
+        player.AddHealsMax(player.maxHealth * 0.1f);
     }
 }
 
@@ -114,11 +112,7 @@ public class Mode_HealthyHealth : Modes
     public override void MainModeDo()
     {
         Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-
-        player.maxHealth += 20;
-        player.Health += 20;
-
-        //player.mode_HealthyHealth = true; Есть ошибка!
+        player.AddHealsMax(20);
     }
 }
 
@@ -156,9 +150,7 @@ public class Mode_OneTimeTreatment : Modes
     public override void MainModeDo()
     {
         Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        player.Health = player.maxHealth;
-
-        //player.mode_OneTimeTreatment = true; ошибка есть!
+        player.Heal();
     }
 }
 
