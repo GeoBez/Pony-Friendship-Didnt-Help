@@ -25,7 +25,9 @@ public class Player : EntityEngine
     private void Start()
     {
         RadiusMagnit = 5F;
-        PowerMagnit = 1.5F;        
+        PowerMagnit = 1.5F;
+
+        PlayerStatistic.ResetAll();
     }  
 
     public override void Awake()

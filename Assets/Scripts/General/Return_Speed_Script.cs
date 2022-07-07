@@ -17,7 +17,7 @@ public class Return_Speed_Script : MonoBehaviour
         }
         else if (gameObject.tag == "Enemy" || gameObject.tag == "Tower Enemy" || gameObject.tag == "Boss")
         {
-            speed = GetComponent<Enemy>().speed;
+            speed = GetComponent<Enemy>().Speed;
         }
         defaultSpeed = speed;
         defaultTime = returnSpeedTime;
@@ -36,7 +36,7 @@ public class Return_Speed_Script : MonoBehaviour
                 }
                 else if (gameObject.tag == "Enemy" || gameObject.tag == "Tower Enemy" || gameObject.tag == "Boss")
                 {
-                    GetComponent<Enemy>().speed = defaultSpeed;
+                    GetComponent<Enemy>().Speed = defaultSpeed;
                 }
                 speed = defaultSpeed;
                 returnSpeedTime = defaultTime;

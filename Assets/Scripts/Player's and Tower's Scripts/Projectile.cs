@@ -49,7 +49,7 @@ public class Projectile : MonoBehaviour
     {
         if (collider.CompareTag("Enemy") || collider.CompareTag("Tower_Enemy") || collider.CompareTag("Boss"))
         {
-            collider.GetComponent<Enemy>().TakeDamage(damage); 
+            collider.GetComponent<Enemy>().TakeHit(damage); 
             DestroyProjectile();
         }
     }

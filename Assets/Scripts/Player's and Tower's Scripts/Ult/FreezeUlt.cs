@@ -63,7 +63,7 @@ public class FreezeUlt : Ult
             if (freezable != null)
             {
                 _freezableEnemy.Add(freezable);
-                e.GetComponent<Enemy>().TakeDamage(ultDamage);
+                e.GetComponent<Enemy>().TakeHit(ultDamage);
                 freezable.FreezingAnimationStart();
             }
         }

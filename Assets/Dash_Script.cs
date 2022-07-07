@@ -38,7 +38,7 @@ public class Dash_Script : MonoBehaviour
         time -= Time.deltaTime;
         if (time <= 0)
         {
-            GetComponentInParent<Enemy>().speed += increase_Speed;
+            GetComponentInParent<Enemy>().Speed += increase_Speed;
             time = default_Time;
         }
 
@@ -48,7 +48,7 @@ public class Dash_Script : MonoBehaviour
 
     void End_Attack()
     {
-        enemy.speed -= increase_Speed;
+        enemy.Speed -= increase_Speed;
         enemy.attackTime = defaultAttackTime;
         boss.RandomAttacks();
         boss.isAttacking = false;
