@@ -42,7 +42,8 @@ public static class PlayerStatistics
         EntityEngine.SomeoneDead += (T) => { if (T == EntityEngine.TypeTeam.Enemy) enemyDeathCount++; };
         _startTime = Time.time;
         ExpNextLevel = ExpNextLevelDefault;
-        ExpCurLevel = Level = Coins = Experience = 0;
+        ExpCurLevel = Level = Experience = 0;
+        Coins = 50;
         Lack—oins = UpdateLevel = null;
     }
     public static void BuyPurchase(IPurchased purchased)

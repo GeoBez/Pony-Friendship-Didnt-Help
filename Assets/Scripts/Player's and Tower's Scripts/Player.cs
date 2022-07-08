@@ -24,7 +24,7 @@ public class Player : EntityEngine
         Weapon.projectile.coolDown = 0.7F;
         RadiusMagnit = 5F;
         PowerMagnit = 1.5F;
-        AddHealsMax(10F);
+
         playerMovement = GetComponent<PlayerMovement>();
 
         capsulePlayer = GetComponent<CapsuleCollider2D>();

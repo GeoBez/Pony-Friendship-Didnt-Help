@@ -17,6 +17,6 @@ public class Tower_UI : MonoBehaviour
                 return;
             }
         PlayerStatistics.BuyPurchase(Tower);
-            description.gameObject.SetActive(false);
+        description.gameObject.SetActive(false);
     }
 }
