@@ -97,6 +97,10 @@ public class FollowPath : MonoBehaviour
 
         while (true)
         {
+            if (moveingTo >= MyPath.PathElements.Length && MyPath.PathType == MovementPath.PathTypes.linear)
+            {
+                break;            }
+
             yield return MyPath.PathElements[moveingTo];
 
             if (MyPath.PathElements.Length == 1)
@@ -105,15 +109,17 @@ public class FollowPath : MonoBehaviour
             }
 
             if (MyPath.PathType == MovementPath.PathTypes.linear)
-            {
+            {                
                 if (moveingTo <= 0)
                 {
                     movementDirection = 1;
                 }
-                else if (moveingTo >= MyPath.PathElements.Length - 1)
+
+                /*else 
+                if (moveingTo >= MyPath.PathElements.Length - 1)
                 {
                     movementDirection = -1;
-                }
+                }*/
             }
 
             moveingTo = moveingTo + movementDirection;

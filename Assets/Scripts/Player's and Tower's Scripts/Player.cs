@@ -76,7 +76,7 @@ public class Player : EntityEngine
     public override void TakeHit(float damage)
     {
         base.TakeHit(damage);
-        Makeinvulnerability();
+        Makeinvulnerability(200);
     }
 
     protected override void TurnOnInvulnerability()
