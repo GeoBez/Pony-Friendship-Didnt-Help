@@ -19,11 +19,13 @@ public class FollowPath : MonoBehaviour
     public int moveingTo = 0;
     public int movementDirection = 1;
 
+    private Enemy thisEnemy;
+
     private IEnumerator<Transform> pointInPath;
 
     private Animator _animator;
 
-    float distance=1000;
+    float distance = 1000;
     GameObject[] Tower_Enemy_Spawners;
 
     private void Awake()
@@ -31,7 +33,7 @@ public class FollowPath : MonoBehaviour
         _animator = GetComponent<Animator>();
         if (MyPath == null)
         {
-            //Debug.Log("Путь забыл");
+            Debug.Log("Путь забыл");
             Find_Path();
         }
 
@@ -44,8 +46,8 @@ public class FollowPath : MonoBehaviour
             Debug.Log("Точек нет");
             return;
         }
-
-        speed = GetComponent<Enemy>().Speed;
+        thisEnemy = GetComponent<Enemy>();
+        speed = thisEnemy.Speed;
 
         transform.position = pointInPath.Current.position;
         defaultSpeed = speed;
@@ -53,23 +55,17 @@ public class FollowPath : MonoBehaviour
 
     private void Update()
     {
-        //if(MyPath == null)
-        //{
-        //    Find_Path();
-        //}    
-
         if (pointInPath == null || pointInPath.Current == null)
         {
             return;
         }
-
         if (Type == MovementType.Moveing)
         {
-            transform.position = Vector3.MoveTowards(transform.position, pointInPath.Current.position, Time.deltaTime * speed);
+            thisEnemy.Rigidbody2D.MovePosition(Vector3.MoveTowards(transform.position, pointInPath.Current.position, Time.deltaTime * speed));
         }
         else if (Type == MovementType.Lerping)
         {
-            transform.position = Vector3.Lerp(transform.position, pointInPath.Current.position, Time.deltaTime * speed);
+            thisEnemy.Rigidbody2D.MovePosition(Vector3.Lerp(transform.position, pointInPath.Current.position, Time.deltaTime * speed));
         }
         _animator.SetBool("isWalking", true);
         float distanceSquare = (transform.position - pointInPath.Current.position).sqrMagnitude;
@@ -78,7 +74,7 @@ public class FollowPath : MonoBehaviour
             pointInPath.MoveNext();
         }
 
-        if(GetComponentInChildren<Enemy_Attack>().What_Attack != null)
+        if (thisEnemy.FreezeAttac)
         {
             speed = 0;
             _animator.SetBool("isWalking", false);

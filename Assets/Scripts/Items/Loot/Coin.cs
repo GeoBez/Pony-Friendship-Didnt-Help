@@ -4,7 +4,12 @@ public class Coin : Loot, ILoot
     private readonly int _Value;
     public int Value => _Value;
            
-    public Coin(int _value = 1)
+    public Coin()
+    {
+        _Value = Player.MainPlayer.coinDenomination;
+    }
+
+    public Coin(int _value =1)
     {
         if (_value > 0)
             _Value = _value;
@@ -15,7 +20,7 @@ public class Coin : Loot, ILoot
     public string Name => nameof(Coin);
     public override void Action()
     {
-        //PlayerStatistics.AddCoins(_Value);
+        PlayerStatistic.AddCoins(_Value);
         base.Action();
     }
 }

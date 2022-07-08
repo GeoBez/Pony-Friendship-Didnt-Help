@@ -5,16 +5,18 @@ using UnityEngine.UI;
 
 public class Coin_Count_Text : MonoBehaviour
 {
-    public static int coin_Count;
+    private static Coin_Count_Text instance;
     private Text text;
 
     void Start()
     {
-        coin_Count = 50;
-        text = GetComponent<Text>();        
+        instance = this;
+        text = GetComponent<Text>();
+        UpdateCountCoin();
     }
-    void Update()
+    public static void UpdateCountCoin()
     {
-        text.text = coin_Count.ToString();    
+        if (instance != null)
+            instance.text.text = PlayerStatistic.Coins.ToString();
     }
 }

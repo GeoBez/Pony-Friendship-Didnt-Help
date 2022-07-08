@@ -12,12 +12,15 @@ public class Description : MonoBehaviour
     public Text coolDown;
     public Text damage;
 
-    internal void Initialize(Tower tower)
+    internal void Initialize(IPurchased purchase)
     {
-        nameText.text = tower.name;
-        //descriptoinText.text = "описание" + tower.name;
-        towerCost.text = tower.price.ToString();
-        coolDown.text = tower.GetComponentInChildren<Weapon>().projectile.coolDown.ToString();
-        damage.text = tower.damage.ToString();
+        nameText.text = purchase.Name;
+        towerCost.text = purchase.Priсe.ToString();
+        descriptoinText.text = purchase.Description;
+        Text[] texts = new Text[] { towerCost, coolDown, damage };
+        for (int i = 0; i < texts.Length; i++)
+        {
+            texts[i].text = purchase.Specifications[i];
+        }
     }
 }

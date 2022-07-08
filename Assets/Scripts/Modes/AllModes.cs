@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class AllModes:MonoBehaviour
 {
     
@@ -23,7 +23,8 @@ public class Mode_Magnit : Modes
 
     public override void MainModeDo()
     {
-        Coins.range = 12;
+        Player.MainPlayer.MagtetUpdate();
+        //Coins.range = 12;
         //player.mode_Magnit = true;
     }
 }
@@ -40,7 +41,8 @@ public class Mode_DoubleDenomination : Modes
     }
     public override void MainModeDo()
     {
-        Coins.coin_Denomination = 2;
+        Debug.Log("later");
+        ///Coins.coin_Denomination = 2;
         //player.mode_Double_Denomination = true;
     }
 }
@@ -57,7 +59,8 @@ public class Mode_CleverLeaf : Modes
     }
     public override void MainModeDo()
     {
-        Coins.probability = 40;
+        Debug.Log("Later");
+        //Coins.probability = 40;
         //player.mode_Clover_Leaf = true;
     }
 }
@@ -74,7 +77,7 @@ public class Mode_MoreBits : Modes
     }
     public override void MainModeDo()
     {
-        Coin_Count_Text.coin_Count += 100;
+        PlayerStatistic.AddCoins(100);
         //player.mode_MoreBits = true;
     }
 }
@@ -188,7 +191,8 @@ public class Mode_TimeIsMoney : Modes //here
 
     public override void MainModeDo()
     {
-        Coins.coinForWavePass *= 2;
+        Debug.Log("Later");
+        //Coins.coinForWavePass *= 2;
         //player.mode_TimeIsMoney = true;
     }
 }
@@ -332,9 +336,9 @@ public class Mode_Extra : Modes//Это скорее исключение, чем улучшение
 
     public override void MainModeDo()
     {
-        Coin_Count_Text.coin_Count += 50;
+        PlayerStatistic.AddCoins(50);
     }
-}
+}*/
 
 
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player_UI : MonoBehaviour
 {
-    Button CTB; //Create Tower Button
+    /*Button CTB; //Create Tower Button
 
     public GameObject Tower;
     GameObject Player;
@@ -35,10 +35,11 @@ public class Player_UI : MonoBehaviour
     public void CreateTower()
     {
         var tower = Tower.GetComponent<Tower>();
-        if (Coin_Count_Text.coin_Count >= tower.price)
+        if (PlayerStatistic.Coins >= tower.price)
         {
-            Coin_Count_Text.coin_Count -= tower.price;
+            Debug.Log("LAter");
+            PlayerStatistic.Buy(tower.price);
             Instantiate(Tower, Player.transform.position, Quaternion.identity);
         }
-    }
+    }*/
 }
