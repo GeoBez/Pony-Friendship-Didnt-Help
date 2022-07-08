@@ -4,7 +4,7 @@ using UnityEngine;
 public class LootEngine : MonoBehaviour 
 {
     public ILoot Loot { get; private set; }
-
+    public bool isStatic = false;
     public Rigidbody2D Rigidbody { get; private set; }
     public static void AddLoot(ILoot _loot, Vector3 vector)
     {

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4743943494906487933}
   - component: {fileID: 4743943494906487932}
   - component: {fileID: 6360793536483935024}
-  - component: {fileID: 4743943494906487934}
   - component: {fileID: 4743943494906487935}
+  - component: {fileID: 7590224879269866664}
   m_Layer: 0
   m_Name: Heal
   m_TagString: Heal Ball
@@ -99,20 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f370670e1b542d149a869c186f6b04b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4743943494906487934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4743943494906487930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3bfdde8a2683af4d84a3030bf502cb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  target: Player
+  isStatic: 1
 --- !u!58 &4743943494906487935
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -129,3 +116,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.42666668
+--- !u!50 &7590224879269866664
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743943494906487930}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

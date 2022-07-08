@@ -54,7 +54,9 @@ public class Player : EntityEngine
         foreach (Collider2D collider in collider2D)
         {
             LootEngine loot = collider.gameObject.GetComponent<LootEngine>();
-            if (loot == null || loot.Rigidbody == null || loot.Loot is not Coin) continue;
+            if (loot == null || loot.Rigidbody == null || loot.isStatic)
+                continue;
+
             Rigidbody2D rb = loot.Rigidbody;
             if (rb)
             {
@@ -68,4 +70,8 @@ public class Player : EntityEngine
         }
     }
 
+    public override void TakeHit(float damage)
+    {
+        base.TakeHit(damage);
+    }
 }

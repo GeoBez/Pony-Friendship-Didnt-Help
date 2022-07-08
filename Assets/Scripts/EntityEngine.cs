@@ -9,6 +9,7 @@ public abstract class EntityEngine : MonoBehaviour
 {
     [SerializeField]
     private float speed = 11;
+    private bool isInvulnerability = false;
     public float Speed
     {
         get => speed;
@@ -89,13 +90,15 @@ public abstract class EntityEngine : MonoBehaviour
     }
     public virtual void TakeHit(float damage)
     {
-        Health -= damage;
-        if (Health <= 0)
+        if (!isInvulnerability)
         {
-            Dead();
-            Destroy(gameObject);
-            SomeoneDead?.Invoke(typeTeam);
+            Health -= damage;
+            if (Health <= 0)
+            {
+                Dead();
+                Destroy(gameObject);
+                SomeoneDead?.Invoke(typeTeam);
+            }
         }
-    }
-    
+    }    
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5796553862491613982}
   - component: {fileID: 3100191239330530480}
   - component: {fileID: 3100191239330530481}
-  - component: {fileID: 3100191239330530485}
   m_Layer: 0
   m_Name: Experience
   m_TagString: Untagged
@@ -100,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f370670e1b542d149a869c186f6b04b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
 --- !u!58 &3100191239330530480
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -136,18 +136,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &3100191239330530485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3100191239330530495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3bfdde8a2683af4d84a3030bf502cb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  target: Player
+  m_Constraints: 4
