@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,6 @@ public abstract class CardUpgrade : ICardUpgrade
     void ICardUpgrade.Function()
     {
         Function();
-        //SoundMeneger.Play(SoundMeneger.Sounds.UseUpgrade);
+        SoundMeneger.Play(SoundMeneger.Sounds.UseUpgrade);
     }
 }

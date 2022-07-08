@@ -2,343 +2,313 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-/*
-public class AllModes:MonoBehaviour
-{
-    
-}
 
-//все моды ниже
-public class Mode_Magnit : Modes
-{
-    public void Start()
-    {
-        modeName = "Магнит";
-        modeDescription = "Увеличивает радиус сбора монет";
+////все моды ниже
+//public class Mode_Magnit : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Магнит";
+//        modeDescription = "Увеличивает радиус сбора монет";
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager")
-            .GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager")
+//            .GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-    public override void MainModeDo()
-    {
-        Player.MainPlayer.MagtetUpdate();
-        //Coins.range = 12;
-        //player.mode_Magnit = true;
-    }
-}
+//    public override void MainModeDo()
+//    {
+//        Coin.range = 12;
+//    }
+//}
 
-public class Mode_DoubleDenomination : Modes
-{
-    public void Start()
-    {
-        modeName = "Двойной номинал";
-        modeDescription = "Все выпадающие монетки стоят 2";
+//public class Mode_DoubleDenomination : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Двойной номинал";
+//        modeDescription = "Все выпадающие монетки стоят 2";
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
-    public override void MainModeDo()
-    {
-        Debug.Log("later");
-        ///Coins.coin_Denomination = 2;
-        //player.mode_Double_Denomination = true;
-    }
-}
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
+//    public override void MainModeDo()
+//    {
+//        Coin.coin_Denomination = 2;
+//    }
+//}
 
-public class Mode_CleverLeaf : Modes
-{
-    public void Start()
-    {
-        modeName = "Лист клевера";
-        modeDescription = "Увеличивает шанс выпадения монет на 10%";
+//public class Mode_CleverLeaf : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Лист клевера";
+//        modeDescription = "Увеличивает шанс выпадения монет на 10%";
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
-    public override void MainModeDo()
-    {
-        Debug.Log("Later");
-        //Coins.probability = 40;
-        //player.mode_Clover_Leaf = true;
-    }
-}
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
+//    public override void MainModeDo()
+//    {
+//        Coin.probability = 40;
+//    }
+//}
 
-public class Mode_MoreBits : Modes
-{
-    public void Start()
-    {
-        modeName = "Больше битсов!";
-        modeDescription = "+100 монеток";
+//public class Mode_MoreBits : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Больше битсов!";
+//        modeDescription = "+100 монеток";
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName("Больше битсов".ToLower());
-    }
-    public override void MainModeDo()
-    {
-        PlayerStatistic.AddCoins(100);
-        //player.mode_MoreBits = true;
-    }
-}
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName("Больше битсов".ToLower());
+//    }
+//    public override void MainModeDo()
+//    {
+//        Coin_Count_Text.coin_Count += 100;
+//    }
+//}
 
-public class Mode_Sturdy : Modes
-{
-    public void Start()
-    {
-        modeName = "Здоровяк";
-        modeDescription = "Увеличение количества жизни на 10%";
+//public class Mode_Sturdy : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Здоровяк";
+//        modeDescription = "Увеличение количества жизни на 10%";
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-    public override void MainModeDo()
-    {
-        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
+//    public override void MainModeDo()
+//    {
+//        Player.MainPlayer.AddHealsMax(player.maxHealth * 0.1F);
+//    }
+//}
 
-        player.AddHealsMax(player.maxHealth * 0.1f);
-    }
-}
+//public class Mode_HealthyHealth : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Здорово, здоровье";
+//        modeDescription = "Увеличение количества жизни на 20 хп";
 
-public class Mode_HealthyHealth : Modes
-{
-    public void Start()
-    {
-        modeName = "Здорово, здоровье";
-        modeDescription = "Увеличение количества жизни на 20 хп";
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName("Здорово здоровье".ToLower());
+//    }
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName("Здорово здоровье".ToLower());
-    }
+//    public override void MainModeDo()
+//    {
+//        Player.MainPlayer.AddHealsMax(20F);
+//    }
+//}
 
-    public override void MainModeDo()
-    {
-        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        player.AddHealsMax(20);
-    }
-}
+//public class Mode_NewHorseshoes : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Новые подковы";
+//        modeDescription = "Повышение скорости передвижения на 20%";
 
-public class Mode_NewHorseshoes : Modes
-{
-    public void Start()
-    {
-        modeName = "Новые подковы";
-        modeDescription = "Повышение скорости передвижения на 20%";
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//    public override void MainModeDo()
+//    {
+//        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
+//        player.Speed += (float)(player.Speed * 0.2);
+//    }
+//}
 
-    public override void MainModeDo()
-    {
-        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
+//public class Mode_OneTimeTreatment : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Разовое лечение";
+//        modeDescription = "Восстанавливает здоровье до максимума";
 
-        player.Speed += (float)(player.Speed * 0.2);
-        //player.mode_NewHorseshoes = true; есть ошибка, не закрывает карточку!
-    }
-}
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-public class Mode_OneTimeTreatment : Modes
-{
-    public void Start()
-    {
-        modeName = "Разовое лечение";
-        modeDescription = "Восстанавливает здоровье до максимума";
+//    public override void MainModeDo()
+//    {
+//        Player.MainPlayer.Medicament(Player.MainPlayer.maxHealth);
+//    }
+//}
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//public class Mode_MoreHealth : Modes ///here
+//{
+//    public void Start()
+//    {
+//        modeName = "Больше здоровья";
+//        modeDescription = "Здоровье дерева увеличивается на 20 единиц";
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-    public override void MainModeDo()
-    {
-        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        player.Heal();
-    }
-}
+//    public override void MainModeDo()
+//    {
+//        Tower tree = GameObject.FindGameObjectWithTag("Main Tower").GetComponent<Tower>();
+//        tree.AddHealsMax(20);
+//    }
+//}
 
-public class Mode_MoreHealth : Modes ///here
-{
-    public void Start()
-    {
-        modeName = "Больше здоровья";
-        modeDescription = "Здоровье дерева увеличивается на 20 единиц";
+//public class Mode_TimeIsMoney : Modes //here
+//{
+//    public void Start()
+//    {
+//        modeName = "Время - деньги";
+//        modeDescription = "За пропуск волны дается в 2 раза больше монет";
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-    public override void MainModeDo()
-    {
-        Tower tree = GameObject.FindGameObjectWithTag("Main Tower").GetComponent<Tower>();
+//    public override void MainModeDo()
+//    {
+//        Coin.coinForWavePass *= 2;
+//        //player.mode_TimeIsMoney = true;
+//    }
+//}
 
-        tree.maxHealth += 20;
-        tree.health += 20;
-        //player.mode_MoreHealth = true;
-    }
-}
+//public class Mode_IAmPower : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Я есть сила";
+//        modeDescription = "Повышает сила атаки в 2 раза";
 
-public class Mode_TimeIsMoney : Modes //here
-{
-    public void Start()
-    {
-        modeName = "Время - деньги";
-        modeDescription = "За пропуск волны дается в 2 раза больше монет";
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//    public override void MainModeDo()
+//    {
+//        Player.MainPlayer.AddDamage(Player.MainPlayer.Damage);
+//    }
+//}
 
-    public override void MainModeDo()
-    {
-        Debug.Log("Later");
-        //Coins.coinForWavePass *= 2;
-        //player.mode_TimeIsMoney = true;
-    }
-}
+//public class Mode_PowerPlus : Modes //here
+//{
+//    public void Start()
+//    {
+//        modeName = "Сила+";
+//        modeDescription = "Увеличение урона на 5 единиц";
 
-public class Mode_IAmPower : Modes
-{
-    public void Start()
-    {
-        modeName = "Я есть сила";
-        modeDescription = "Повышает сила атаки в 2 раза";
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//    public override void MainModeDo()
+//    {
+//        Player.MainPlayer.AddDamage(5F);
+//    }
+//}
 
-    public override void MainModeDo()
-    {
-        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        player.damage *= 2;
-        //player.mode_IAmPower = true;
-    }
-}
+//public class Mode_SimpleDistanteBattle : Modes //here
+//{
+//    public void Start()
+//    {
+//        modeName = "Простой дальний бой";
+//        modeDescription = "Меняет тип атаки на дальний";
 
-public class Mode_PowerPlus : Modes //here
-{
-    public void Start()
-    {
-        modeName = "Сила+";
-        modeDescription = "Увеличение урона на 5 единиц";
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//    public override void MainModeDo()
+//    {
+//        var player = Player.MainPlayer;
+//        player.GetComponentInChildren<PlayerMeleeAttacks>().enabled = false;
+//        player.GetComponentInChildren<Weapon>().enabled = true;
+//    }
+//}
 
-    public override void MainModeDo()
-    {
-        Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        player.damage += 5;
-        //player.mode_PowerPlus = true;
-    }
-}
+//public class Mode_SittingUpper : Modes 
+//{
+//    public void Start()
+//    {
+//        modeName = "Сижу высоко - стреляю далеко";
+//        modeDescription = "Увеличивает радиус атаки";
 
-public class Mode_SimpleDistanteBattle : Modes //here
-{
-    public void Start()
-    {
-        modeName = "Простой дальний бой";
-        modeDescription = "Меняет тип атаки на дальний";
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//    public override void MainModeDo()
+//    {
+//        //throw new System.Exception("You tried to use unworking Mode_SittingUpper");
 
-    public override void MainModeDo()
-    {
-        var player = GameObject.FindGameObjectWithTag("MainPlayer");
-        player.GetComponentInChildren<PlayerMeleeAttacks>().enabled = false;
-        player.GetComponentInChildren<Weapon>().enabled = true;
+//        Player.MainPlayer.GetComponentInChildren<Weapon>().detectionDistance = 10;
+//        Player.MainPlayer.GetComponentInChildren<PlayerMeleeAttacks>().attackRange = 8;
+//        //player.mode = true;
+//    }
+//}
 
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isMeleeAttacker = false;
-        //GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Change_Attack>().ChangeAttack();  
-    }
-}
+//public class Mode_IAmSpeed : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Я есть скорость";
+//        modeDescription = "Повышает частоту атаки в 1.5 раза";
 
-public class Mode_SittingUpper : Modes 
-{
-    public void Start()
-    {
-        modeName = "Сижу высоко - стреляю далеко";
-        modeDescription = "Увеличивает радиус атаки";
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//    public override void MainModeDo()
+//    {
+//        //throw new System.Exception("Bugs fouded. Every time mod used coolDown firball low");
 
-    public override void MainModeDo()
-    {
-        //throw new System.Exception("You tried to use unworking Mode_SittingUpper");
+//        var player = Player.MainPlayer;
+//        var obj = player.GetComponentInChildren<PlayerMeleeAttacks>();
+//        obj.SetCoolDown(obj.attackCoolDown / 2);
 
-        GameObject.FindGameObjectWithTag("MainPlayer").GetComponentInChildren<Weapon>().detectionDistance = 10;
-        GameObject.FindGameObjectWithTag("MainPlayer").GetComponentInChildren<PlayerMeleeAttacks>().attackRange = 8;
-        //player.mode = true;
-    }
-}
+//        player.GetComponentInChildren<Weapon>().projectile.coolDown /= 2;
+//    }
+//}
 
-public class Mode_IAmSpeed : Modes
-{
-    public void Start()
-    {
-        modeName = "Я есть скорость";
-        modeDescription = "Повышает частоту атаки в 1.5 раза";
+//public class Mode_YouShallNoPass : Modes
+//{
+//    public void Start()
+//    {
+//        modeName = "Ты не пройдешь";
+//        modeDescription = "Вы можете стрелять по врагам идущим к дереву";
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName(modeName.ToLower());
+//    }
 
-    public override void MainModeDo()
-    {
-        //throw new System.Exception("Bugs fouded. Every time mod used coolDown firball low");
+//    public override void MainModeDo()
+//    {
+//        //player.mode_YouShallNotPass = true;
 
-        var player = GameObject.FindGameObjectWithTag("MainPlayer");
-        var obj = player.GetComponentInChildren<PlayerMeleeAttacks>();
-        obj.SetCoolDown(obj.attackCoolDown / 2);
+//        var _player = GameObject.FindGameObjectWithTag("MainPlayer");
 
-        player.GetComponentInChildren<Weapon>().projectile.coolDown /= 2;
-    }
-}
+//        _player.GetComponentInChildren<Weapon>().whatIsAttack = LayerMask.GetMask("Tower Enemy", "Enemy");
+//        _player.GetComponentInChildren<PlayerMeleeAttacks>().enemyLayer = LayerMask.GetMask("Tower Enemy", "Enemy");
+//    }
+//}
 
-public class Mode_YouShallNoPass : Modes
-{
-    public void Start()
-    {
-        modeName = "Ты не пройдешь";
-        modeDescription = "Вы можете стрелять по врагам идущим к дереву";
+//public class Mode_Extra : Modes//Это скорее исключение, чем улучшение
+//{
+//    public void Start()
+//    {
+//        modeName = "Уууупс:D";
+//        modeDescription = "Это улучшение невозможно получить";
 
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName(modeName.ToLower());
-    }
+//        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UpgradeCardPlayer>();
+//        Image = manager.GetSpriteByName("Улучшение - ошибка");
+//    }
 
-    public override void MainModeDo()
-    {
-        //player.mode_YouShallNotPass = true;
-
-        var _player = GameObject.FindGameObjectWithTag("MainPlayer");
-
-        _player.GetComponentInChildren<Weapon>().whatIsAttack = LayerMask.GetMask("Tower Enemy", "Enemy");
-        _player.GetComponentInChildren<PlayerMeleeAttacks>().enemyLayer = LayerMask.GetMask("Tower Enemy", "Enemy");
-    }
-}
-
-public class Mode_Extra : Modes//Это скорее исключение, чем улучшение
-{
-    public void Start()
-    {
-        modeName = "Уууупс:D";
-        modeDescription = "Это улучшение невозможно получить";
-
-        var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
-        Image = manager.GetSpriteByName("Улучшение - ошибка");
-    }
-
-    public override void MainModeDo()
-    {
-        PlayerStatistic.AddCoins(50);
-    }
-}*/
+//    public override void MainModeDo()
+//    {
+//        Coin_Count_Text.coin_Count += 50;
+//    }
+//}
 
 
 

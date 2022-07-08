@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public float coolDown;
     public float damage;
 
+    public GameObject Particle_Destroy;
     public Weapon shot_Point;
 
     private Transform _target;
@@ -27,7 +28,7 @@ public class Projectile : MonoBehaviour
 
         //rb.velocity = new Vector2((_target.position.x - transform.position.x) * speed, (_target.position.y - transform.position.y) * speed);
     }
-
+    
 
     void FixedUpdate()
     {
@@ -49,7 +50,9 @@ public class Projectile : MonoBehaviour
     {
         if (collider.CompareTag("Enemy") || collider.CompareTag("Tower_Enemy") || collider.CompareTag("Boss"))
         {
-            collider.GetComponent<Enemy>().TakeHit(damage); 
+            collider.GetComponent<Enemy>()?.TakeHit(damage);
+            Particle_Destroy.GetComponent<ParticleSystem>().startColor = Color.green;
+            Destroy(Instantiate(Particle_Destroy, collider.transform.position, Quaternion.identity), 1F);
             DestroyProjectile();
         }
     }

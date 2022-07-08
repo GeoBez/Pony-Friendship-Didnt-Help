@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
         attackCoolDownBar?.SetMaxValue(_resetCoolDown);
 
         if (gameObject.tag == "Player")
-            damage = GetComponentInParent<Player>().damage;
+            damage = Player.MainPlayer.Damage;
         else if (gameObject.tag == "Tower" || gameObject.tag == "Main Tower")
             damage = GetComponentInParent<Tower>().Damage;
     }

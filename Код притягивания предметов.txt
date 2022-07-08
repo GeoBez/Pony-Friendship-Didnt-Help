@@ -1,0 +1,6 @@
+float dictanceToPlayer = Vector2.Distance(transform.position, Player.MainPlayer.transform.position);
+            if (dictanceToPlayer <= range)
+            {
+                physic.velocity = (Player.MainPlayer.transform.position - transform.position) * speed;
+            }
+            else physic.velocity = new Vector2(0, 0);

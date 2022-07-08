@@ -16,13 +16,13 @@ public class Laser_Attack : MonoBehaviour
     Player Player;
 
     SpriteRenderer sprite;
-    BoxCollider2D collider;
+    new BoxCollider2D collider;
 
     private void Awake()
     {
         enemy = GetComponentInParent<Enemy>();
         boss = GetComponentInParent<Boss_Script>();
-        Player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         defaultAttackTime = enemy.attackTime;
         sprite = GetComponent<SpriteRenderer>();
         collider = GetComponent<BoxCollider2D>();
@@ -60,9 +60,9 @@ public class Laser_Attack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "MainPlayer")
+        if(collision.tag == "Player")
         {
-            Player.TakeDamage(damage);
+            Player.TakeHit(damage);
         }
     }
 }

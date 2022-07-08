@@ -14,9 +14,9 @@ public class Lasers : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "MainPlayer")
+        if (collision.tag == "Player")
         {
-            collision.GetComponent<Player>().TakeDamage(damage);
+            collision.GetComponent<Player>().TakeHit(damage);
         }
     }
 

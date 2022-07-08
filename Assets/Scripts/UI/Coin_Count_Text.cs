@@ -16,7 +16,7 @@ public class Coin_Count_Text : MonoBehaviour
     }
     public static void UpdateCountCoin()
     {
-        if (instance != null)
-            instance.text.text = PlayerStatistic.Coins.ToString();
+        if(instance != null)
+        instance.text.text = PlayerStatistics.Coins.ToString();
     }
 }

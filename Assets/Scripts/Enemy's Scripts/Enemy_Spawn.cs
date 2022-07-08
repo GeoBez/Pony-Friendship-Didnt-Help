@@ -8,8 +8,11 @@ public class Enemy_Spawn : MonoBehaviour
     public float time;
 
     Preparation preparation;
+    bool inPreparation;
     float default_Time;
+
     private int _enemy_Count;
+
 
     void Start()
     {
@@ -21,11 +24,11 @@ public class Enemy_Spawn : MonoBehaviour
         }
     }
 
+
     public void SpawnEnemy(GameObject enemy, int enemy_Count)
     {        
         this.enemy = enemy;
         _enemy_Count = enemy_Count;
-
         StartCoroutine(CreateEnemyFor2Seconds());
     }
        

@@ -107,17 +107,13 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
             {
                 if (angle < 22.5f || angle > 157.5f)
                     return 0;
-                else
-                    return (value > 0) ? 1 : -1;
             }
             else if (snapAxis == AxisOptions.Vertical)
             {
                 if (angle > 67.5f && angle < 112.5f)
                     return 0;
-                else
-                    return (value > 0) ? 1 : -1;
             }
-            return value;
+            return (value > 0) ? 1 : -1;
         }
         else
         {
@@ -137,8 +133,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     protected Vector2 ScreenPointToAnchoredPosition(Vector2 screenPosition)
     {
-        Vector2 localPoint = Vector2.zero;
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(baseRect, screenPosition, cam, out localPoint))
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(baseRect, screenPosition, cam, out Vector2 localPoint))
         {
             Vector2 pivotOffset = baseRect.pivot * baseRect.sizeDelta;
             return localPoint - (background.anchorMax * baseRect.sizeDelta) + pivotOffset;

@@ -17,7 +17,7 @@ public class Dash_Script : MonoBehaviour
 
     private void Awake()
     {
-        Player = GameObject.FindGameObjectWithTag("MainPlayer").transform;
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
         enemy = GetComponentInParent<Enemy>();
         boss = GetComponentInParent<Boss_Script>();
         defaultAttackTime = enemy.attackTime;
@@ -26,9 +26,9 @@ public class Dash_Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "MainPlayer")
+        if(collision.tag == "Player")
         {
-            Player.GetComponent<Player>().TakeDamage(damage);
+            Player.GetComponent<Player>().TakeHit(damage);
             End_Attack();
         }
     }

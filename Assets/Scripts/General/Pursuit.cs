@@ -10,7 +10,7 @@ public class Pursuit : MonoBehaviour
 
 	private Animator _animator;
 
-	void Start()
+	void Awake()
 	{
 		_animator = GetComponent<Animator>();
 		_target = GameObject.FindGameObjectWithTag(target)?.GetComponent<Transform>();
@@ -29,7 +29,10 @@ public class Pursuit : MonoBehaviour
 		else if (_animator != null) _animator?.SetBool("isWalking", false);
 
 		if (gameObject.tag == "Enemy" || gameObject.tag == "Boss")
-			if(speed != GetComponent<Enemy>().Speed)
-				speed = GetComponent<Enemy>().Speed;
+		{
+			Enemy enemy = GetComponentInParent<Enemy>();
+			if (enemy && speed != enemy.Speed)
+				speed = enemy.Speed;
+		}
 	}
 }

@@ -17,9 +17,8 @@ public class Exp_Bar : MonoBehaviour
     }
     public void Update_Bar()
     {
-        Debug.Log($"Exp: {PlayerStatistic.Experience}, ExpCurForLVL: {PlayerStatistic.ExpCurLevel}, ExpNextForLVL: {PlayerStatistic.ExpNextLevel}, LVL: {PlayerStatistic.Level}, Card: {PlayerStatistic.Received—ards}");
-        
-        fill_Value.value = PlayerStatistic.Experience - PlayerStatistic.ExpCurLevel;
-        fill_Value.maxValue = PlayerStatistic.ExpNextLevel - PlayerStatistic.ExpCurLevel;
+        Debug.Log($"Exp: {PlayerStatistics.Experience}, ExpCurForLVL: {PlayerStatistics.ExpCurLevel}, ExpNextForLVL: {PlayerStatistics.ExpNextLevel}, LVL: {PlayerStatistics.Level}, Card: {PlayerStatistics.Received—ards}");
+        fill_Value.value = PlayerStatistics.Experience - PlayerStatistics.ExpCurLevel;
+        fill_Value.maxValue = PlayerStatistics.ExpNextLevel - PlayerStatistics.ExpCurLevel;
     }
 }

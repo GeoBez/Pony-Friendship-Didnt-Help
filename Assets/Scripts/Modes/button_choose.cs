@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class button_choose : MonoBehaviour
+public class Button_choose : MonoBehaviour
 {
     [SerializeField] private Text _Name;
     public Text Name => _Name;

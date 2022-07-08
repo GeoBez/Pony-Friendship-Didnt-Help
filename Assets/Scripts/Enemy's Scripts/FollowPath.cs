@@ -25,7 +25,7 @@ public class FollowPath : MonoBehaviour
 
     private Animator _animator;
 
-    float distance = 1000;
+    float distance=1000;
     GameObject[] Tower_Enemy_Spawners;
 
     private void Awake()

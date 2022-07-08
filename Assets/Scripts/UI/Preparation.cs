@@ -9,11 +9,8 @@ public class Preparation : MonoBehaviour
     static Preparation Instance;
     Button Skip_Button;
     Text PreparationTime;
-
     public const int DefaultTimePreparation = 30;
-    public const int DefaultTimeBossPreparation = 45;
     public const int DefaultCountCoin = 20;
-
     private int PassCountCoin;
     DateTime Timer;
     float RemainingTime;
@@ -28,9 +25,8 @@ public class Preparation : MonoBehaviour
     }
     private void Reset()
     {
-        PlayerStatistic.AddCoins(50);
+        PlayerStatistics.AddCoins(50);
         Timer = DateTime.Now.AddSeconds(DefaultTimePreparation);
-        Debug.Log("later");
         RemainingTime = DefaultTimePreparation;
         StartCoroutine(TimerStart());
         ActiveUI(true);
@@ -47,31 +43,29 @@ public class Preparation : MonoBehaviour
     }
     private string FormatedTextInTimeSpan(TimeSpan newTime)
     {
-        return string.Format("Time {0}:{1}", new object[]
+        return  string.Format("Time {0}:{1}", new object[]
             {
                 newTime.Minutes, newTime.Seconds,
             });
     }
     public static void ContinueTimer()
     {
-        if (!Menu.GameIsPaused) 
-            return;
+        if (!Menu.GameIsPaused) return;
         Instance.Timer = DateTime.Now.AddSeconds(Instance.RemainingTime);
         Instance.StartCoroutine(Instance.TimerStart());
     }
     public static void Upgrade(IModiferUpgrade upgrade)
     {
         var mod = upgrade.Expansion(Instance.PassCountCoin);
-        if (mod is int i)
-            Instance.PassCountCoin = i;
+        if (mod is int i) Instance.PassCountCoin = i;
     }
     private IEnumerator TimerStart()
     {
-        TimeSpan newTime = new TimeSpan();
+        TimeSpan newTime = new();
         while (!Menu.GameIsPaused)
         {
             newTime = Timer - DateTime.Now;
-            RemainingTime = newTime.Minutes * 60 + newTime.Seconds;
+            RemainingTime = newTime.Minutes*60+ newTime.Seconds;
             string TimeText = FormatedTextInTimeSpan(newTime);
             PreparationTime.text = TimeText;
             if (newTime.Seconds == 0 && newTime.Minutes == 0)
@@ -86,11 +80,11 @@ public class Preparation : MonoBehaviour
         StartWave();
         int Procent = (int)((float)(Timer - DateTime.Now).Seconds / DefaultTimePreparation * 100);
         Procent = (int)((float)PassCountCoin / 100 * Procent);
-        PlayerStatistic.AddCoins(Procent);
+        PlayerStatistics.AddCoins(Procent);
     }
 
     public void Reset_Timer(bool isBoss)
     {
-        //timer = isBoss? bossTimer: default_time;
+       // timer = isBoss? bossTimer: default_time;
     }
 }

@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private YandexSDK YandexSDK;
     public void Start()
     {
-        PlayerStatistic.ResetAll();
+        PlayerStatistics.ResetAll();
 
         foreach (var buttonsReset in ButtonResetGame)
             buttonsReset.onClick.AddListener(RestartGame);
@@ -40,7 +40,7 @@ public class Menu : MonoBehaviour
     }
     private void OnDestroy()
     {
-        PlayerStatistic.ResetAll();
+        PlayerStatistics.ResetAll();
     }
     private void GetVictory()
     {
@@ -54,7 +54,7 @@ public class Menu : MonoBehaviour
         Menu_Pause.SetActive(isActive);
         SetPause(isActive);
     }
-    /*public void Update()
+    public void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha5))
         {
@@ -64,20 +64,19 @@ public class Menu : MonoBehaviour
                 game.GetComponent<Enemy>().TakeHit(1000);
             }
         }
-    }*/
-
+    }
     /// <summary>
     /// ≈сли ставить паузу, то желательно через этот метод =)
     /// </summary>
     public static void SetPause(bool active)
     {
-        if (!active)
+        if(!active)
             Preparation.ContinueTimer();
         Time.timeScale = active ? 0F : 1F;
     }
     private void UpdateFieldText()
     {
-        string[] stats = PlayerStatistic.GetStatistic();
+        string[] stats = PlayerStatistics.GetStatistic();
         for (int i = 0; i < FieldTextStats.Length; i++)
         {
             FieldTextStats[i].text = stats[i];
@@ -98,11 +97,11 @@ public class Menu : MonoBehaviour
         SetPause(false);
         ResetLevel();
     }
-
+   
     public void ToMenu()
     {
         SetPause(false);
         SceneManager.LoadScene(0);
     }
-
+    
 }

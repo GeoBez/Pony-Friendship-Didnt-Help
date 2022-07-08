@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class UpgradeChoiceMenu : MonoBehaviour
 {
-    [SerializeField] private button_choose[] Buttons;
-    public button_choose[] Button_Chooses => Buttons;
+    [SerializeField] private Button_choose[] Buttons;
+    public Button_choose[] Button_Chooses => Buttons;
     public static UpgradeChoiceMenu instance { get; private set; }
     private void Start()
     {
@@ -18,7 +18,7 @@ public class UpgradeChoiceMenu : MonoBehaviour
     ///</summary>
     private void OnEnable()
     {
-        for (int i = 0; i < Buttons.Length; i++)
+        for (int i = 0; i<Buttons.Length;i++)
         {
             ButtonCard card;
             do
@@ -27,26 +27,26 @@ public class UpgradeChoiceMenu : MonoBehaviour
                 if (GenerateCardUpgrade.CountTypeUpgrade < i + 1)
                     card = GenerateCardUpgrade.GetCardAt(TypeUpgrade.None);
             }
-            while (card.typeUpgrade != TypeUpgrade.None &&
+            while (card.typeUpgrade != TypeUpgrade.None && 
             Buttons.Where(Butt => Butt.typeUpgrade == card.typeUpgrade).Count() > 0);
             Buttons[i].SetButton(card);
         }
     }
     private void OnDisable()
     {
-        foreach (button_choose choice in Buttons)
+        foreach (Button_choose choice in Buttons)
             choice.DefaultTypeUpgrade();
-
+       
     }
     public void MenuClosed()
     {
         Menu.SetPause(false);
         gameObject.SetActive(false);
-        MenuOpen();
+            MenuOpen();
     }
     public void MenuOpen()
     {
-        if (PlayerStatistic.Level > PlayerStatistic.Received—ards)
+        if (PlayerStatistics.Level > PlayerStatistics.Received—ards)
         {
             Menu.SetPause(true);
             gameObject.SetActive(true);

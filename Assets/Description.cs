@@ -18,9 +18,11 @@ public class Description : MonoBehaviour
         towerCost.text = purchase.Priñe.ToString();
         descriptoinText.text = purchase.Description;
         Text[] texts = new Text[] { towerCost, coolDown, damage };
-        for (int i = 0; i < texts.Length; i++)
+        for(int i =0; i< texts.Length; i++)
         {
             texts[i].text = purchase.Specifications[i];
         }
+
+
     }
 }

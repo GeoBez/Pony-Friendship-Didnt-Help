@@ -10,23 +10,20 @@ public static class GenerateCardUpgrade
     static GenerateCardUpgrade()
     {
         Reset();
-        Type[] CardClass = Assembly.GetExecutingAssembly().GetTypes()
-            .Where(t => t.Namespace == nameof(Upgrades) && !t.Name.Contains("<>")).ToArray();
+        Type[] CardClass = Assembly.GetExecutingAssembly().GetTypes().Where(t => t.Namespace == nameof(Upgrades) && !t.Name.Contains("<>")).ToArray();
         foreach (Type CardClassType in CardClass)
         {
             object Object = Activator.CreateInstance(Type.GetType(CardClassType.FullName));
-
-            /*if (Enum.TryParse(typeof(TypeUpgrade), Object.GetType().Name, out object typeUpgrate)
-                && Object is ICardUpgrade card)
+            if (Enum.TryParse(typeof(TypeUpgrade), Object.GetType().Name, out object typeUpgrage) && Object is ICardUpgrade card)
             {
-                card.TypeUpgrade = (TypeUpgrade)typeUpgrate;
-                CardUpgrade.Add((TypeUpgrade)typeUpgrate, card);
+                card.TypeUpgrade = (TypeUpgrade)typeUpgrage;
+                CardUpgrade.Add((TypeUpgrade)typeUpgrage, card);
             }
             else
-                Debug.LogError($"Error: Was not found Type of Object {Object}");*/
+                Debug.LogError($"Error: Was not found Type of Object {Object}");
         }
     }
-    private static Dictionary<TypeUpgrade, ICardUpgrade> CardUpgrade = new Dictionary<TypeUpgrade, ICardUpgrade>();
+    private static Dictionary<TypeUpgrade, ICardUpgrade> CardUpgrade = new();
     private static List<string> Used { get; set; }
 
     public static int CountTypeUpgrade { get { return Used.Count - 1; } }
@@ -49,22 +46,22 @@ public static class GenerateCardUpgrade
 
     public static void UsedUpgrade(TypeUpgrade type)
     {
-        if (CardBlocking.ContainsKey(type))
-            foreach (TypeUpgrade upgrades in CardBlocking[type])
-            {
-                Used.Remove(upgrades.ToString());
-            }
+        if(CardBlocking.ContainsKey(type))
+        foreach (TypeUpgrade upgrades in CardBlocking[type])
+        {
+            Used.Remove(upgrades.ToString());
+        }
         if (type == TypeUpgrade.None) return;
-        PlayerStatistic.GiveOneCard();
+        PlayerStatistics.GiveOneCard();
         CardUpgrade[type].Function();
-        Used.Remove(type.ToString());
+            Used.Remove(type.ToString());
     }
     /// <summary>
     ///Добавь карту, которая заблокирует другие карточки.
     ///</summary>
     private static Dictionary<TypeUpgrade, TypeUpgrade[]> CardBlocking = new Dictionary<TypeUpgrade, TypeUpgrade[]>
     {
-        //  [TypeUpgrade. Тип Блокирующий ] = new TypeUpgrade[] { TypeUpgrade. Тип Блокируемые },
+      //  [TypeUpgrade. Тип Блокирующий ] = new TypeUpgrade[] { TypeUpgrade. Тип Блокируемые },
 
     };
 
@@ -79,7 +76,7 @@ public static class GenerateCardUpgrade
         TypeUpgrade randomUpgrade;
         do
         {
-            randomUpgrade = Used.Count == 1 ? TypeUpgrade.None : (TypeUpgrade)Enum.Parse(typeof(TypeUpgrade), Used[random.Next(1, Used.Count)]);
+            randomUpgrade = Used.Count == 1? TypeUpgrade.None : (TypeUpgrade)Enum.Parse(typeof(TypeUpgrade), Used[random.Next(1, Used.Count)]);
         }
         while (!Used.Contains(randomUpgrade.ToString()));
         return GetCardAt(randomUpgrade);
@@ -97,8 +94,10 @@ public static class GenerateCardUpgrade
             Type
             );
     }
-}
 
+    
+    
+}
 public enum TypeUpgrade
 {
     None,
