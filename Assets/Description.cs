@@ -14,7 +14,7 @@ public class Description : MonoBehaviour
 
     internal void Initialize(Tower tower)
     {
-        nameText.text = tower.name;
+        //nameText.text = tower.name;
         //descriptoinText.text = "описание" + tower.name;
         towerCost.text = tower.price.ToString();
         coolDown.text = tower.GetComponentInChildren<Weapon>().projectile.coolDown.ToString();
