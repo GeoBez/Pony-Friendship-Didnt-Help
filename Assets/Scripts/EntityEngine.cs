@@ -71,6 +71,7 @@ public abstract class EntityEngine : MonoBehaviour
         }
         Damage = 1F;
         typeTeam = TypeTeam.Friend;
+        AddHealsMax(10F);
 
         sprite = GetComponent<SpriteRenderer>();
         if (sprite == null)
@@ -85,7 +86,7 @@ public abstract class EntityEngine : MonoBehaviour
     {
         Health += value;
     }
-    public void AddDamage(float value)
+    public void ChangeDamage(float value)
     {
         Damage = value;
     }

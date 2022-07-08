@@ -10,7 +10,7 @@ public static class PlayerStatistics
     public static event Action Lack—oins;
     public static int Coins { get; private set; }
 
-    private const int ExpNextLevelDefault = 20;
+    private const int ExpNextLevelDefault = 10;
 
     public static int ExpNextLevel { get; private set; }
 

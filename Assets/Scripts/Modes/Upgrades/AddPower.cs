@@ -12,7 +12,7 @@ namespace Upgrades
 
         protected override void Function()
         {
-            Player.MainPlayer.AddDamage(5F);
+            Player.MainPlayer.ChangeDamage(5F);
         }
     }
 }
