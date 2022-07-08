@@ -10,6 +10,8 @@ public abstract class EntityEngine : MonoBehaviour
     [SerializeField]
     private float speed = 11;
     private bool isInvulnerability = false;
+    
+    private SpriteRenderer sprite;    
     public float Speed
     {
         get => speed;
@@ -69,6 +71,10 @@ public abstract class EntityEngine : MonoBehaviour
         }
         Damage = 1F;
         typeTeam = TypeTeam.Friend;
+
+        sprite = GetComponent<SpriteRenderer>();
+        if (sprite == null)
+            sprite = GetComponentInChildren<SpriteRenderer>();
     }
     public abstract void Dead();
     public void Medicament()
@@ -100,5 +106,37 @@ public abstract class EntityEngine : MonoBehaviour
                 SomeoneDead?.Invoke(typeTeam);
             }
         }
-    }    
+    }
+
+    /// <summary>
+    /// Сделать сущность неуязвимой на time времени
+    /// </summary>
+    /// <param name="time"></param>
+    public void Makeinvulnerability(float time = 1)
+    {
+        isInvulnerability = true;
+        TurnOnInvulnerability();
+        Invoke("TurnOffInvulnerability", time);
+        isInvulnerability = false;
+    }
+
+    /// <summary>
+    /// Изменить характеристики сущности при включенной неуязвимости. Парный с TurnOffInvulnerability.
+    /// </summary>
+    /// <param name="isTurn"></param>
+    protected virtual void TurnOnInvulnerability()
+    {
+        Color _color = Color.gray;
+        _color.a = 50;
+        
+        sprite.color = _color;
+    }
+
+    /// <summary>
+    /// Изменить характеристики сущности при включенной неуязвимости. Парный с TurnOnInvulnerability.
+    /// </summary>
+    protected virtual void TurnOffInvulnerability()
+    {
+        sprite.color = Color.white;
+    }
 }

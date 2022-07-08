@@ -10,6 +10,7 @@ public class Player : EntityEngine
     public static Player MainPlayer;
     private float RadiusMagnit;
     private float PowerMagnit;
+    private CapsuleCollider2D capsulePlayer;
     public Weapon Weapon { get; private set; }
     public PlayerMeleeAttacks PlayerMelee { get; private set; }
     public PlayerMovement playerMovement { get; private set; }
@@ -25,6 +26,8 @@ public class Player : EntityEngine
         PowerMagnit = 1.5F;
         AddHealsMax(10F);
         playerMovement = GetComponent<PlayerMovement>();
+
+        capsulePlayer = GetComponent<CapsuleCollider2D>();
     } 
     public void MagtetUpdate(bool poewr = false)
     {
@@ -73,5 +76,17 @@ public class Player : EntityEngine
     public override void TakeHit(float damage)
     {
         base.TakeHit(damage);
+        Makeinvulnerability();
+    }
+
+    protected override void TurnOnInvulnerability()
+    {
+        base.TurnOnInvulnerability();
+        capsulePlayer.enabled = false;
+    }
+    protected override void TurnOffInvulnerability()
+    {
+        base.TurnOffInvulnerability();
+        capsulePlayer.enabled = true;
     }
 }
