@@ -18,6 +18,7 @@ public class button_choose : MonoBehaviour
     public void MakeMoodActive()
     {
         mod.Activate();
+        
         foreach (var card in parent.cards)
         {
             card.button.GetComponent<button_choose>().mod.isUsed = false;

@@ -10,11 +10,19 @@ public class skill_choose : MonoBehaviour
     public GameObject skills_Canvas;
     public XP_Bar xp_Bar;
 
+    private skill_choose parent;
+    private Skill_Canvas skill_canvas;
+
+
     private bool isStartWas = false;
     public bool _isItWork = false;
 
     void Start()
     {
+
+        parent = GetComponentInParent<skill_choose>();
+        skill_canvas = GetComponentInParent<Skill_Canvas>();
+
         _allModes = new List<Modes>() {
             gameObject.AddComponent<Mode_Magnit>(),
             gameObject.AddComponent<Mode_DoubleDenomination>(),
@@ -38,6 +46,7 @@ public class skill_choose : MonoBehaviour
             if (mode.isUsed)
                 mode.Activate();
         }
+        _isItWork = false;
     }
 
     public void MakeCard()
@@ -67,6 +76,13 @@ public class skill_choose : MonoBehaviour
                     {
                         count = -1;
                         mod = gameObject.AddComponent<Mode_Extra>();
+                        //card.button.GetComponent<button_choose>().MakeMoodActive();
+
+                        //mod.Activate();
+                        //skill_canvas.skill_Points--;
+                        //parent.xp_Bar.skill_Points--;
+                        //_isItWork = false;
+
                         throw new System.Exception("Mods name or description is null!");
                     }
                 }
@@ -85,6 +101,8 @@ public class skill_choose : MonoBehaviour
                     Cardbutton.index = count;
                 }
             }
+
+
         }
     } 
 
