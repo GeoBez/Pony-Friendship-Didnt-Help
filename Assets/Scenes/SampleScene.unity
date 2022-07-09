@@ -7882,7 +7882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Waves:
   - waves:
-    - Enemy: {fileID: 3205444235630396451, guid: 54824aecbc3866a44bf40d57d6d0d210, type: 3}
+    - Enemy: {fileID: 3205444235630396451, guid: 5fa10a30f9e68bf4d812eb13090c18eb, type: 3}
       _min_Count_Enemy: 3
       _max_Count_Enemy: 5
       Portal: {fileID: 1361756283}
