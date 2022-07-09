@@ -433,7 +433,6 @@ GameObject:
   - component: {fileID: 5232870316641352980}
   - component: {fileID: 1901460010378310713}
   - component: {fileID: 1901460010378310715}
-  - component: {fileID: 1818820588}
   m_Layer: 3
   m_Name: player
   m_TagString: MainPlayer
@@ -475,24 +474,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2877501745157864698}
   maxHealth: 20
+  atackUi: {fileID: 0}
   damage: 1
   inTowerCollider: 0
   mode_YouShallNotPass: 0
-  mode_Magnit: 0
-  mode_Double_Denomination: 0
-  mode_Clover_Leaf: 0
-  mode_MoreBits: 0
-  mode_Sturdy: 0
-  mode_HealthyHealth: 0
-  mode_NewHorseshoes: 0
-  mode_OneTimeTreatment: 0
-  mode_MoreHealth: 0
-  mode_TimeIsMoney: 0
-  mode_IAmPower: 0
-  mode_PowerPlus: 0
-  mode_SimpleDistanteBattle: 0
-  mode_SittingUpper: 0
-  mode_IAmSpeed: 0
   mode_YouShallNoPass: 0
   isMeleeAttacker: 1
 --- !u!114 &6489787237821227859
@@ -508,6 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  MiniMap: {fileID: 0}
   _joysticks:
   - {fileID: 0}
   - {fileID: 0}
@@ -566,18 +552,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.24759161, y: -0.059598923}
   m_Size: {x: 2.265484, y: 3.254796}
   m_Direction: 0
---- !u!114 &1818820588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901460010378308550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc41cd8402d2714459920618375d0acd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1901460011688975663
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +774,7 @@ Transform:
   m_GameObject: {fileID: 7609455926678627985}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.18, y: -0.25, z: 0}
-  m_LocalScale: {x: -9.412401, y: 9.780879, z: 0.5201845}
+  m_LocalScale: {x: -14.86531, y: 15.447258, z: 0.82154423}
   m_Children: []
   m_Father: {fileID: 1901460010378308551}
   m_RootOrder: 5

@@ -101,6 +101,9 @@ public class Enemy : MonoBehaviour, IFreezable
 		var ñ = GetComponentInChildren<FollowPath>();
 		if (ñ != null) ñ.enabled = false;
 
+		var d = GetComponent<Boss_Script>();
+		if (d != null) d.enabled = false;
+
 		Instantiate(ice, transform.position, Quaternion.identity, transform);
     }
 
@@ -114,6 +117,9 @@ public class Enemy : MonoBehaviour, IFreezable
 
 		var ñ = GetComponentInChildren<FollowPath>();
 		if (ñ != null) ñ.enabled = true;
+
+		var d = GetComponent<Boss_Script>();
+		if (d != null) d.enabled = true;
 
 		Instantiate(iceDestroyParticle, transform.position, Quaternion.identity, transform);
 		_animator.SetTrigger("FreezingEnd");

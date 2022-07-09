@@ -91,9 +91,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8020799160096601053}
-  - component: {fileID: 8020799160096601050}
   - component: {fileID: 8020799160096601051}
   - component: {fileID: 8020799160096601048}
+  - component: {fileID: 4600071407963032699}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -108,28 +108,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8020799160096601052}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.69, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.9600005, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8020799161829022177}
+  m_Father: {fileID: 232981735942177658}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8020799160096601050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8020799160096601052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481f089537ec8314a88245b2de228e32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  time: 5
-  delay: 3
 --- !u!212 &8020799160096601051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -207,6 +192,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &4600071407963032699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8020799160096601052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 481f089537ec8314a88245b2de228e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  time: 5
+  delay: 3
 --- !u!1 &8020799160762443579
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ Transform:
   m_LocalPosition: {x: -3.9185405, y: -2.8735697, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8020799160096601053}
+  - {fileID: 232981735942177658}
   - {fileID: 8020799160762443576}
   - {fileID: 8020799161958053360}
   - {fileID: 3583346016251622735}
@@ -365,7 +365,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9db862d5d87a47b47b353853f7004799, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.03, y: 3.22}
@@ -393,6 +393,7 @@ MonoBehaviour:
   - {fileID: 8020799160762443579}
   - {fileID: 8020799161958053363}
   rnd: 0
+  laserTransform: {fileID: 232981735942177658}
 --- !u!114 &8020799161829022204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,6 +651,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 15
+--- !u!1 &8743309974654143157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232981735942177658}
+  m_Layer: 0
+  m_Name: LaserPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &232981735942177658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8743309974654143157}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.27, y: -0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8020799160096601053}
+  m_Father: {fileID: 8020799161829022177}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1369802018358928944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -711,7 +743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalScale.y
@@ -751,7 +783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.49
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
