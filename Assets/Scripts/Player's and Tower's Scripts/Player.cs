@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public static Player MainPlayer;
+
     public StatsBar healthBar;
     public float maxHealth = 10;
     private float health;
+    [SerializeField] private Text atackUi;
     public float Health
     {
         get => health;
@@ -33,29 +35,20 @@ public class Player : MonoBehaviour
         }
     }
 
-    public float damage;
+    public int Damage { get => damage; set {
+            if (value > 0)
+            {
+                damage = value;
+                atackUi.GetComponent<AtackPowerText>().UpdateText(damage);
+            }
+
+        } }
+    [SerializeField]private int damage;
 
     public bool inTowerCollider = false;
 
     public bool mode_YouShallNotPass;
-
-    public bool mode_Magnit = false;
-    public bool mode_Double_Denomination = false;
-    public bool mode_Clover_Leaf = false;
-    public bool mode_MoreBits = false;
-    public bool mode_Sturdy = false;
-    public bool mode_HealthyHealth = false;
-    public bool mode_NewHorseshoes = false;
-    public bool mode_OneTimeTreatment = false;
-    public bool mode_MoreHealth = false;
-    public bool mode_TimeIsMoney = false;
-    public bool mode_IAmPower = false;
-    public bool mode_PowerPlus = false;
-    public bool mode_SimpleDistanteBattle = false;
-    public bool mode_SittingUpper = false;
-    public bool mode_IAmSpeed = false;
     public bool mode_YouShallNoPass = false;
-
     public bool isMeleeAttacker;
 
     bool isImmortality;

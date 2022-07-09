@@ -12,6 +12,8 @@ public class Tower_UI : MonoBehaviour
     GameObject Player;
 
     public Description description;
+    public GameObject CoinCounts;
+    private Animator _animator; 
 
     private Tower tower;
     public void Start()
@@ -21,6 +23,8 @@ public class Tower_UI : MonoBehaviour
         CTB = GameObject.FindGameObjectWithTag("CTB").GetComponent<Button>();
         cost = CTB.GetComponentInChildren<Text>();
         cost.text = tower.price.ToString();
+
+        _animator = CoinCounts.GetComponent<Animator>();
     }
 
     public void Update()
@@ -50,6 +54,10 @@ public class Tower_UI : MonoBehaviour
             Coin_Count_Text.coin_Count -= tower.price;
             Instantiate(Tower, Player.transform.position, Quaternion.identity);
             description.gameObject.SetActive(false);
+        }
+        else
+        {
+            _animator.SetTrigger("isActive");//.SetBool("isActive", true);
         }
     }
 }

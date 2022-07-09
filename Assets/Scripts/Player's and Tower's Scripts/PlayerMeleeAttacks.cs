@@ -30,7 +30,7 @@ public class PlayerMeleeAttacks : MonoBehaviour
         animator = GetComponentInParent<Animator>();
         _currentAttackCoolDown = attackCoolDown;
         attackCoolDownBar.SetMaxValue(attackCoolDown);
-        attackDamage = GetComponentInParent<Player>().damage;
+        attackDamage = GetComponentInParent<Player>().Damage;
     }
     void Update()
     {

@@ -215,7 +215,7 @@ public class Mode_IAmPower : Modes
     public override void MainModeDo()
     {
         Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        player.damage *= 2;
+        player.Damage *= 2;
         //player.mode_IAmPower = true;
     }
 }
@@ -234,7 +234,7 @@ public class Mode_PowerPlus : Modes //here
     public override void MainModeDo()
     {
         Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        player.damage += 5;
+        player.Damage += 5;
         //player.mode_PowerPlus = true;
     }
 }

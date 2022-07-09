@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector] public float speed = 8;
     private float defaultSpeed;
-
+    [SerializeField] GameObject MiniMap;
     #region Animation
 
     private Animator animator;
@@ -46,9 +46,7 @@ public class PlayerMovement : MonoBehaviour
         _controlType = ControlType.PC;
         rb = GetComponent<Rigidbody2D>();
         if (_controlType == ControlType.PC) { _joystick.gameObject.SetActive(false); }
-        defaultSpeed = speed;
-
-        
+        defaultSpeed = speed;        
     }
 
     void Update()
@@ -100,7 +98,12 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
             stats.localScale = new Vector3(-0.5f, .5f, 1);
         }
+
+        if (Input.GetKey(KeyCode.Space))
+            MiniMap.SetActive(true);
+        else MiniMap.SetActive(false);
     }
+
 
     private void FixedUpdate()
     {
