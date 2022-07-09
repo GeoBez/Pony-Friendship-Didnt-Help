@@ -6,6 +6,7 @@ public class ControlsManager : MonoBehaviour
 {
     public FreezeUlt freezeUlt;
     public Tower_UI tower_UI;
+    public GameObject preporation;
     public 
     void Update()
     {
@@ -15,5 +16,11 @@ public class ControlsManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)){
             tower_UI.CreateTower();
         }
+        if (Input.GetKeyDown(KeyCode.C) && preporation.activeSelf)
+        {
+            //Preparation_Script.
+            preporation.GetComponent<Preparation_Script>().End_Time();
+        }
+
     }
 }
