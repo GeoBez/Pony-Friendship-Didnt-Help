@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1700984239178791006}
   - component: {fileID: 8333388199183338076}
   m_Layer: 7
-  m_Name: Tower_Enemy
+  m_Name: FastSlime
   m_TagString: Tower_Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,8 +112,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3205444235630396451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.75, y: 3.64, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.6092, y: 3.5608, z: 0}
+  m_LocalScale: {x: 0.9296, y: 0.9296, z: 0.9296}
   m_Children:
   - {fileID: 678187629481155012}
   - {fileID: 666116273431834337}
@@ -163,7 +163,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 922876546fbbf974da2db2bbaa9d2e31, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.21960784, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -185,12 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d10c1015cf2cf4f8b5af33031dde6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
-  health: 12
-  speed: 1
+  maxHealth: 3
+  health: 3
+  speed: 4
   damage: 3
   xp_points: 2
-  attackTime: 2
+  attackTime: 1
   fall_Object:
   - {fileID: 4743943494906487930, guid: 7e473dde17d4b4e4885da255f7a18164, type: 3}
   - {fileID: 8974354507945617733, guid: 689e9bcad43e6c142970c1dc2173d82a, type: 3}
@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  _moveType: 2
   MyPath: {fileID: 0}
   maxDistance: 0.1
   moveingTo: 0
@@ -294,7 +295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4797170538265270533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.91, y: -0.06, z: 0}
+  m_LocalPosition: {x: -1.18, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4597561529572272634}

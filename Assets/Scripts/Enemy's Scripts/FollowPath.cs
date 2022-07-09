@@ -9,15 +9,24 @@ public class FollowPath : MonoBehaviour
         Moveing,
         Lerping
     }
+    enum MoveType
+    {
+        Linear,
+        Loop,
+        ToBack
+    }
+
 
     private Transform _target;
     public MovementType Type = MovementType.Moveing;
+    [SerializeField] private MoveType _moveType;
+
     public MovementPath MyPath;
     private float speed = 1;
     private float defaultSpeed;
     public float maxDistance = .1f;
     public int moveingTo = 0;
-    public int movementDirection = 1;
+    public int movementDirection = 0;
 
     private IEnumerator<Transform> pointInPath;
 
@@ -80,7 +89,7 @@ public class FollowPath : MonoBehaviour
 
         if(GetComponentInChildren<Enemy_Attack>().What_Attack != null)
         {
-            speed = 0;
+            //speed = 0;
             _animator.SetBool("isWalking", false);
         }
         else
@@ -103,12 +112,42 @@ public class FollowPath : MonoBehaviour
         {
             yield return MyPath.PathElements[moveingTo];
 
-            if (MyPath.PathElements.Length == 1)
+            if (_moveType == MoveType.Linear)
+            {
+
+                Debug.Log(string.Format("I am 1, {0} to {1}", moveingTo, movementDirection));
+                if (moveingTo == MyPath.PathElements.Length-1)
+                    yield break;
+
+                moveingTo++;
+            }
+
+            if (_moveType == MoveType.Loop)
+            {
+
+                Debug.Log(string.Format("I am 2, {0} to {1}", moveingTo, movementDirection));
+                if (moveingTo == MyPath.PathElements.Length-1)
+                    moveingTo = 0;
+                else moveingTo++;
+            }
+
+            if (_moveType == MoveType.ToBack)
+            {
+                Debug.Log(string.Format("I am 3, {0} to {1}", moveingTo, movementDirection));
+                if (moveingTo == MyPath.PathElements.Length-1)
+                    movementDirection = -1;
+                if (moveingTo == 0)
+                    movementDirection = 1;
+                moveingTo += movementDirection;
+            }
+
+            /*if (MyPath.PathElements.Length == 1)
             {
                 continue;
             }
 
-            if (MyPath.PathType == MovementPath.PathTypes.linear)
+            //if (MyPath.PathType == MovementPath.PathTypes.linear)
+            if (_moveType == MoveType.Linear)
             {
                 if (moveingTo <= 0)
                 {
@@ -122,7 +161,8 @@ public class FollowPath : MonoBehaviour
 
             moveingTo = moveingTo + movementDirection;
 
-            if (MyPath.PathType == MovementPath.PathTypes.loop)
+            //if (MyPath.PathType == MovementPath.PathTypes.loop)
+            if (_moveType == MoveType.Loop)
             {
                 if (moveingTo >= MyPath.PathElements.Length)
                 {
@@ -134,6 +174,7 @@ public class FollowPath : MonoBehaviour
                     moveingTo = MyPath.PathElements.Length - 1;
                 }
             }
+        */
         }
     }
 
