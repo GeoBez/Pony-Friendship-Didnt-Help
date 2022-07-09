@@ -15,6 +15,8 @@ public class Boss_Script : MonoBehaviour
     int pastAttack;
     int AttackVariant;
 
+    public Transform laserTransform;
+
     private void Start()
     {
         Target = GameObject.FindGameObjectWithTag("Boss_Target").transform;
@@ -26,6 +28,7 @@ public class Boss_Script : MonoBehaviour
         {
             Attacks[i].SetActive(false);
         }
+
     }
 
     private void Update()
@@ -33,7 +36,7 @@ public class Boss_Script : MonoBehaviour
         if (rnd < 30)
         {
             AttackVariant = 0;
-            Target = GameObject.FindGameObjectWithTag("Player").transform;
+            Target = GameObject.FindGameObjectWithTag("Player")?.transform;
         }
         else if (rnd >= 30 && rnd < 80)
             AttackVariant = 1;
@@ -64,7 +67,8 @@ public class Boss_Script : MonoBehaviour
 
     void Rotation_Character()
     {
-        transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((Target.position.y - transform.position.y), (Target.position.x - transform.position.x)) * Mathf.Rad2Deg);
+        if (Target == null) return;
+        laserTransform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((Target.position.y - transform.position.y), (Target.position.x - transform.position.x)) * Mathf.Rad2Deg);
     }
 
     public void RandomAttacks()
