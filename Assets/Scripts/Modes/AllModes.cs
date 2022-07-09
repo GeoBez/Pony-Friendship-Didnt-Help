@@ -32,15 +32,15 @@ public class Mode_DoubleDenomination : Modes
 {
     public void Start()
     {
-        modeName = "Двойной номинал";
-        modeDescription = "Все выпадающие монетки стоят 2";
+        modeName = "Повышенный номинал";
+        modeDescription = "Все выпадающие монетки стоят 4";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName(modeName.ToLower());
     }
     public override void MainModeDo()
     {
-        Coin.coin_Denomination = 2;
+        Coin.coin_Denomination = 4;
         //player.mode_Double_Denomination = true;
     }
 }
@@ -50,14 +50,14 @@ public class Mode_CleverLeaf : Modes
     public void Start()
     {
         modeName = "Лист клевера";
-        modeDescription = "Увеличивает шанс выпадения монет на 10%";
+        modeDescription = "Шанс выпадения монет больше на 20%";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName(modeName.ToLower());
     }
     public override void MainModeDo()
     {
-        Coin.probability = 40;
+        Coin.probability += 20;
         //player.mode_Clover_Leaf = true;
     }
 }
@@ -188,7 +188,7 @@ public class Mode_TimeIsMoney : Modes //here
     public void Start()
     {
         modeName = "Время - деньги";
-        modeDescription = "За пропуск волны дается в 2 раза больше монет";
+        modeDescription = "Больше монет за пропуск волны";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName(modeName.ToLower());
@@ -310,7 +310,7 @@ public class Mode_YouShallNoPass : Modes
     public void Start()
     {
         modeName = "Ты не пройдешь";
-        modeDescription = "Вы можете стрелять по врагам идущим к дереву";
+        modeDescription = "Вы можете стрелять по путевым врагаму";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName(modeName.ToLower());

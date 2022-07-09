@@ -1001,12 +1001,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6886516553803484212}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 292, y: -110}
-  m_SizeDelta: {x: 176.26, y: 31.869995}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 2, y: -110}
+  m_SizeDelta: {x: 176.26001, y: 31.869995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109539509
 MonoBehaviour:
@@ -6999,7 +6999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -15.0000305, y: 89.20502}
+  m_AnchoredPosition: {x: -14.999939, y: 89.20502}
   m_SizeDelta: {x: 0, y: 178.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1601073545
@@ -9053,6 +9053,10 @@ PrefabInstance:
       propertyPath: _joysticks.Array.data[2]
       value: 
       objectReference: {fileID: 1251446578}
+    - target: {fileID: 8475251887585018398, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1818820588, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
@@ -12259,8 +12263,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 109539508}
   - {fileID: 6886516553955344098}
+  - {fileID: 109539508}
   - {fileID: 6886516553967056387}
   - {fileID: 618993902825841752}
   m_Father: {fileID: 1130660996}
@@ -12357,7 +12361,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6886516553803484212}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}

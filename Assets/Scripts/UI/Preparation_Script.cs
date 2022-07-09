@@ -54,7 +54,11 @@ public class Preparation_Script : MonoBehaviour
 
         if(!inPreparation)
         {
-            text.gameObject.SetActive(false);
+            foreach( var y in GetComponentsInChildren<Text>())
+            {
+                y.gameObject.SetActive(false);
+            }
+            //text.gameObject.SetActive(false);
             button.gameObject.SetActive(false);
         }
         else

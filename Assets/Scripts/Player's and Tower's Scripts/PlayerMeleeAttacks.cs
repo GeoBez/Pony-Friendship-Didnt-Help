@@ -59,14 +59,32 @@ public class PlayerMeleeAttacks : MonoBehaviour
         _currentAttackCoolDown = 0;
     }
 
+    private void Attack(Collider2D enemy)
+    {
+        //animator.SetTrigger("Attack");
+                
+        {
+            enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
+            Instantiate(Melee_Damage_Effect, enemy.transform.position, Quaternion.identity);
+        }
+
+        _isNeedRollback = true;
+        _currentAttackCoolDown = 0;
+    }
+
+
     private void TargetSearch()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
 
         if (hitEnemies.Length != 0) 
         {
-            Attack(hitEnemies);
+            Attack(hitEnemies[0]);
+            //Attack(hitEnemies);
         }
+        
+
+
     }
 
     private void OnDrawGizmos()
