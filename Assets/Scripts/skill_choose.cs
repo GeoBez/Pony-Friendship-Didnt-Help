@@ -60,10 +60,8 @@ public class skill_choose : MonoBehaviour
         if (!_isItWork)
         {
             _isItWork = true;
-            foreach (var card in cards)
-            {
-                ReMakeCard();
-            }
+
+            ReMakeCard();
         }
     }
 
