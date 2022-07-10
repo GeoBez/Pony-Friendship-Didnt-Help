@@ -112,8 +112,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3205444235630396451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.75, y: 3.64, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.1169, y: 3.2839, z: 0}
+  m_LocalScale: {x: 0.68344194, y: 0.68344194, z: 0.68344194}
   m_Children:
   - {fileID: 678187629481155012}
   - {fileID: 666116273431834337}
@@ -163,7 +163,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 922876546fbbf974da2db2bbaa9d2e31, type: 3}
-  m_Color: {r: 0.918633, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.9362135, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -185,11 +185,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d10c1015cf2cf4f8b5af33031dde6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  health: 3
-  speed: 4
-  damage: 3
-  xp_points: 2
+  maxHealth: 4
+  health: 4
+  speed: 3
+  damage: 2
+  xp_points: 3
   attackTime: 1
   fall_Object:
   - {fileID: 4743943494906487930, guid: 7e473dde17d4b4e4885da255f7a18164, type: 3}
@@ -295,7 +295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4797170538265270533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: 0.11, z: 0}
+  m_LocalPosition: {x: -1.18, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4597561529572272634}
@@ -359,7 +359,7 @@ Transform:
   m_GameObject: {fileID: 8993118498318148634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.04, y: -0.05, z: 0}
-  m_LocalScale: {x: -13.1122465, y: 13.625567, z: 0.72465974}
+  m_LocalScale: {x: -7.0260315, y: 7.301088, z: 0.38829976}
   m_Children: []
   m_Father: {fileID: 4597561529572272634}
   m_RootOrder: 3
@@ -405,11 +405,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4457046916163352173, guid: 58a774c30a8240645a55c4c5e36966a6, type: 3}
-<<<<<<< HEAD:Assets/Prefabs/Enemy/Tower enemy/LoopSlime.prefab
-  m_Color: {r: 0.36296952, g: 0.012103926, b: 0.3773585, a: 1}
-=======
-  m_Color: {r: 0.11743164, g: 1, b: 0, a: 1}
->>>>>>> 92706a7eb0d33f19a0b89f8195d725e71caf750e:Assets/Prefabs/Tower_Enemy.prefab
+  m_Color: {r: 0.8018868, g: 0.4190993, b: 0.768565, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -62,49 +62,55 @@ public class skill_choose : MonoBehaviour
             _isItWork = true;
             foreach (var card in cards)
             {
-                Modes mod;
-                var count =  GenerateIndex();
-                                
-                if (count != -1)
-                    mod = _allModes[count];
-                else
+                ReMakeCard();
+            }
+        }
+    }
+
+    public void ReMakeCard()
+    {
+        foreach (var card in cards)
+        {
+            Modes mod;
+            var count = GenerateIndex();
+
+            if (count != -1)
+                mod = _allModes[count];
+            else
+                mod = gameObject.AddComponent<Mode_Extra>();
+
+            try
+            {
+                if (mod.GetName() == null || mod.GetDescription() == null)
+                {
+                    count = -1;
                     mod = gameObject.AddComponent<Mode_Extra>();
-                                
-                try
-                {
-                    if (mod.GetName() == null || mod.GetDescription() == null)
-                    {
-                        count = -1;
-                        mod = gameObject.AddComponent<Mode_Extra>();
-                        //card.button.GetComponent<button_choose>().MakeMoodActive();
+                    //card.button.GetComponent<button_choose>().MakeMoodActive();
 
-                        //mod.Activate();
-                        //skill_canvas.skill_Points--;
-                        //parent.xp_Bar.skill_Points--;
-                        //_isItWork = false;
+                    //mod.Activate();
+                    //skill_canvas.skill_Points--;
+                    //parent.xp_Bar.skill_Points--;
+                    //_isItWork = false;
 
-                        throw new System.Exception("Mods name or description is null!");
-                    }
-                }
-                catch (System.Exception e)
-                {
-                    Debug.Log(e);
-                }
-                finally
-                {
-                    card.descriptionText.text = mod.GetDescription();
-                    card.nameText.text = mod.GetName();
-                    card.image.sprite = mod.GetImage();
-
-                    var Cardbutton = card.button.GetComponent<button_choose>();
-                    Cardbutton.mod = mod;
-                    Cardbutton.index = count;
+                    throw new System.Exception("Mods name or description is null!");
                 }
             }
+            catch (System.Exception e)
+            {
+                Debug.Log(e);
+            }
+            finally
+            {
+                card.descriptionText.text = mod.GetDescription();
+                card.nameText.text = mod.GetName();
+                card.image.sprite = mod.GetImage();
 
-
+                var Cardbutton = card.button.GetComponent<button_choose>();
+                Cardbutton.mod = mod;
+                Cardbutton.index = count;
+            }
         }
-    } 
+    }
 
     int GenerateIndex()
     {

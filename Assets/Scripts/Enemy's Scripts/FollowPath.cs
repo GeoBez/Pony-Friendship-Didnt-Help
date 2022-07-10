@@ -115,7 +115,7 @@ public class FollowPath : MonoBehaviour
             if (_moveType == MoveType.Linear)
             {
 
-                Debug.Log(string.Format("I am 1, {0} to {1}", moveingTo, movementDirection));
+                //Debug.Log(string.Format("I am 1, {0} to {1}", moveingTo, movementDirection));
                 if (moveingTo == MyPath.PathElements.Length-1)
                     yield break;
 
@@ -125,7 +125,7 @@ public class FollowPath : MonoBehaviour
             if (_moveType == MoveType.Loop)
             {
 
-                Debug.Log(string.Format("I am 2, {0} to {1}", moveingTo, movementDirection));
+                //Debug.Log(string.Format("I am 2, {0} to {1}", moveingTo, movementDirection));
                 if (moveingTo == MyPath.PathElements.Length-1)
                     moveingTo = 0;
                 else moveingTo++;
@@ -133,7 +133,7 @@ public class FollowPath : MonoBehaviour
 
             if (_moveType == MoveType.ToBack)
             {
-                Debug.Log(string.Format("I am 3, {0} to {1}", moveingTo, movementDirection));
+                //Debug.Log(string.Format("I am 3, {0} to {1}", moveingTo, movementDirection));
                 if (moveingTo == MyPath.PathElements.Length-1)
                     movementDirection = -1;
                 if (moveingTo == 0)

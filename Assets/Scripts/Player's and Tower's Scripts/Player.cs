@@ -47,8 +47,8 @@ public class Player : MonoBehaviour
 
     public bool inTowerCollider = false;
 
-    public bool mode_YouShallNotPass;
-    public bool mode_YouShallNoPass = false;
+    public static bool mode_YouShallNotPass;
+    public static bool mode_YouShallNoPass = false;
     public bool isMeleeAttacker;
 
     bool isImmortality;

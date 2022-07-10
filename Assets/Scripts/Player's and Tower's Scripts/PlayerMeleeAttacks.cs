@@ -75,7 +75,12 @@ public class PlayerMeleeAttacks : MonoBehaviour
 
     private void TargetSearch()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
+        attackDamage = GetComponentInParent<Player>().Damage;
+        Collider2D[] hitEnemies;
+        if (Player.mode_YouShallNoPass)
+            hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer, LayerMask.GetMask("Tower Enemy"));
+
+        hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer, LayerMask.GetMask("Enemy"));
 
         if (hitEnemies.Length != 0) 
         {

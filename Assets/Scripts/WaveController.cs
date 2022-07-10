@@ -59,6 +59,8 @@ public class WaveController : MonoBehaviour
 
     public void Rise_Wave()
     {
+        Debug.Log("New wave " + Wave_Number);
+
         NeedToKill = 0;
         for (int i = 0; i < Waves[Wave_Number].waves.Length; i++)
         {

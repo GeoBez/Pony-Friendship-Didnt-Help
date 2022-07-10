@@ -6,7 +6,7 @@ public class Melee_Attack : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Enemy" || (collision.tag == "Tower_Enemy" && GetComponentInParent<Player>().mode_YouShallNotPass))
+        if(collision.tag == "Enemy" || (collision.tag == "Tower_Enemy" && Player.mode_YouShallNotPass))
         {
             collision.GetComponent<Enemy>().TakeDamage(GetComponentInParent<Player>().Damage);
         }

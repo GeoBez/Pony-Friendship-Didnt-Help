@@ -63,8 +63,10 @@ public class Preparation_Script : MonoBehaviour
         }
         else
         {
-            text.gameObject.SetActive(true);
+            foreach (var y in GetComponentsInChildren<Text>())
+                text.gameObject.SetActive(true);
             button.gameObject.SetActive(true);
+
             if(xp_Bar.skill_Points > 0)
                 xp_Bar.TranslateSkillPoints();
         }
