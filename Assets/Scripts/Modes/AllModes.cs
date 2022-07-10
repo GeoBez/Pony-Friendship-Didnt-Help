@@ -253,8 +253,10 @@ public class Mode_SimpleDistanteBattle : Modes //here
     public override void MainModeDo()
     {
         var player = GameObject.FindGameObjectWithTag("MainPlayer");
+
         player.GetComponentInChildren<PlayerMeleeAttacks>().enabled = false;
         player.GetComponentInChildren<Weapon>().enabled = true;
+        //Debug.Log("update");
 
         //GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isMeleeAttacker = false;
         //GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Change_Attack>().ChangeAttack();  

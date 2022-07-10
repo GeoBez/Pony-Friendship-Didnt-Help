@@ -86,6 +86,7 @@ public class Enemy : MonoBehaviour, IFreezable
 
 	public void FreezingAnimationStart()
     {
+		TakeDamage(1);
 		_animator.SetTrigger("Freezing");
 		_animator.SetBool("isWalking", false);
 	}

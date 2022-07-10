@@ -29,6 +29,8 @@ public class Weapon : MonoBehaviour
     }
     void Update()
     {
+        if (gameObject.tag == "Player")
+            damage = GetComponentInParent<Player>().Damage;
         TargetSearch();
 
         if (currentTarget != null)
