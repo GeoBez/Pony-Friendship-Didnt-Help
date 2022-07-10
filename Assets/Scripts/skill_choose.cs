@@ -110,6 +110,12 @@ public class skill_choose : MonoBehaviour
         }
     }
 
+    public void MakeNotActive()
+    {
+        foreach (var y in _allModes)
+            y.isUsed = false;
+    }
+
     int GenerateIndex()
     {
         int cout;
