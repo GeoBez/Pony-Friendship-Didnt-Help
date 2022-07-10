@@ -62,7 +62,6 @@ public class PlayerMeleeAttacks : MonoBehaviour
     private void Attack(Collider2D enemy)
     {
         //animator.SetTrigger("Attack");
-                
         {
             enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
             Instantiate(Melee_Damage_Effect, enemy.transform.position, Quaternion.identity);
@@ -77,10 +76,10 @@ public class PlayerMeleeAttacks : MonoBehaviour
     {
         attackDamage = GetComponentInParent<Player>().Damage;
         Collider2D[] hitEnemies;
-        if (Player.mode_YouShallNoPass)
-            hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer, LayerMask.GetMask("Tower Enemy"));
-
-        hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer, LayerMask.GetMask("Enemy"));
+        //if (Player.mode_YouShallNoPass)
+          //  hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer, LayerMask.GetMask("Tower Enemy"));
+         
+        hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);    
 
         if (hitEnemies.Length != 0) 
         {
