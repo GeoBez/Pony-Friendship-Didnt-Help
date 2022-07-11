@@ -21,7 +21,7 @@ public class WaveController : MonoBehaviour
         preparation = GameObject.FindGameObjectWithTag("Preparation").GetComponent<Preparation_Script>();
         Wave_Number = 0;
 
-        text.text = string.Format("Волна: {0}/{1}", Wave_Number + 1, Waves.Length-2);
+        text.text = string.Format("Волна: {0}/{1}", Wave_Number + 1, Waves.Length-1);
         //LaunchWave();
     }
 
@@ -44,7 +44,7 @@ public class WaveController : MonoBehaviour
             if (!preparation.inPreparation && !_isWorking)
             {
                 _isWorking = true;
-                text.text = string.Format("Волна: {0}/{1}", Wave_Number + 1, Waves.Length-2);
+                text.text = string.Format("Волна: {0}/{1}", Wave_Number + 1, Waves.Length-1);
                 Rise_Wave();
             }
             else if (preparation.inPreparation && _isWorking)
