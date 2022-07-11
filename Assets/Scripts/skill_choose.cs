@@ -17,6 +17,8 @@ public class skill_choose : MonoBehaviour
     private bool isStartWas = false;
     public bool _isItWork = false;
 
+    private YandexSDK yandexSDK;
+
     void Start()
     {
 
@@ -47,6 +49,17 @@ public class skill_choose : MonoBehaviour
                 mode.Activate();
         }
         _isItWork = false;
+
+        yandexSDK = YandexSDK.instance;
+        yandexSDK.onRewardedAdReward += Reward;
+    }
+
+    private void Reward(string placement)
+    {
+        if (placement == "ReMakeCard")
+        {
+            ReMakeCard();
+        }
     }
 
     public void MakeCard()
