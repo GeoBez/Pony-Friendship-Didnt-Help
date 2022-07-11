@@ -143,6 +143,8 @@ GameObject:
   - component: {fileID: 5408714187243187382}
   - component: {fileID: 5408714187243187383}
   - component: {fileID: 133968815019855858}
+  - component: {fileID: 7784828551554924480}
+  - component: {fileID: 6874191904778556741}
   m_Layer: 3
   m_Name: Tower
   m_TagString: Tower
@@ -234,6 +236,34 @@ MonoBehaviour:
   health: 5
   damage: 2
   price: 25
+--- !u!114 &7784828551554924480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5408714187243187385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bae992d95a02045a7d632b05648db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: {fileID: 5408714187243187385}
+  distanceRoundPrefab: {fileID: 7710331149747063768, guid: 5db1957727a1a804d845052f8bec0480, type: 3}
+  accuracyFactor: 6
+--- !u!65 &6874191904778556741
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5408714187243187385}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 34.91868, y: 34.479996, z: 0.2}
+  m_Center: {x: 1.6403816, y: 0, z: 0}
 --- !u!1 &8828151551572738988
 GameObject:
   m_ObjectHideFlags: 0

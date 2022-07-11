@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 6045906499427412219}
   - component: {fileID: 6045906499427412222}
   - component: {fileID: 6045906499427412223}
+  - component: {fileID: 1809714198487425441}
   m_Layer: 8
   m_Name: MainTower
   m_TagString: Main Tower
@@ -232,7 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e5ecd45654d8544aaaa3fe8782509e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 80
   health: 80
   damage: 1
   price: 0
@@ -252,6 +252,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.77465713, y: -4.4700356}
   m_Size: {x: 7.1435733, y: 2.4945824}
   m_Direction: 1
+--- !u!114 &1809714198487425441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045906499427412218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bae992d95a02045a7d632b05648db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: {fileID: 6045906499427412218}
+  distanceRoundPrefab: {fileID: 7710331149747063768, guid: 5db1957727a1a804d845052f8bec0480, type: 3}
+  accuracyFactor: 1
 --- !u!1 &8710717474061586901
 GameObject:
   m_ObjectHideFlags: 0

@@ -3855,7 +3855,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 80 HP
+  m_text: 20 HP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 568ff3e8b2c889748b84a44850acaf28, type: 2}
   m_sharedMaterial: {fileID: -7248685815044290828, guid: 568ff3e8b2c889748b84a44850acaf28, type: 2}
@@ -8832,7 +8832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '2 HP
+  m_text: '1 HP
 
 '
   m_isRightToLeft: 0
