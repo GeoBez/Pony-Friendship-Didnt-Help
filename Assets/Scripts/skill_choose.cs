@@ -116,8 +116,13 @@ public class skill_choose : MonoBehaviour
 
     public void PlayVideo(string a)
     {
-        MakeNotActive();
-        ReMakeCard();
+        //sdk.ShowRewarded(a);
+
+        if (a == "upgrate")
+        {
+            MakeNotActive();
+            ReMakeCard();
+        }
     }
 
     public void MakeNotActive()

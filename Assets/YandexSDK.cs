@@ -9,6 +9,7 @@ public class YandexSDK : MonoBehaviour {
     private static extern void GetUserData();
     [DllImport("__Internal")]
     private static extern void ShowFullscreenAd();
+    public GameObject skill_chose;
     /// <summary>
     /// Returns an int value which is sent to index.html
     /// </summary>
@@ -108,6 +109,7 @@ public class YandexSDK : MonoBehaviour {
     /// </summary>
     /// <param name="placement"></param>
     public void OnRewarded() {
+        skill_chose.GetComponent<skill_choose>().PlayVideo("upgrate");
     }
 
     /// <summary>
