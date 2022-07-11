@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveController : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class WaveController : MonoBehaviour
     private bool _isWorking;
     private bool isWavesEnd = false;
 
-
+    public Text text;
     private Preparation_Script preparation;
 
     private void Start()
@@ -20,6 +21,7 @@ public class WaveController : MonoBehaviour
         preparation = GameObject.FindGameObjectWithTag("Preparation").GetComponent<Preparation_Script>();
         Wave_Number = 0;
 
+        text.text = string.Format("Волна: {0}/{1}", Wave_Number + 1, Waves.Length-2);
         //LaunchWave();
     }
 
@@ -42,6 +44,7 @@ public class WaveController : MonoBehaviour
             if (!preparation.inPreparation && !_isWorking)
             {
                 _isWorking = true;
+                text.text = string.Format("Волна: {0}/{1}", Wave_Number + 1, Waves.Length-2);
                 Rise_Wave();
             }
             else if (preparation.inPreparation && _isWorking)
