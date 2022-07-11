@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 2
   health: 2
-  speed: 7
+  speed: 14
   damage: 3
   xp_points: 5
   attackTime: 4
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7ad167491eac746b9fcdd34b463d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 1
+  Type: 0
   _moveType: 0
   MyPath: {fileID: 0}
   maxDistance: 0.1
@@ -480,11 +480,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.75625
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1.00015
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -516,11 +516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.099
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.943
+      value: 1.31
       objectReference: {fileID: 0}
     - target: {fileID: 2501777746399105919, guid: e243eb9e3c0f2e34c9207925407b9d19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

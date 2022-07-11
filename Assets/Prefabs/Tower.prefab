@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 6081111955599462340, guid: a1d90a13727c262499a1fbc2861b9745, type: 3}
   shotPoint: {fileID: 5408714187024413839}
-  detectionDistance: 10
+  detectionDistance: 9
   whatIsAttack:
     serializedVersion: 2
     m_Bits: 192
@@ -233,7 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e5ecd45654d8544aaaa3fe8782509e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 80
   health: 5
   damage: 2
   price: 25

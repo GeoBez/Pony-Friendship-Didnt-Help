@@ -8,7 +8,15 @@ public class Player : MonoBehaviour
     public static Player MainPlayer;
 
     public StatsBar healthBar;
-    public float maxHealth = 10;
+    [SerializeField]private float maxHealth = 10;
+    public float MaxHealth { get => maxHealth; set {
+            if (value > 0)
+            {
+                Health = value - health;
+                maxHealth = value;
+                healthBar.SetMaxValue(MaxHealth);
+            }
+        } }
     private float health;
     [SerializeField] private Text atackUi;
     public float Health
@@ -16,7 +24,7 @@ public class Player : MonoBehaviour
         get => health;
         set  
         {
-            if (value <= maxHealth)
+            if (value <= MaxHealth)
             {
                 health = value;
                 healthBar.SetValue(value);
@@ -63,8 +71,8 @@ public class Player : MonoBehaviour
         GetComponentInChildren<Weapon>().projectile.coolDown = 0.7F;
         
         change_Attack = GetComponentInChildren<Change_Attack>();
-        healthBar.SetMaxValue(maxHealth);
-        Health = maxHealth;
+        healthBar.SetMaxValue(MaxHealth);
+        Health = MaxHealth;
         GetComponent<PlayerMovement>().speed = Speed;
               
         //isMeleeAttacker = true;
