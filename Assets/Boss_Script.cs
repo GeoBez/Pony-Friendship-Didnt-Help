@@ -33,21 +33,18 @@ public class Boss_Script : MonoBehaviour
 
     private void Update()
     {
-        if (rnd < 30)
+        if (rnd < 50)
         {
             AttackVariant = 0;
             Target = GameObject.FindGameObjectWithTag("Player")?.transform;
         }
-        else if (rnd >= 30 && rnd < 80)
-            AttackVariant = 1;
-        else if (rnd < 100 && rnd >= 80)
-            AttackVariant = 2;
+        else AttackVariant = 1;
 
-        if (pastAttack == AttackVariant)
+        /*if (pastAttack == AttackVariant)
             if (AttackVariant == 0)
                 AttackVariant += 1;
             else
-                AttackVariant -= 1;
+                AttackVariant -= 1;*/
 
         if (enemy_Script.attackTime <= 0)
             isAttacking = true;
