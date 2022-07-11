@@ -33,7 +33,7 @@ public class Boss_Script : MonoBehaviour
 
     private void Update()
     {
-        if (rnd < 50)
+        if (rnd < 30)
         {
             AttackVariant = 0;
             Target = GameObject.FindGameObjectWithTag("Player")?.transform;
