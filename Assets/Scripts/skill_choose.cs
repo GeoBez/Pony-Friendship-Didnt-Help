@@ -24,6 +24,7 @@ public class skill_choose : MonoBehaviour
         skill_canvas = GetComponentInParent<Skill_Canvas>();
 
         _allModes = new List<Modes>() {
+            gameObject.AddComponent<Mode_IAmSpeed>(),
             gameObject.AddComponent<Mode_Magnit>(),
             gameObject.AddComponent<Mode_DoubleDenomination>(),
             gameObject.AddComponent<Mode_CleverLeaf>(),
@@ -37,8 +38,7 @@ public class skill_choose : MonoBehaviour
             gameObject.AddComponent<Mode_IAmPower>(),
             gameObject.AddComponent<Mode_PowerPlus>(),
             gameObject.AddComponent<Mode_SimpleDistanteBattle>(),
-            gameObject.AddComponent<Mode_SittingUpper>(),
-            gameObject.AddComponent<Mode_IAmSpeed>()};
+            gameObject.AddComponent<Mode_SittingUpper>() };
 
         //тут надо как-то сделать активацию начальных скилов (перенести из старта )
         foreach(var mode in _allModes)
@@ -121,11 +121,11 @@ public class skill_choose : MonoBehaviour
         int cout;
         if (_allModes.Count > 4)
         {
-            cout = Random.Range(0, _allModes.Count - 1);
+            cout = Random.Range(0, _allModes.Count);
 
             while (_allModes[cout].isUsed)
             {
-                cout = Random.Range(0, _allModes.Count - 1);
+                cout = Random.Range(0, _allModes.Count);
             }
 
             _allModes[cout].isUsed = true;

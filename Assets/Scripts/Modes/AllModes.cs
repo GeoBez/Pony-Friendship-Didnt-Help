@@ -94,8 +94,8 @@ public class Mode_Sturdy : Modes
     {
         Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
 
-        player.maxHealth += (int)(player.maxHealth * 0.1);
-        player.Health += (int)(player.maxHealth * 0.1);
+        player.MaxHealth += (int)(player.MaxHealth * 0.1);
+        //player.Health += (int)(player.MaxHealth * 0.1);
         //player.mode_Sturdy = true; ошибка!
     }
 }
@@ -115,7 +115,7 @@ public class Mode_HealthyHealth : Modes
     {
         Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
 
-        player.maxHealth += 20;
+        player.MaxHealth += 20;
         player.Health += 20;
 
         //player.mode_HealthyHealth = true; Есть ошибка!
@@ -156,7 +156,7 @@ public class Mode_OneTimeTreatment : Modes
     public override void MainModeDo()
     {
         Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        player.Health = player.maxHealth;
+        player.Health = player.MaxHealth;
 
         //player.mode_OneTimeTreatment = true; ошибка есть!
     }
@@ -166,7 +166,7 @@ public class Mode_MoreHealth : Modes ///here
 {
     public void Start()
     {
-        modeName = "Больше здоровья";
+        modeName = "Здоровья дереву";
         modeDescription = "Здоровье дерева увеличивается на 20 единиц";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
@@ -177,7 +177,7 @@ public class Mode_MoreHealth : Modes ///here
     {
         Tower tree = GameObject.FindGameObjectWithTag("Main Tower").GetComponent<Tower>();
 
-        tree.maxHealth += 20;
+        tree.MaxHealth += 20;
         tree.health += 20;
         //player.mode_MoreHealth = true;
     }
@@ -225,7 +225,7 @@ public class Mode_PowerPlus : Modes //here
     public void Start()
     {
         modeName = "Сила+";
-        modeDescription = "Увеличение урона на 5 единиц";
+        modeDescription = "Увеличение урона на 3 единицы";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName(modeName.ToLower());
@@ -234,7 +234,7 @@ public class Mode_PowerPlus : Modes //here
     public override void MainModeDo()
     {
         Player player = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        player.Damage += 5;
+        player.Damage += 3;
         //player.mode_PowerPlus = true;
     }
 }
