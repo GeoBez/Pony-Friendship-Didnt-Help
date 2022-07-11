@@ -25,7 +25,7 @@ public class Laser_Rotation_Script : MonoBehaviour
     private void Update()
     {
         transform.position = Player.position;
-        transform.Rotate(0f, 0, 0.5f, Space.Self);
+        //transform.Rotate(0f, 0, 0.5f, Space.Self);
 
         time -= Time.deltaTime;
         if(time <= 0)
