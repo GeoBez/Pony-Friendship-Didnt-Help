@@ -289,7 +289,7 @@ public class Mode_IAmSpeed : Modes
     public void Start()
     {
         modeName = "Я есть скорость";
-        modeDescription = "Повышает частоту атаки в 1.5 раза";
+        modeDescription = "Повышает частоту атаки";
 
         var manager = GameObject.FindGameObjectWithTag("UprgadeSpritesManager").GetComponent<UprgadeSpritesManager>();
         Image = manager.GetSpriteByName(modeName.ToLower());
@@ -301,9 +301,9 @@ public class Mode_IAmSpeed : Modes
 
         var player = GameObject.FindGameObjectWithTag("MainPlayer");
         var obj = player.GetComponentInChildren<PlayerMeleeAttacks>();
-        obj.SetCoolDown(obj.attackCoolDown / 2);
+        obj.SetCoolDown(obj.attackCoolDown / 1.3f);
 
-        player.GetComponentInChildren<Weapon>().projectile.coolDown /= 2;
+        player.GetComponentInChildren<Weapon>().projectile.coolDown /= 1.3f;
     }
 }
 

@@ -53,18 +53,13 @@ public class Preparation_Script : MonoBehaviour
         text.text = minutes + ":" + seconds;
 
         if(!inPreparation)
-        {
-            foreach( var y in GetComponentsInChildren<Text>())
-            {
-                y.gameObject.SetActive(false);
-            }
-            //text.gameObject.SetActive(false);
+        {            
+            text.gameObject.SetActive(false);
             button.gameObject.SetActive(false);
         }
         else
         {
-            foreach (var y in GetComponentsInChildren<Text>())
-                text.gameObject.SetActive(true);
+            text.gameObject.SetActive(true);
             button.gameObject.SetActive(true);
 
             if(xp_Bar.skill_Points > 0)
