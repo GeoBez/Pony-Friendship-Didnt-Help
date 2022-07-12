@@ -178,7 +178,7 @@ public class Mode_MoreHealth : Modes ///here
         Tower tree = GameObject.FindGameObjectWithTag("Main Tower").GetComponent<Tower>();
 
         tree.MaxHealth += 20;
-        tree.health += 20;
+        tree.Health += 20;
         //player.mode_MoreHealth = true;
     }
 }

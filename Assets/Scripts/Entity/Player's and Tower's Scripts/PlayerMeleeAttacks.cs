@@ -51,7 +51,7 @@ public class PlayerMeleeAttacks : MonoBehaviour
 
         foreach (var enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
+            enemy.GetComponent<Enemy>()?.TakeHit(attackDamage);
             Instantiate(Melee_Damage_Effect, enemy.transform.position, Quaternion.identity);
         }
 
@@ -63,7 +63,7 @@ public class PlayerMeleeAttacks : MonoBehaviour
     {
         //animator.SetTrigger("Attack");
         {
-            enemy.GetComponent<Enemy>()?.TakeDamage(attackDamage);
+            enemy.GetComponent<Enemy>()?.TakeHit(attackDamage);
             Instantiate(Melee_Damage_Effect, enemy.transform.position, Quaternion.identity);
         }
 

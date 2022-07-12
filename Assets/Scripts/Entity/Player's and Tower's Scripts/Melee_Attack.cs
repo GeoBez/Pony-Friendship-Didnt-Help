@@ -8,7 +8,7 @@ public class Melee_Attack : MonoBehaviour
     {
         if(collision.tag == "Enemy" || (collision.tag == "Tower_Enemy" && Player.mode_YouShallNotPass))
         {
-            collision.GetComponent<Enemy>().TakeDamage(GetComponentInParent<Player>().Damage);
+            collision.GetComponent<Enemy>().TakeHit(GetComponentInParent<Player>().Damage);
         }
     }
 }

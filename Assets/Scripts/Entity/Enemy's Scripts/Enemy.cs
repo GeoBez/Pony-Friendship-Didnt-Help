@@ -2,49 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IFreezable
+public class Enemy : Entity , IFreezable
 {
-	StatsBar healthBar;
-	public float maxHealth = 10;
-    public float health;
-	public float speed;
-	public float damage;
+
 	public int xp_points;
+
 	float defaultSpeed;
+
 	public float attackTime;
+
 	public GameObject[] fall_Object;
 
 	private Animator _animator;
 
-	private void Start()
-	{
+	protected override void OnAwake()
+    {
 		_animator = GetComponent<Animator>();
-		healthBar = GetComponentInChildren<StatsBar>();
-		healthBar?.SetMaxValue(maxHealth);
-        health = maxHealth;
 
-		defaultSpeed = speed;
+		defaultSpeed = Speed;
 	}
 
 	void Update()
 	{
-		if (health <= 0)
+		if (Speed != defaultSpeed)
 		{
-			Death();
-		}
-
-		if (speed != defaultSpeed)
-		{
-			GetComponent<Return_Speed_Script>().speed = speed;
+			GetComponent<Return_Speed_Script>().speed = Speed;
 		}
 	}
 
-	public void Death()
+	public override void Death()
 	{
 		Statistic.enemyDeathCount++;
 		float rnd = Random.Range(0, 99);
 
-		Destroy(gameObject);
 		WaveController.NeedToKill--;
 
 		if (gameObject.tag == "Enemy" || gameObject.tag == "Tower Enemy")
@@ -78,15 +68,9 @@ public class Enemy : MonoBehaviour, IFreezable
 
 	}
 
-	public void TakeDamage(float damage)
-	{
-		health -= damage;
-		healthBar?.SetValue(health);
-	}
-
 	public void FreezingAnimationStart()
     {
-		TakeDamage(1);
+		TakeHit(1);
 		_animator.SetTrigger("Freezing");
 		_animator.SetBool("isWalking", false);
 	}

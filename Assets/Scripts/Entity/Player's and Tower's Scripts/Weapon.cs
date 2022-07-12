@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
         if (gameObject.tag == "Player")
             damage = GetComponentInParent<Player>().Damage;
         else if (gameObject.tag == "Tower" || gameObject.tag == "Main Tower")
-            damage = GetComponentInParent<Tower>().damage;
+            damage = GetComponentInParent<Tower>().Damage;
     }
     void Update()
     {

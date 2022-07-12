@@ -14,7 +14,7 @@ public class Enemy_Attack : MonoBehaviour
     void Start()
     {
         time = GetComponentInParent<Enemy>().attackTime;
-        damage = GetComponentInParent<Enemy>().damage;
+        damage = GetComponentInParent<Enemy>().Damage;
         default_Time = time;
         Main_Tower = "Main Tower";
     }
@@ -30,9 +30,9 @@ public class Enemy_Attack : MonoBehaviour
             else if (time < 0)
             {
                 if (What_Attack.tag == "MainPlayer")
-                    What_Attack.GetComponent<Player>()?.TakeDamage(damage);
+                    What_Attack.GetComponent<Player>()?.TakeHit(damage);
                 else if (What_Attack.tag == Main_Tower)
-                    What_Attack.GetComponent<Tower>()?.TakeDamage(damage);
+                    What_Attack.GetComponent<Tower>()?.TakeHit(damage);
                 time = default_Time;
             }
         }

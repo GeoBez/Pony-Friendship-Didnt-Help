@@ -230,11 +230,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5408714187243187385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9e5ecd45654d8544aaaa3fe8782509e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c9c80a0468be8f45aee4204560ab256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  damage: 2
+  EventChangeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  EventTakeHit:
+    m_PersistentCalls:
+      m_Calls: []
+  healthBar: {fileID: 0}
+  maxHealth: 20
+  damage: 3
+  IsMainTower: 0
   price: 25
 --- !u!114 &7784828551554924480
 MonoBehaviour:
@@ -331,7 +339,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8828151551572738988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 975b08e862d9dc947abaa787584a8294, type: 3}
+  m_Script: {fileID: 11500000, guid: c3f1a7bb613444a4c97b8cd9f389b624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2673525503635916550

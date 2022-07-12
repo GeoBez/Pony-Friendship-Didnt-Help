@@ -16,7 +16,7 @@ public class Lasers : MonoBehaviour
     {
         if (collision.tag == "MainPlayer")
         {
-            collision.GetComponent<Player>().TakeDamage(damage);
+            collision.GetComponent<Player>().TakeHit(damage);
         }
     }
 

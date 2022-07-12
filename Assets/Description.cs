@@ -18,6 +18,6 @@ public class Description : MonoBehaviour
         //descriptoinText.text = "описание" + tower.name;
         towerCost.text = tower.price.ToString();
         coolDown.text = tower.GetComponentInChildren<Weapon>().projectile.coolDown.ToString();
-        damage.text = tower.damage.ToString();
+        damage.text = tower.Damage.ToString();
     }
 }

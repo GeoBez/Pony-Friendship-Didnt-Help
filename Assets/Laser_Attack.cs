@@ -62,7 +62,7 @@ public class Laser_Attack : MonoBehaviour
     {
         if(collision.tag == "MainPlayer")
         {
-            Player.TakeDamage(damage);
+            Player.TakeHit(damage);
         }
     }
 }

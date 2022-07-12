@@ -54,7 +54,7 @@ public class FollowPath : MonoBehaviour
             return;
         }
 
-        speed = GetComponent<Enemy>().speed;
+        speed = GetComponent<Enemy>().Speed;
 
         transform.position = pointInPath.Current.position;
         defaultSpeed = speed;

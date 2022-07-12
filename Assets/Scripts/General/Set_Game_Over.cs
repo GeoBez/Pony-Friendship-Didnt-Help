@@ -5,16 +5,14 @@ using UnityEngine.UI;
 
 public class Set_Game_Over : MonoBehaviour
 {
-    public Player PHealth;
-    public Tower MTHealth;
+    static Set_Game_Over instance;
     public GameObject GameOverMenu;
     public YandexSDK YandexSDK;
 
 
     private void Start()
     {
-        PHealth = GameObject.FindGameObjectWithTag("MainPlayer").GetComponent<Player>();
-        MTHealth = GameObject.FindGameObjectWithTag("Main Tower").GetComponent<Tower>();
+        instance = this;
         //GameOverMenu = GameObject.FindGameObjectWithTag("GameOver");
         GameOverMenu.SetActive(false);
 
@@ -22,23 +20,10 @@ public class Set_Game_Over : MonoBehaviour
         YandexSDK.ShowInterstitial();*/
     }
 
-    private void Update()
+    public static void SetActive()
     {
-        if (PHealth != null)
-            if (PHealth.Health <= 0)
-            {
-                Destroy(PHealth.gameObject);
-                GameOverMenu.SetActive(true);
-                Time.timeScale = 0;
-            }
-
-        if (MTHealth != null)
-            if (MTHealth.health <= 0)
-            {
-                Destroy(MTHealth.gameObject);
-                GameOverMenu.SetActive(true);
-                Time.timeScale = 0;
-            }
+        instance.GameOverMenu.SetActive(true);
+        Time.timeScale = 0;
     }
 }
 
