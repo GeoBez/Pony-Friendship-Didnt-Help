@@ -94,29 +94,38 @@ public class YandexSDK : MonoBehaviour {
     /// Callback from index.html
     /// </summary>
     /// <param name="error"></param>
-    public void OnInterstitialError() {
+    public void OnInterstitialError(string error)
+    {
+        onInterstitialFailed(error);
     }
 
     /// <summary>
     /// Callback from index.html
     /// </summary>
     /// <param name="placement"></param>
-    public void OnRewardedOpen() {
+    public void OnRewardedOpen(int placement)
+    {
+        onRewardedAdOpened(placement);
     }
 
     /// <summary>
     /// Callback from index.html
     /// </summary>
     /// <param name="placement"></param>
-    public void OnRewarded() {
-        skill_chose.GetComponent<skill_choose>().PlayVideo("upgrate");
+    public void OnRewarded(int placement) {
+        if (placement == rewardedAdPlacementsAsInt.Dequeue())
+        {
+            onRewardedAdReward.Invoke(rewardedAdsPlacements.Dequeue());
+        }
     }
 
     /// <summary>
     /// Callback from index.html
     /// </summary>
     /// <param name="placement"></param>
-    public void OnRewardedClose() {
+    public void OnRewardedClose(int placement)
+    {
+        onRewardedAdClosed(placement);
     }
 
     /// <summary>
