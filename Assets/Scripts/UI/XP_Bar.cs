@@ -18,7 +18,7 @@ public class XP_Bar : MonoBehaviour
     void Start()
     {
         Past_Max_XP = 5;
-        level = 1;
+        level = PlayerPrefs.HasKey("Level") ? PlayerPrefs.GetInt("Level") : 1;
         Max_XP = 5;
         fill_Value = GetComponent<Slider>();
         fill_Value.value = 0;
@@ -44,6 +44,9 @@ public class XP_Bar : MonoBehaviour
         {
             skill_Points++;
             level++;
+
+            PlayerPrefs.SetInt("Level", level);
+
             int Rest_Of_XP = xp - Max_XP;
             xp = 0;
             xp += Rest_Of_XP;

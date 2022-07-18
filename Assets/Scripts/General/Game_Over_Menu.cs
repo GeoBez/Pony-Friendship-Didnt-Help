@@ -7,6 +7,7 @@ public class Game_Over_Menu : MonoBehaviour
 {
     public void ResetLevel()
     {
+        PlayerPrefs.SetInt("Level", 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

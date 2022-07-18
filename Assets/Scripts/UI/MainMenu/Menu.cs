@@ -22,12 +22,14 @@ public class Menu : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1F;
+        PlayerPrefs.SetInt("Level", 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ToMenu()
     {
         Time.timeScale = 1F;
+        PlayerPrefs.SetInt("Level", 1);
         SceneManager.LoadScene(0);
     }
     

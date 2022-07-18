@@ -14,6 +14,7 @@ public class LevelChecker : MonoBehaviour
     }
     void Update()
     {
-        textLevel.text = $"Lv. {xP_Bar.level.ToString()}";
+        if (PlayerPrefs.HasKey("Level")) textLevel.text = $"Lv. {PlayerPrefs.GetInt("Level")}";
+        else textLevel.text = $"Lv. {xP_Bar.level}";
     }
 }
