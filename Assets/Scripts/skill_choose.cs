@@ -17,12 +17,12 @@ public class skill_choose : MonoBehaviour
     private bool isStartWas = false;
     public bool _isItWork = false;
 
-    private YandexSDK sdk;
+    //private YandexSDK sdk;
 
     void Start()
     {
-        sdk = YandexSDK.instance;
-        sdk.onRewardedAdReward += PlayVideo;
+        //sdk = YandexSDK.instance;
+        //sdk.onRewardedAdReward += PlayVideo;
         //sdk.onRewardedAdClosed += PlayVideo;
 
         parent = GetComponentInParent<skill_choose>();
