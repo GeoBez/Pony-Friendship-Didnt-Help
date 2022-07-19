@@ -1350,50 +1350,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5648764687271863318, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
   m_PrefabInstance: {fileID: 903359543}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &150542171
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 150542172}
-  - component: {fileID: 150542173}
-  m_Layer: 0
-  m_Name: YandexSDK
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &150542172
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150542171}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &150542173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150542171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846ba265e876657468a83e68cae8bcef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skill_chose: {fileID: 1931459499189022643}
 --- !u!1 &164266625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3694,8 +3650,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 150542173}
-        m_TargetAssemblyTypeName: YandexSDK, Assembly-CSharp
+      - m_Target: {fileID: 1912791644}
+        m_TargetAssemblyTypeName: YandexSDK, YandexGamesSDK
         m_MethodName: ShowRewarded
         m_Mode: 5
         m_Arguments:
@@ -4417,7 +4373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &996129773
 GameObject:
@@ -9593,6 +9549,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0d0e7a039f526499c356a3c5cd6d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1912791643
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 210.2164
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 132.79747
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 44.486332
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248565, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 12778234783248567, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+      propertyPath: m_Name
+      value: YandexSDK
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+--- !u!114 &1912791644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 12778234783248564, guid: b8cc9fa895ac03a4f8d994ed62b6341e, type: 3}
+  m_PrefabInstance: {fileID: 1912791643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfdda3e0fb20e24d9f2ea7b5acee7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1940965194
 GameObject:
   m_ObjectHideFlags: 0
@@ -9626,7 +9650,7 @@ MonoBehaviour:
   PHealth: {fileID: 1945607876}
   MTHealth: {fileID: 490759047}
   GameOverMenu: {fileID: 4887423395665976001}
-  YandexSDK: {fileID: 150542173}
+  YandexSDK: {fileID: 0}
 --- !u!4 &1940965196
 Transform:
   m_ObjectHideFlags: 0
@@ -9654,7 +9678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Victory_Menu: {fileID: 6013985683177515926}
-  YandexSDK: {fileID: 150542173}
+  YandexSDK: {fileID: 0}
 --- !u!114 &1945607876 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3984970939799630470, guid: 5b4828b4e17dc1946bdafb50bfbccd25, type: 3}
@@ -12750,8 +12774,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 150542173}
-        m_TargetAssemblyTypeName: YandexSDK, Assembly-CSharp
+      - m_Target: {fileID: 1912791644}
+        m_TargetAssemblyTypeName: YandexSDK, YandexGamesSDK
         m_MethodName: ShowInterstitial
         m_Mode: 1
         m_Arguments:

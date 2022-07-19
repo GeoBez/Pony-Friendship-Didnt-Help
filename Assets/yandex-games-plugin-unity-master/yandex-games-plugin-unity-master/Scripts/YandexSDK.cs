@@ -9,7 +9,6 @@ public class YandexSDK : MonoBehaviour {
     private static extern void GetUserData();
     [DllImport("__Internal")]
     private static extern void ShowFullscreenAd();
-    public GameObject skill_chose;
     /// <summary>
     /// Returns an int value which is sent to index.html
     /// </summary>
@@ -48,7 +47,17 @@ public class YandexSDK : MonoBehaviour {
     /// </summary>
     public event Action<string> onRewardedAdError;
     /// <summary>
+    /// Покупка успешно совершена
+    /// </summary>
+    public event Action<string> onPurchaseSuccess;
+    /// <summary>
+    /// Покупка не удалась: в консоли разработчика не добавлен товар с таким id,
+    /// пользователь не авторизовался, передумал и закрыл окно оплаты,
+    /// истекло отведенное на покупку время, не хватило денег и т. д.
+    /// </summary>
+    public event Action<string> onPurchaseFailed;
 
+    public event Action onClose;
 
     public Queue<int> rewardedAdPlacementsAsInt = new Queue<int>();
     public Queue<string> rewardedAdsPlacements = new Queue<string>();
@@ -60,6 +69,13 @@ public class YandexSDK : MonoBehaviour {
         else {
             Destroy(gameObject);
         }
+    }
+
+    /// <summary>
+    /// Call this to ask user to authenticate
+    /// </summary>
+    public void Authenticate() {
+        AuthenticateUser();
     }
 
     /// <summary>
@@ -81,7 +97,22 @@ public class YandexSDK : MonoBehaviour {
     /// <summary>
     /// Call this to receive user data
     /// </summary>
+    public void RequestUserData() {
+        GetUserData();
+    }
+    
+    public void InitializePurchases() {
+        InitPurchases();
+    }
 
+    public void ProcessPurchase(string id) {
+        Purchase(id);
+    }
+    
+    public void StoreUserData(string data) {
+        user = JsonUtility.FromJson<UserData>(data);
+        onUserDataReceived();
+    }
 
     /// <summary>
     /// Callback from index.html
@@ -94,29 +125,34 @@ public class YandexSDK : MonoBehaviour {
     /// Callback from index.html
     /// </summary>
     /// <param name="error"></param>
-    public void OnInterstitialError() {
+    public void OnInterstitialError(string error) {
+        onInterstitialFailed(error);
     }
 
     /// <summary>
     /// Callback from index.html
     /// </summary>
     /// <param name="placement"></param>
-    public void OnRewardedOpen() {
+    public void OnRewardedOpen(int placement) {
+        onRewardedAdOpened(placement);
     }
 
     /// <summary>
     /// Callback from index.html
     /// </summary>
     /// <param name="placement"></param>
-    public void OnRewarded() {
-        skill_chose.GetComponent<skill_choose>().PlayVideo("upgrate");
+    public void OnRewarded(int placement) {
+        if (placement == rewardedAdPlacementsAsInt.Dequeue()) {
+            onRewardedAdReward.Invoke(rewardedAdsPlacements.Dequeue());
+        }
     }
 
     /// <summary>
     /// Callback from index.html
     /// </summary>
     /// <param name="placement"></param>
-    public void OnRewardedClose() {
+    public void OnRewardedClose(int placement) {
+        onRewardedAdClosed(placement);
     }
 
     /// <summary>
@@ -129,6 +165,29 @@ public class YandexSDK : MonoBehaviour {
         rewardedAdPlacementsAsInt.Clear();
     }
 
+    /// <summary>
+    /// Callback from index.html
+    /// </summary>
+    /// <param name="id"></param>
+    public void OnPurchaseSuccess(string id) {
+        onPurchaseSuccess(id);
+    }
+
+    /// <summary>
+    /// Callback from index.html
+    /// </summary>
+    /// <param name="error"></param>
+    public void OnPurchaseFailed(string error) {
+        onPurchaseFailed(error);
+    }
+    
+    /// <summary>
+    /// Browser tab has been closed
+    /// </summary>
+    /// <param name="error"></param>
+    public void OnClose() {
+        onClose.Invoke();
+    }
 }
 
 public struct UserData {

@@ -23,6 +23,7 @@ public class skill_choose : MonoBehaviour
     {
         sdk = YandexSDK.instance;
         sdk.onRewardedAdReward += PlayVideo;
+        //sdk.onRewardedAdClosed += PlayVideo;
 
         parent = GetComponentInParent<skill_choose>();
         skill_canvas = GetComponentInParent<Skill_Canvas>();
