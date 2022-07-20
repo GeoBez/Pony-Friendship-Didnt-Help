@@ -16,7 +16,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject Menu_Pause;
     [SerializeField] private GameObject Menu_VictoryMenu;
     [SerializeField] private UpgradeChoiceMenu Menu_UpgradeChoise;
-    [SerializeField] private YandexSDK YandexSDK;
+   // [SerializeField] private YandexSDK YandexSDK;
     public void Start()
     {
         PlayerStatistics.ResetAll();

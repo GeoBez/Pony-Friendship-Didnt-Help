@@ -275,50 +275,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5648764687271863318, guid: ad0278cd2f2c10e47acfe3025dd9d1c6, type: 3}
   m_PrefabInstance: {fileID: 903359543}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &150542171
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 150542172}
-  - component: {fileID: 150542173}
-  m_Layer: 0
-  m_Name: YandexSDK
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &150542172
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150542171}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &150542173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150542171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846ba265e876657468a83e68cae8bcef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &175545886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,7 +2499,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7732619, y: 1}
+    m_SensorSize: {x: 0.41333336, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2667,7 +2623,7 @@ PrefabInstance:
       objectReference: {fileID: 3984970939048730103}
     - target: {fileID: 3274038070994295082, guid: ccb5ebe18cf71cb4693b52701201b659, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.999878
+      value: -14.999863
       objectReference: {fileID: 0}
     - target: {fileID: 3274038070994361768, guid: ccb5ebe18cf71cb4693b52701201b659, type: 3}
       propertyPath: m_IsActive
@@ -2683,7 +2639,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 3274038071195249698, guid: ccb5ebe18cf71cb4693b52701201b659, type: 3}
       propertyPath: m_Name
-      value: MenuGroup
+      value: CanvasMenuGroup
       objectReference: {fileID: 0}
     - target: {fileID: 3274038071195249702, guid: ccb5ebe18cf71cb4693b52701201b659, type: 3}
       propertyPath: m_Pivot.x
@@ -2772,7 +2728,7 @@ PrefabInstance:
     - target: {fileID: 3274038071195249703, guid: ccb5ebe18cf71cb4693b52701201b659, type: 3}
       propertyPath: YandexSDK
       value: 
-      objectReference: {fileID: 150542173}
+      objectReference: {fileID: 0}
     - target: {fileID: 5211403909299632263, guid: ccb5ebe18cf71cb4693b52701201b659, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2814,9 +2770,13 @@ PrefabInstance:
       value: 430.23346
       objectReference: {fileID: 0}
     - target: {fileID: 8286177009927519226, guid: ccb5ebe18cf71cb4693b52701201b659, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286177009927519226, guid: ccb5ebe18cf71cb4693b52701201b659, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 150542173}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccb5ebe18cf71cb4693b52701201b659, type: 3}
 --- !u!114 &3984970939048730103 stripped

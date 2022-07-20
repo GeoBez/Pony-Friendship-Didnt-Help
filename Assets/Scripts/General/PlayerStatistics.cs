@@ -5,6 +5,7 @@ using System;
 
 public static class PlayerStatistics
 {
+    public static int DiamondsCount { get; private set;}
     public static int Experience { get; private set; }
 
     public static event Action Lack—oins;
@@ -68,7 +69,7 @@ public static class PlayerStatistics
     {
         if (count < 0) return;
         Experience += count;
-        if(ExpNextLevel < Experience)
+        if (ExpNextLevel < Experience)
         {
             ExpCurLevel = ExpNextLevel;
             ExpNextLevel += Mathf.RoundToInt(ExpNextLevel * 0.5F);
@@ -76,6 +77,11 @@ public static class PlayerStatistics
             UpdateLevel?.Invoke();
         }
         Exp_Bar.instance.Update_Bar();
+    }
+
+    public static void AddDiamonds()
+    {
+        DiamondsCount += (int)((Level * 0.5) + enemyDeathCount * 0.2 + WaveController.Wave_Number * 2);  
     }
 }
 
