@@ -8,8 +8,7 @@ public class Set_Game_Over : MonoBehaviour
     public Player PHealth;
     public Tower MTHealth;
     public GameObject GameOverMenu;
-    public YandexSDK YandexSDK;
-
+    //public YG YandexSDK;
 
     private void Start()
     {

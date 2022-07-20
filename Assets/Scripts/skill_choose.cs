@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class skill_choose : MonoBehaviour
 {
@@ -17,12 +18,15 @@ public class skill_choose : MonoBehaviour
     private bool isStartWas = false;
     public bool _isItWork = false;
 
-    private YandexSDK sdk;
+    //private YandexSDK sdk;
+    //private YandexGame sdk;
 
     void Start()
     {
-        sdk = YandexSDK.instance;
-        sdk.onRewardedAdReward += PlayVideo;
+        YandexGame.CloseVideoEvent += PlayVideo;
+        //sdk = YandexSDK.instance;
+        //sdk.onRewardedAdReward += PlayVideo;
+        //sdk.onRewardedAdClosed += PlayVideo;
 
         parent = GetComponentInParent<skill_choose>();
         skill_canvas = GetComponentInParent<Skill_Canvas>();
@@ -114,11 +118,11 @@ public class skill_choose : MonoBehaviour
         }
     }
 
-    public void PlayVideo(string a)
+    public void PlayVideo(int a)//string a)
     {
         //sdk.ShowRewarded(a);
 
-        if (a == "upgrate")
+        if (a == 0)//== "upgrate")
         {
             MakeNotActive();
             ReMakeCard();

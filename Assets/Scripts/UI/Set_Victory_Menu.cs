@@ -5,7 +5,7 @@ using UnityEngine;
 public class Set_Victory_Menu : MonoBehaviour
 {
     public GameObject Victory_Menu;
-    public YandexSDK YandexSDK;
+    //public YandexSDK YandexSDK;
 
     private WaveController _waveController;
     private void Start()
